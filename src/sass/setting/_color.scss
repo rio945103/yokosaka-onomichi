@@ -1,0 +1,14 @@
+@use "../foundation/mixin" as *;
+
+body {
+    background: var(--LP-Light-Blue, #E9F6F8);
+}
+
+header {
+    background: var(--LP-White, #FFF);
+}
+
+.about__contents {
+    border-radius: 24px;
+    background: var(--LP-White, #FFF);
+}

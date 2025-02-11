@@ -1,0 +1,82 @@
+@use "../foundation/mixin" as *;
+
+.mv__inner {
+    padding-inline: 20px;
+    padding-top: 17px;
+}
+
+.mv__contents {
+    position: relative;
+}
+
+.mv__text {
+   
+}
+
+.mv__title1 {
+    margin-top: 20px;
+}
+
+.mv__title2 {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.mv__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 58px;
+}
+
+.mv__share  {
+    margin-top: 7px;
+}
+
+.mv__smart {
+    text-align: center;
+    top: -7px;
+}
+
+.mv__food {
+    position: absolute;
+    top: 569px;
+}
+
+.mv__cats {
+    position: absolute;
+    top: 583px;
+    right: 0;
+}
+
+.about {
+    margin-top: 32px;
+}
+
+.about__inner {
+    padding-inline: 20px;
+}
+
+.about__contents {
+    padding: 40px 12px;
+}
+
+.about__title2 {
+    margin-top: 6px;
+}
+
+.about__text1 {
+    margin-top: 24px;
+}
+
+.about__text2 {
+    margin-top: 24px;
+}
+
+.about__text3 {
+    margin-top: 32px;
+}
+
+.about__button {
+    margin-top: 24px;
+}

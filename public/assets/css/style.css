@@ -1,0 +1,304 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td,
+small,
+button,
+time,
+figure {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+li,
+dd {
+	list-style-type: none;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+	display: block;
+}
+
+img {
+	border: none;
+	vertical-align: bottom;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.header__inner {
+	padding: 16px 20px;
+}
+
+.mv__inner {
+	padding-inline: 20px;
+	padding-top: 17px;
+}
+
+.mv__contents {
+	position: relative;
+}
+
+.mv__title1 {
+	margin-top: 20px;
+}
+
+.mv__title2 {
+	margin-top: 12px;
+	text-align: center;
+}
+
+.mv__content {
+	display: flex;
+	gap: 58px;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.mv__share {
+	margin-top: 7px;
+}
+
+.mv__smart {
+	text-align: center;
+	top: -7px;
+}
+
+.mv__food {
+	position: absolute;
+	top: 569px;
+}
+
+.mv__cats {
+	position: absolute;
+	right: 0;
+	top: 583px;
+}
+
+.about {
+	margin-top: 32px;
+}
+
+.about__inner {
+	padding-inline: 20px;
+}
+
+.about__contents {
+	padding: 40px 12px;
+}
+
+.about__title2 {
+	margin-top: 6px;
+}
+
+.about__text1 {
+	margin-top: 24px;
+}
+
+.about__text2 {
+	margin-top: 24px;
+}
+
+.about__text3 {
+	margin-top: 32px;
+}
+
+.about__button {
+	margin-top: 24px;
+}
+
+body {
+	background: var(--LP-Light-Blue, #E9F6F8);
+}
+
+header {
+	background: var(--LP-White, #FFF);
+}
+
+.about__contents {
+	background: var(--LP-White, #FFF);
+	border-radius: 24px;
+}
+
+.header__logo img {
+	height: 27px;
+	width: 210px;
+}
+
+.mv__bg {
+	position: absolute;
+}
+
+.mv__bg img {
+	height: 554px;
+	width: 375px;
+}
+
+.mv__text {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Kiwi Maru";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%; /* 17.5px */
+	text-align: center;
+	text-shadow: 0px 0px 30px #FFF;
+}
+
+.mv__title1 img {
+	height: 53px;
+	width: 335px;
+}
+
+.mv__title2 img {
+	height: 40px;
+	width: 240px;
+}
+
+.mv__share img {
+	height: 80px;
+	width: 142px;
+}
+
+.mv__present img {
+	height: 110px;
+	width: 110px;
+}
+
+.mv__smart img {
+	height: 408px;
+	width: 200px;
+}
+
+.mv__food img {
+	height: 141px;
+	width: 86px;
+}
+
+.mv__cats img {
+	height: 127px;
+	width: 107px;
+}
+
+.about__title1 {
+	color: var(--LP-Blown, #4A3636);
+	font-family: Courgette;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%; /* 20px */
+	text-align: center;
+}
+
+.about__title2 {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Kiwi Maru";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%; /* 25px */
+	text-align: center;
+}
+
+.about__text1 {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+	text-align: center;
+}
+
+.about__text2 {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+	text-align: center;
+}
+
+.about__text3 {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+	text-align: center;
+}
+
+.about__button {
+	background: var(--LP-White, #FFF);
+	border: 2px solid var(--LP-Blown, #4A3636);
+	border-radius: 40px;
+	box-shadow: 0px 4px 0px 0px #4A3636;
+}
+
+@media screen and (min-width: 768px) {
+
+.hidden-pc {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+.hidden-sp {
+	display: none;
+}
+
+}
+

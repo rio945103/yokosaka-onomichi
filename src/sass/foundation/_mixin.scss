@@ -1,0 +1,26 @@
+// src/sass/foundation/_mixin.scss
+@use "sass:map";
+
+
+$breakpoints: (
+  sp: "screen and (max-width: 767px)",
+  pc: "screen and (min-width: 768px)",
+);
+
+@mixin mq($breakpoint: pc) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.hidden-pc {
+    @include mq(pc) {
+      display: none;
+    }
+}
+
+.hidden-sp {
+    @include mq(sp) {
+      display: none;
+  }
+}

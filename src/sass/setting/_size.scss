@@ -1,0 +1,142 @@
+@use "../foundation/mixin" as *;
+
+.header__logo  {
+    img {
+        width: 210px;
+        height: 27px;
+    }
+}
+
+.mv {
+    // background: url("../img/Onomichi.png") no-repeat center center / cover;
+}
+
+.mv__bg {
+    position: absolute;
+    img {
+        width: 375px;
+        height: 554px;
+    }
+}
+
+
+.mv__text {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+    text-shadow: 0px 0px 30px #FFF;
+    font-family: "Kiwi Maru";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 17.5px */
+}
+
+.mv__title1 {
+    img {
+        width: 335px;
+        height: 53px;
+    }
+}
+
+.mv__title2 {
+    img {
+        width: 240px;
+        height: 40px;
+    }
+}
+
+.mv__share {
+    img {
+        width: 142px;
+        height: 80px;
+    }
+}
+
+.mv__present {
+    img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.mv__smart {
+    img {
+        width: 200px;
+        height: 408px;
+    }
+}
+
+.mv__food {
+    img {
+        width: 86px;
+        height: 141px;
+    }
+}
+
+.mv__cats {
+    img {
+        width: 107px;
+        height: 127px;
+    }
+}
+
+.about__title1 {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+    font-family: Courgette;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 20px */
+}
+
+.about__title2 {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+    font-family: "Kiwi Maru";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 25px */
+}
+
+.about__text1 {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+
+    /* JP/Text 14px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
+}
+
+.about__text2 {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+}
+
+.about__text3 {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+
+    /* JP/Text 14px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
+}
+
+.about__button {
+    border-radius: 40px;
+    border: 2px solid var(--LP-Blown, #4A3636);
+    background: var(--LP-White, #FFF);
+    box-shadow: 0px 4px 0px 0px #4A3636;
+}
