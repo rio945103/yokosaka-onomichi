@@ -50,7 +50,8 @@
 }
 
 .about {
-    margin-top: 32px;
+    margin-top: 43px;
+    z-index: 50;
 }
 
 .about__inner {
@@ -59,6 +60,46 @@
 
 .about__contents {
     padding: 40px 12px;
+    position: relative;
+    z-index: 49;
+}
+
+.about__icon  {
+    text-align: center;
+}
+
+.about__pictures {
+    
+}
+
+.about__picture1 {
+    position: absolute;
+    top: 38px;
+    left: 36px;
+}
+
+.about__picture2 {
+    position: absolute;
+    top: 38px;
+    right: 36px;
+}
+
+.about__picture-left {
+    position: absolute;
+    left: -160px;
+    top: 395px;
+    z-index: 1;
+}
+
+.about__picture-right {
+    position: absolute;
+    right: -160px;
+    top: 273px;
+    z-index: 1;
+}
+
+.about__title1 {
+    margin-top: 6px;
 }
 
 .about__title2 {

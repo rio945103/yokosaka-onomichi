@@ -1,3 +1,10 @@
+.button {
+	background: var(--LP-White, #FFF);
+	border: 2px solid var(--LP-Blown, #4A3636);
+	border-radius: 40px;
+	box-shadow: 0px 4px 0px 0px #4A3636;
+}
+
 *,
 *::before,
 *::after {
@@ -125,7 +132,8 @@ a {
 }
 
 .about {
-	margin-top: 32px;
+	margin-top: 43px;
+	z-index: 50;
 }
 
 .about__inner {
@@ -134,6 +142,42 @@ a {
 
 .about__contents {
 	padding: 40px 12px;
+	position: relative;
+	z-index: 49;
+}
+
+.about__icon {
+	text-align: center;
+}
+
+.about__picture1 {
+	left: 36px;
+	position: absolute;
+	top: 38px;
+}
+
+.about__picture2 {
+	position: absolute;
+	right: 36px;
+	top: 38px;
+}
+
+.about__picture-left {
+	left: -160px;
+	position: absolute;
+	top: 395px;
+	z-index: 1;
+}
+
+.about__picture-right {
+	position: absolute;
+	right: -160px;
+	top: 273px;
+	z-index: 1;
+}
+
+.about__title1 {
+	margin-top: 6px;
 }
 
 .about__title2 {
@@ -279,11 +323,36 @@ header {
 	text-align: center;
 }
 
+.about__icon img {
+	height: 37.333px;
+	width: 37.333px;
+}
+
+.about__picture1 img {
+	height: 60px;
+	width: 80px;
+}
+
+.about__picture2 img {
+	height: 60px;
+	width: 80px;
+}
+
+.about__picture-left img {
+	height: 200px;
+	width: 200px;
+}
+
+.about__picture-right img {
+	height: 200px;
+	width: 200px;
+}
+
 .about__button {
-	background: var(--LP-White, #FFF);
-	border: 2px solid var(--LP-Blown, #4A3636);
-	border-radius: 40px;
-	box-shadow: 0px 4px 0px 0px #4A3636;
+	padding: 6px 24px;
+	text-align: center;
+	white-space: nowrap;
+	width: 192px;
 }
 
 @media screen and (min-width: 768px) {

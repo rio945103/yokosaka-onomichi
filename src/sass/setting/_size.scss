@@ -134,9 +134,48 @@
     line-height: 160%; /* 22.4px */
 }
 
+
+.about__icon {
+    img {
+        width: 37.333px;
+        height: 37.333px;
+    }
+}
+
+
+
+.about__picture1 {
+    img {
+        width: 80px;
+        height: 60px;
+    }
+}
+
+.about__picture2 {
+    img {
+        width: 80px;
+        height: 60px;;
+    }
+}
+
+.about__picture-left {
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.about__picture-right {
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 .about__button {
-    border-radius: 40px;
-    border: 2px solid var(--LP-Blown, #4A3636);
-    background: var(--LP-White, #FFF);
-    box-shadow: 0px 4px 0px 0px #4A3636;
+    text-align: center;
+    padding: 6px 24px ;
+    width: 192px;
+    white-space: nowrap;
+
 }
