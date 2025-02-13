@@ -5,6 +5,70 @@
 	box-shadow: 0px 4px 0px 0px #4A3636;
 }
 
+.title1 {
+	color: var(--LP-Blown, #4A3636);
+	font-family: Courgette;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%; /* 20px */
+	margin-top: 6px;
+	text-align: center;
+}
+
+.title2 {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Kiwi Maru";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%; /* 25px */
+	margin-top: 6px;
+	text-align: center;
+}
+
+.mv__text {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Kiwi Maru";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%; /* 17.5px */
+	text-align: center;
+	text-shadow: 0px 0px 30px #FFF;
+}
+
+.how__step-title {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
+	font-family: "Noto Sans JP";
+	font-feature-settings: "pref" on;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 25.6px */
+	text-align: center;
+}
+
+.how__step-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+	text-align: center;
+}
+
+.how__follow-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+	text-align: center;
+}
+
 *,
 *::before,
 *::after {
@@ -133,7 +197,6 @@ a {
 
 .about {
 	margin-top: 43px;
-	z-index: 50;
 }
 
 .about__inner {
@@ -143,7 +206,6 @@ a {
 .about__contents {
 	padding: 40px 12px;
 	position: relative;
-	z-index: 49;
 }
 
 .about__icon {
@@ -166,22 +228,12 @@ a {
 	left: -160px;
 	position: absolute;
 	top: 395px;
-	z-index: 1;
 }
 
 .about__picture-right {
 	position: absolute;
 	right: -160px;
 	top: 273px;
-	z-index: 1;
-}
-
-.about__title1 {
-	margin-top: 6px;
-}
-
-.about__title2 {
-	margin-top: 6px;
 }
 
 .about__text1 {
@@ -200,6 +252,98 @@ a {
 	margin-top: 24px;
 }
 
+.about__pictures {
+	position: relative;
+}
+
+.about__arrow {
+	text-align: center;
+}
+
+.about__sakamichi {
+	left: -20px;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.about__goods {
+	position: absolute;
+	right: 37px;
+	top: 54px;
+}
+
+.about__ball {
+	position: absolute;
+	right: 1px;
+	top: 12px;
+}
+
+.about__onomichi {
+	margin-top: 140px;
+	text-align: center;
+	z-index: 100;
+}
+
+.how {
+	margin-top: 32px;
+}
+
+.how__inner {
+	padding-inline: 20px;
+}
+
+.how__contents {
+	position: relative;
+}
+
+.how__icon {
+	text-align: center;
+}
+
+.how__picture-map {
+	left: -20px;
+	position: absolute;
+	top: 0;
+}
+
+.how__picture-cats {
+	position: absolute;
+	right: -51px;
+	top: 0;
+}
+
+.how__steps {
+	padding-top: 32px;
+}
+
+.how__step-image {
+	text-align: center;
+}
+
+.how__step-title {
+	margin-top: 16px;
+}
+
+.how__step-text {
+	margin-top: 16px;
+}
+
+.how__follow {
+	background: var(--LP-White, #FFF);
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	margin-top: 16px;
+	padding: 8px 12px;
+	width: 240px;
+}
+
+.how__step-line {
+	margin-top: 16px;
+	text-align: center;
+}
+
 body {
 	background: var(--LP-Light-Blue, #E9F6F8);
 }
@@ -211,6 +355,11 @@ header {
 .about__contents {
 	background: var(--LP-White, #FFF);
 	border-radius: 24px;
+}
+
+.icon img {
+	height: 37.333px;
+	width: 37.333px;
 }
 
 .header__logo img {
@@ -225,17 +374,6 @@ header {
 .mv__bg img {
 	height: 554px;
 	width: 375px;
-}
-
-.mv__text {
-	color: var(--LP-Blown, #4A3636);
-	font-family: "Kiwi Maru";
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 125%; /* 17.5px */
-	text-align: center;
-	text-shadow: 0px 0px 30px #FFF;
 }
 
 .mv__title1 img {
@@ -273,26 +411,6 @@ header {
 	width: 107px;
 }
 
-.about__title1 {
-	color: var(--LP-Blown, #4A3636);
-	font-family: Courgette;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 125%; /* 20px */
-	text-align: center;
-}
-
-.about__title2 {
-	color: var(--LP-Blown, #4A3636);
-	font-family: "Kiwi Maru";
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 125%; /* 25px */
-	text-align: center;
-}
-
 .about__text1 {
 	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
 	font-family: "Noto Sans JP";
@@ -323,11 +441,6 @@ header {
 	text-align: center;
 }
 
-.about__icon img {
-	height: 37.333px;
-	width: 37.333px;
-}
-
 .about__picture1 img {
 	height: 60px;
 	width: 80px;
@@ -353,6 +466,54 @@ header {
 	text-align: center;
 	white-space: nowrap;
 	width: 192px;
+}
+
+.about__arrow img {
+	height: 36px;
+	width: 100px;
+}
+
+.about__sakamichi img {
+	height: 176px;
+}
+
+.about__goods img {
+	height: 65.003px;
+	width: 133px;
+}
+
+.about__ball img {
+	height: 48px;
+	width: 48px;
+}
+
+.about__onomichi img {
+	height: 37.2px;
+	width: 354.642px;
+}
+
+.how__picture-map img {
+	height: 223px;
+	width: 149px;
+}
+
+.how__picture-cats img {
+	height: 194px;
+	width: 160px;
+}
+
+.how__step-image img {
+	height: 210px;
+}
+
+.how__follow-icon img {
+	height: 20px;
+	width: 20px;
+}
+
+.how__step-line img {
+	height: 34px;
+	width: 7px;
 }
 
 @media screen and (min-width: 768px) {

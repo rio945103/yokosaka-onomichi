@@ -1,5 +1,12 @@
 @use "../foundation/mixin" as *;
 
+.icon {
+    img {
+        width: 37.333px;
+        height: 37.333px;
+    }
+}
+
 .header__logo  {
     img {
         width: 210px;
@@ -20,16 +27,7 @@
 }
 
 
-.mv__text {
-    color: var(--LP-Blown, #4A3636);
-    text-align: center;
-    text-shadow: 0px 0px 30px #FFF;
-    font-family: "Kiwi Maru";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 17.5px */
-}
+
 
 .mv__title1 {
     img {
@@ -80,25 +78,7 @@
     }
 }
 
-.about__title1 {
-    color: var(--LP-Blown, #4A3636);
-    text-align: center;
-    font-family: Courgette;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 20px */
-}
 
-.about__title2 {
-    color: var(--LP-Blown, #4A3636);
-    text-align: center;
-    font-family: "Kiwi Maru";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 125%; /* 25px */
-}
 
 .about__text1 {
     color: var(--LP-Blown, #4A3636);
@@ -132,14 +112,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 22.4px */
-}
-
-
-.about__icon {
-    img {
-        width: 37.333px;
-        height: 37.333px;
-    }
 }
 
 
@@ -178,4 +150,72 @@
     width: 192px;
     white-space: nowrap;
 
+}
+
+.about__arrow  {
+    img {
+        width: 100px;
+        height: 36px;
+    }
+}
+
+.about__sakamichi {
+    img {
+        height: 176px;
+    }
+}
+
+.about__goods {
+    img {
+        width: 133px;
+        height: 65.003px;
+    }
+}
+
+.about__ball {
+    img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.about__onomichi {
+    img {
+        width: 354.642px;
+        height: 37.2px;
+    }
+}
+
+.how__picture-map {
+    img {
+        width: 149px;
+        height: 223px;
+    }
+}
+
+.how__picture-cats {
+    img {
+        width: 160px;
+        height: 194px;
+    }
+}
+
+.how__step-image {
+    img {
+        height: 210px;
+    }
+}
+
+.how__follow-icon {
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.how__step-line {
+    img {
+        width: 7px;
+        height: 34px;
+    }
 }

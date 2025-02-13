@@ -51,7 +51,7 @@
 
 .about {
     margin-top: 43px;
-    z-index: 50;
+    
 }
 
 .about__inner {
@@ -61,7 +61,7 @@
 .about__contents {
     padding: 40px 12px;
     position: relative;
-    z-index: 49;
+    
 }
 
 .about__icon  {
@@ -88,22 +88,14 @@
     position: absolute;
     left: -160px;
     top: 395px;
-    z-index: 1;
+    
 }
 
 .about__picture-right {
     position: absolute;
     right: -160px;
     top: 273px;
-    z-index: 1;
-}
-
-.about__title1 {
-    margin-top: 6px;
-}
-
-.about__title2 {
-    margin-top: 6px;
+    
 }
 
 .about__text1 {
@@ -121,3 +113,96 @@
 .about__button {
     margin-top: 24px;
 }
+
+.about__pictures {
+    position: relative;
+}
+
+.about__arrow  {
+   text-align: center;
+}
+
+.about__sakamichi {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    z-index: 1;
+}
+
+.about__goods {
+    position: absolute;
+    top: 54px;
+    right: 37px;
+}
+
+.about__ball {
+    position: absolute;
+    top: 12px;
+    right: 1px;
+}
+
+.about__onomichi {
+    text-align: center;
+    margin-top: 140px;
+    z-index: 100;
+}
+
+.how {
+    margin-top: 32px;
+}
+
+.how__inner {
+    padding-inline: 20px;
+}
+
+.how__contents {
+    position: relative;
+}
+
+.how__icon {
+    text-align: center;
+}
+
+.how__picture-map {
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+
+.how__picture-cats {
+    position: absolute;
+    top: 0;
+    right: -51px;
+}
+
+.how__steps {
+    padding-top: 32px;
+}
+
+.how__step-image {
+    text-align: center;
+}
+
+.how__step-title {
+    margin-top: 16px;
+}
+
+.how__step-text {
+    margin-top: 16px;
+}
+
+.how__follow {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 8px 12px;
+    background: var(--LP-White, #FFF);
+    width: 240px;
+}
+
+.how__step-line {
+    text-align: center;
+    margin-top: 16px;
+}
+
