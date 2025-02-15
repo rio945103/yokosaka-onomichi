@@ -344,6 +344,10 @@ a {
 	text-align: center;
 }
 
+.how__button {
+	margin-top: 16px;
+}
+
 body {
 	background: var(--LP-Light-Blue, #E9F6F8);
 }
@@ -514,6 +518,12 @@ header {
 .how__step-line img {
 	height: 34px;
 	width: 7px;
+}
+
+.how__button {
+	padding: 6px 24px;
+	white-space: nowrap;
+	width: 100%;
 }
 
 @media screen and (min-width: 768px) {
