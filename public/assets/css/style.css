@@ -249,6 +249,7 @@ a {
 }
 
 .about__button {
+	margin: auto;
 	margin-top: 24px;
 }
 
