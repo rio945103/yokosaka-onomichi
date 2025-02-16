@@ -334,6 +334,7 @@ a {
 	display: flex;
 	gap: 8px;
 	justify-content: center;
+	margin: auto;
 	margin-top: 16px;
 	padding: 8px 12px;
 	width: 240px;
@@ -348,6 +349,45 @@ a {
 	margin-top: 16px;
 }
 
+.prizes {
+	margin-top: 32px;
+}
+
+.prizes__inner {
+	padding-inline: 20px;
+}
+
+.prizes__icon {
+	text-align: center;
+}
+
+.prizes__text {
+	margin-top: 16px;
+}
+
+.prizes__cards {
+	display: grid;
+	gap: 15px; /* カード間の余白 */
+	grid-template-columns: repeat(2, 1fr); /* 2列（50%ずつ） */
+	margin-top: 24px;
+}
+
+.prizes__card {
+	margin-top: 24px;
+	position: relative;
+}
+
+.prizes__card:nth-child(5) {
+	grid-column: span 2; /* ✅ 1行にして中央配置 */ /* 5番目のカード */
+	justify-self: center; /* ✅ 左右中央揃え */
+}
+
+.prize__card-number {
+	left: 56px;
+	position: absolute;
+	top: -24px;
+}
+
 body {
 	background: var(--LP-Light-Blue, #E9F6F8);
 }
@@ -359,6 +399,21 @@ header {
 .about__contents {
 	background: var(--LP-White, #FFF);
 	border-radius: 24px;
+}
+
+.prizes__contents::before {
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="238" height="83" viewBox="0 0 238 83" fill="none"><path d="M0 83C11.6916 83 21.3926 74.4179 25.658 63.532C40.2316 26.3384 76.44 0 118.8 0C161.16 0 197.369 26.3384 211.942 63.5321C216.208 74.4179 225.909 83 237.6 83C118.8 83 118.8 83 0 83Z" fill="white"/></svg>');
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 83px; /* SVG の高さ */
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%);
+	width: 238px; /* SVG の幅 */
+	z-index: -1; /* 背景として配置 */
+	fill: var(--LP-White, #FFF);
 }
 
 .icon img {
@@ -524,6 +579,37 @@ header {
 	padding: 6px 24px;
 	white-space: nowrap;
 	width: 100%;
+}
+
+.prizes__text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+	text-align: center;
+}
+
+.prizes__card-image img {
+	height: 140px;
+	width: 160px;
+}
+
+.prize__card-number img {
+	height: 48px;
+	width: 48px;
+}
+
+.prizes__card-text {
+	align-items: center;
+	background: var(--LP-Gray, #F5F5F5);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 56px;
+	justify-content: center;
+	width: 160px;
 }
 
 @media screen and (min-width: 768px) {

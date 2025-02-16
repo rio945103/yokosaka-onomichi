@@ -225,3 +225,40 @@
     padding: 6px 24px;
     white-space: nowrap;
 }
+
+.prizes__text {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+
+    /* JP/Text 12px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+}
+
+.prizes__card-image {
+    img {
+        width: 160px;
+        height: 140px;
+    }
+}
+
+.prize__card-number {
+    img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.prizes__card-text {
+    border-radius: 8px;
+    background: var(--LP-Gray, #F5F5F5);
+    width: 160px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

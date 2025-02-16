@@ -179,6 +179,7 @@
     padding-top: 32px;
 }
 
+
 .how__step-image {
     text-align: center;
 }
@@ -192,6 +193,7 @@
 }
 
 .how__follow {
+    margin: auto;
     margin-top: 16px;
     display: flex;
     gap: 8px;
@@ -209,3 +211,48 @@
 .how__button {
     margin-top: 16px;
 }
+
+.prizes {
+    margin-top: 32px;
+}
+
+.prizes__inner  {
+    padding-inline: 20px;
+}
+
+.prize__contents {
+
+}
+
+.prizes__icon {
+    text-align: center;
+}
+
+.prizes__text {
+    margin-top: 16px;
+}
+
+.prizes__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列（50%ずつ） */
+    gap: 15px; /* カード間の余白 */
+    margin-top: 24px;
+}
+
+.prizes__card {
+    position: relative;
+    margin-top: 24px;
+    &:nth-child(5) { /* 5番目のカード */
+        grid-column: span 2; /* ✅ 1行にして中央配置 */
+        justify-self: center; /* ✅ 左右中央揃え */
+    }
+}
+
+.prize__card-number  {
+    position: absolute;
+    left: 56px;
+    top: -24px;
+}
+
+
+
