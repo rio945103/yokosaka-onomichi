@@ -69,6 +69,16 @@
 	text-align: center;
 }
 
+.prizes__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
+	font-family: "Noto Sans JP";
+	font-feature-settings: "pref" on;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 25.6px */
+}
+
 *,
 *::before,
 *::after {
@@ -389,6 +399,14 @@ a {
 	top: -24px;
 }
 
+.prizes__button {
+	margin: auto;
+	margin-top: 24px;
+	padding: 6px 24px;
+	text-align: center;
+	white-space: nowrap;
+}
+
 body {
 	background: var(--LP-Light-Blue, #E9F6F8);
 }
@@ -402,19 +420,9 @@ header {
 	border-radius: 24px;
 }
 
-.prizes__contents::before {
-	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="238" height="83" viewBox="0 0 238 83" fill="none"><path d="M0 83C11.6916 83 21.3926 74.4179 25.658 63.532C40.2316 26.3384 76.44 0 118.8 0C161.16 0 197.369 26.3384 211.942 63.5321C216.208 74.4179 225.909 83 237.6 83C118.8 83 118.8 83 0 83Z" fill="white"/></svg>');
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: "";
-	height: 83px; /* SVG の高さ */
-	left: 50%;
-	position: absolute;
-	top: 0;
-	transform: translateX(-50%);
-	width: 238px; /* SVG の幅 */
-	z-index: -1; /* 背景として配置 */
-	fill: var(--LP-White, #FFF);
+.prizes__inner {
+	background: var(--LP-White, #FFF);
+	border-radius: 24px;
 }
 
 .icon img {
@@ -611,6 +619,33 @@ header {
 	height: 56px;
 	justify-content: center;
 	width: 160px;
+}
+
+.bg_pic {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.bg_pic img {
+	height: 260px;
+	width: 580px;
+}
+
+.wave {
+	position: relative;
+}
+
+.wave_pic {
+	left: -4px;
+	overflow: hidden;
+	position: absolute;
+	top: -45px;
+}
+
+.wave_pic img {
+	width: 384px;
 }
 
 @media screen and (min-width: 768px) {
