@@ -79,6 +79,27 @@
 	line-height: 160%; /* 25.6px */
 }
 
+.spots__title {
+	color: var(--LP-White, #FFF);
+	font-family: "Kiwi Maru";
+	font-feature-settings: "pwid" on;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%; /* 35px */
+	text-align: center;
+}
+
+.spots__text {
+	color: var(--LP-White, #FFF);
+	font-family: "Noto Sans JP";
+	font-size: 11.444px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 18.311px */
+	text-align: center;
+}
+
 *,
 *::before,
 *::after {
@@ -365,6 +386,7 @@ a {
 }
 
 .prizes__inner {
+	padding-bottom: 36px;
 	padding-inline: 20px;
 }
 
@@ -407,6 +429,73 @@ a {
 	white-space: nowrap;
 }
 
+.spots__inner {
+	padding-bottom: 20px;
+	padding-inline: 20px;
+}
+
+.spots__head {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+}
+
+.spots__text {
+	margin-top: 16px;
+}
+
+.spots__button {
+	margin: auto;
+	margin-top: 16px;
+	padding: 6px 24px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.under__wave img {
+	height: 45px;
+	width: 375px;
+}
+
+.question {
+	margin-top: 40px;
+}
+
+.question__inner {
+	padding-inline: 20px;
+}
+
+.question__icon {
+	text-align: center;
+}
+
+.question__items {
+	margin-top: 12px;
+}
+
+.question__item {
+	background: var(--LP-White, #FFF);
+	border: 2px solid var(--LP-Blown, #4A3636);
+	border-radius: 12px;
+	margin-top: 12px;
+}
+
+.question__item-q {
+	display: flex;
+	gap: 12px;
+	padding: 12px 16px;
+}
+
+.question__item-q-icon img {
+	width: 22px;
+}
+
+.question__item-a {
+	display: flex;
+	gap: 12px;
+	padding: 16px 16px;
+}
+
 body {
 	background: var(--LP-Light-Blue, #E9F6F8);
 }
@@ -423,6 +512,14 @@ header {
 .prizes__inner {
 	background: var(--LP-White, #FFF);
 	border-radius: 24px;
+}
+
+.spots {
+	background: var(--LP-Dark-Blue, #67B0C7);
+}
+
+.question__item-a {
+	background: var(--LP-Gray, #F5F5F5);
 }
 
 .icon img {
@@ -646,6 +743,33 @@ header {
 
 .wave_pic img {
 	width: 384px;
+}
+
+.spots__icon img {
+	height: 28px;
+	width: 28px;
+}
+
+.spots__sub-title {
+	text-align: center;
+}
+
+.spots__sub-title img {
+	height: 55px;
+	width: 255px;
+}
+
+.question__item-q-icon img {
+	width: 22px;
+}
+
+.question__item-a-icon img {
+	width: 22px;
+}
+
+.question__item-button img {
+	height: 26.182px;
+	width: 26.182px;
 }
 
 @media screen and (min-width: 768px) {

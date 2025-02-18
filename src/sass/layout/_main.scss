@@ -219,6 +219,7 @@
 
 .prizes__inner  {
     padding-inline: 20px;
+    padding-bottom: 36px;
 }
 
 .prize__contents {
@@ -263,5 +264,74 @@
     white-space: nowrap;
 }
 
+.spots__inner {
+    padding-inline: 20px;
+    padding-bottom: 20px;
+}
 
+.spots__head {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.spots__text {
+    margin-top: 16px;
+}
+
+.spots__button {
+    margin-top: 16px;
+    margin: auto;
+    text-align: center;
+    padding: 6px 24px;
+    white-space: nowrap;
+}
+
+.under__wave {
+    img {
+        width: 375px;
+        height: 45px;
+    }
+}
+
+.question {
+    margin-top: 40px;
+}
+
+.question__inner {
+    padding-inline: 20px;
+}
+
+.question__icon {
+    text-align: center;
+}
+
+.question__items {
+    margin-top: 12px;
+}
+
+.question__item {
+    margin-top: 12px;
+    border-radius: 12px;
+    border: 2px solid var(--LP-Blown, #4A3636);
+    background: var(--LP-White, #FFF);
+}
+
+.question__item-q {
+    display: flex;
+    padding: 12px 16px;
+    gap: 12px;
+}
+
+.question__item-q-icon {
+    img {
+        width: 22px;
+    }
+}
+
+.question__item-a {
+    display: flex;
+    padding: 16px 16px;
+    gap: 12px;
+}
 
