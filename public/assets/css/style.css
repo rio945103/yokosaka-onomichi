@@ -100,6 +100,44 @@
 	text-align: center;
 }
 
+.entry__content-title {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+}
+
+.entry__content-title::before {
+	background-color: #9ED0E0; /* 背景色指定 */
+	border-radius: 50%; /* 要素を丸くする */
+	content: ""; /* 空の要素作成 */
+	display: inline-block; /* インラインブロックにする */
+	height: 10px; /* 高さ指定 */
+	width: 10px; /* 幅指定 */
+}
+
+.entry__content-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+}
+
+.text__dots::before {
+	background-color: #000; /* 背景色指定 */
+	border-radius: 50%; /* 要素を丸くする */
+	content: ""; /* 空の要素作成 */
+	display: inline-block; /* インラインブロックにする */
+	height: 4px; /* 高さ指定 */
+	position: relative;
+	top: -3px;
+	width: 4px; /* 幅指定 */
+}
+
 *,
 *::before,
 *::after {
@@ -228,6 +266,23 @@ a {
 
 .about {
 	margin-top: 43px;
+	overflow: hidden;
+}
+
+.about__bd-picture {
+	position: relative;
+}
+
+.about__picture-left {
+	left: -160px;
+	position: absolute;
+	top: 395px;
+}
+
+.about__picture-right {
+	position: absolute;
+	right: -160px;
+	top: 273px;
 }
 
 .about__inner {
@@ -253,18 +308,6 @@ a {
 	position: absolute;
 	right: 36px;
 	top: 38px;
-}
-
-.about__picture-left {
-	left: -160px;
-	position: absolute;
-	top: 395px;
-}
-
-.about__picture-right {
-	position: absolute;
-	right: -160px;
-	top: 273px;
 }
 
 .about__text1 {
@@ -462,6 +505,7 @@ a {
 }
 
 .question__inner {
+	margin-bottom: 32px;
 	padding-inline: 20px;
 }
 
@@ -494,6 +538,32 @@ a {
 	display: flex;
 	gap: 12px;
 	padding: 16px 16px;
+}
+
+.entry {
+	padding-inline: 20px;
+}
+
+.entry__inner {
+	background: rgba(255, 255, 255, 0.5);
+	border: 8px solid var(--LP-White, #FFF);
+	padding-inline: 20px;
+}
+
+.entry__icon {
+	text-align: center;
+}
+
+.big__entry {
+	margin-top: 32px;
+}
+
+.contact__icon {
+	text-align: center;
+}
+
+.contact__inner {
+	padding-inline: 20px;
 }
 
 body {
@@ -770,6 +840,11 @@ header {
 .question__item-button img {
 	height: 26.182px;
 	width: 26.182px;
+}
+
+.big__entry img {
+	height: 99px;
+	width: 375px;
 }
 
 @media screen and (min-width: 768px) {
