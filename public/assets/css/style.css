@@ -115,6 +115,7 @@
 	content: ""; /* 空の要素作成 */
 	display: inline-block; /* インラインブロックにする */
 	height: 10px; /* 高さ指定 */
+	margin-right: 8px;
 	width: 10px; /* 幅指定 */
 }
 
@@ -127,12 +128,17 @@
 	line-height: 160%; /* 19.2px */
 }
 
+.entry__content-text ul {
+	list-style-type: disc !important;
+}
+
 .text__dots::before {
 	background-color: #000; /* 背景色指定 */
 	border-radius: 50%; /* 要素を丸くする */
 	content: ""; /* 空の要素作成 */
 	display: inline-block; /* インラインブロックにする */
 	height: 4px; /* 高さ指定 */
+	margin-right: 4px;
 	position: relative;
 	top: -3px;
 	width: 4px; /* 幅指定 */

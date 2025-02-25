@@ -119,12 +119,9 @@
         display:  inline-block;     /* インラインブロックにする */
         background-color: #9ED0E0;  /* 背景色指定 */
         border-radius:  50%;        /* 要素を丸くする */
+        margin-right: 8px;
     }
 }
-
-
-
-
 
 .entry__content-text {
     color: var(--LP-Blown, #4A3636);
@@ -135,7 +132,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 19.2px */
+}
 
+.entry__content-text ul {
+    list-style-type: disc !important;
 }
 
 .text__dots {
@@ -148,5 +148,6 @@
         border-radius:  50%;        /* 要素を丸くする */
         position: relative;
         top: -3px;
+        margin-right: 4px;
     }
 }

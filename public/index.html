@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="robots" content="noindex"/>
     <title>onomichi</title>
-    <link rel="stylesheet" href="./assets/css/style.css"/>
     <link rel="stylesheet" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
   </head>
   <body>
     <header> 
@@ -224,16 +224,17 @@
           <div class="entry__content-title">対象のお客様</div>
           <div class="entry__content-text">日本国内在住で、公式アカウント（@onomichi_retro）をフォローのうえ、ハッシュタグをつけて応募された方</div>
           <div class="entry__content-title">注意事項</div>
-          <div class="entry__content-text text__dots">​​当選のご連絡はInstagramダイレクトメールで 行いますので、公式アカウント（@jtb_nihonnoshun）を必ずフォローしてください。<br/>
-            <div class="text__dots">Instagramの投稿を「非公開」設定にされている場合は、本キャンペーンの応募対象外になりますのでご注意ください。</div><br/>
-            <div class="text__dots">ご本人が撮影した写真が対象です。 他人の著作権を侵害する写真、公序良俗に反する写真、他人のプライバシーを侵害する写真によるご応募は無効です。</div><br/>
-            <div class="text__dots">指定のハッシュタグをつけて画像を投稿した時点で肖像権や著作権、その他一切の関連する権利（以下、「肖像権等」といいます）に対する了承がとれているものと見なします。 投稿写真内で確認できる対象物によって肖像権等の第三者の権利侵害があった場合、当社は一切責任を負いません。</div><br/>
-            <div class="text__dots">投稿された写真は＠onomichi_retroにリポスト投稿する場合もあります。</div><br/>
-            <div class="text__dots">発表は当選者の方への連絡をもって代えさせていただきます。</div><br/>
-            <div class="text__dots">ご応募は日本国内在住の方に限ります。</div><br/>
-            <div class="text__dots">ご送信いただいた個人情報は当社が当選者への賞品の発送、本キャンペーンに関する諸連絡に利用するほか、商品やサービスの参考とするために個人を特定しない統計情報の形で利用させていただきます。</div><br/>
+          <ul class="entry__content-text">
+            <div class="text__dots">当選のご連絡はInstagramダイレクトメールで 行いますので、公式アカウント（@jtb_nihonnoshun）を必ずフォローしてください。</div>
+            <div class="text__dots">Instagramの投稿を「非公開」設定にされている場合は、本キャンペーンの応募対象外になりますのでご注意ください。</div>
+            <div class="text__dots">ご本人が撮影した写真が対象です。 他人の著作権を侵害する写真、公序良俗に反する写真、他人のプライバシーを侵害する写真によるご応募は無効です。</div>
+            <div class="text__dots">指定のハッシュタグをつけて画像を投稿した時点で肖像権や著作権、その他一切の関連する権利（以下、「肖像権等」といいます）に対する了承がとれているものと見なします。 投稿写真内で確認できる対象物によって肖像権等の第三者の権利侵害があった場合、当社は一切責任を負いません。</div>
+            <div class="text__dots">投稿された写真は＠onomichi_retroにリポスト投稿する場合もあります。</div>
+            <div class="text__dots">発表は当選者の方への連絡をもって代えさせていただきます。</div>
+            <div class="text__dots">ご応募は日本国内在住の方に限ります。</div>
+            <div class="text__dots"> ご送信いただいた個人情報は当社が当選者への賞品の発送、本キャンペーンに関する諸連絡に利用するほか、商品やサービスの参考とするために個人を特定しない統計情報の形で利用させていただきます。</div>
             <div class="text__dots">応募者または当選者の個人情報は当社が管理します。応募者または当選者の個人情報を応募者または当選者の同意なしに業務委託先以外の第三者に開示・提供することはありません。（法令等により開示を求められた場合を除く）なお、ご送信いただいた個人情報は当社の個人情報保護方針に基づき安全かつ適切に管理いたします。詳しくは当社ホームページにて、プライバシーポリシーをご確認ください。</div>
-          </div>
+          </ul>
         </div>
       </div>
     </div>
@@ -246,7 +247,46 @@
           <div class="contact__title2 title2">お問い合わせ</div>
           <div class="contact__text">本キャンペーンに関するお問い合わせは、<br/>以下のフォームからお願いします。</div>
           <div class="contact__items"> 
-            <label class="form-field__label" for="your-name">お名前</label>
+            <form class="contact__form">
+              <div class="contact__fields">
+                <div class="contact__field">
+                  <div class="form-field"></div>
+                  <div class="form-field__head">
+                    <label class="form-field__label" for="your-name">お名前</label><span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input class="form-text" type="text" name="your-name" id="your-name" placeholder="田中 おは次郎"/>
+                  </div>
+                </div>
+                <div class="contact__field">
+                  <div class="form-field"></div>
+                  <div class="form-field__head">
+                    <label class="form-field__label" for="your-email">メールアドレス</label><span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input class="form-text" type="email" name="your-email" id="your-email" placeholder="info@oha.com"/>
+                  </div>
+                </div>
+                <div class="contact__field">
+                  <div class="form-field"></div>
+                  <div class="form-field__head">
+                    <div class="form-field__label">お問い合わせ項目</div><span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <div class="form-field__radios"></div>
+                    <label class="form-field__radio form-radio">
+                      <input class="form-radio__input" type="radio" name="your-inquiry"/><span class="form-radio__text">アプリの質問</span>
+                    </label>
+                    <label class="form-field__radio form-radio">
+                      <input class="form-radio__input" type="radio" name="your-inquiry"/><span class="form-radio__text">取材の依頼</span>
+                    </label>
+                    <label class="form-field__radio form-radio">
+                      <input class="form-radio__input" type="radio" name="your-inquiry"/><span class="form-radio__text">その他</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
