@@ -336,31 +336,63 @@ html(lang="ja")
                             .contact__fields
                                 .contact__field
                                     .form-field
-                                    .form-field__head
-                                        label.form-field__label(for="your-name") お名前
-                                        span.form-field__tag 必須
+                                        .form-field__head
+                                            label.form-field__label(for="your-name") お名前
+                                            span.form-field__tag 必須
                                     .form-field__item
-                                        input.form-text(type="text" name="your-name" id="your-name" placeholder="田中 おは次郎")
+                                        input.form-text(type="text" name="your-name" id="your-name" placeholder="山田太郎")
                                 .contact__field
                                     .form-field
-                                    .form-field__head
-                                        label.form-field__label(for="your-email") メールアドレス
-                                        span.form-field__tag 必須
+                                        .form-field__head
+                                            label.form-field__label(for="your-email") メールアドレス
+                                            span.form-field__tag 必須
                                     .form-field__item
-                                        input.form-text(type="email" name="your-email" id="your-email" placeholder="info@oha.com")
+                                        input.form-text(type="email" name="your-email" id="your-email" placeholder="info@example.com")
                                 .contact__field
                                     .form-field
-                                    .form-field__head
-                                        .form-field__label お問い合わせ項目
-                                        span.form-field__tag 必須
+                                        .form-field__head
+                                            label.form-field__label(for="your-age") お問い合わせ内容
+                                            span.form-field__tag.is-option 必須
                                     .form-field__item
-                                        .form-field__radios
-                                        label.form-field__radio.form-radio
-                                            input.form-radio__input(type="radio" name="your-inquiry")
-                                            span.form-radio__text アプリの質問
-                                        label.form-field__radio.form-radio
-                                            input.form-radio__input(type="radio" name="your-inquiry")
-                                            span.form-radio__text 取材の依頼
-                                        label.form-field__radio.form-radio
-                                            input.form-radio__input(type="radio" name="your-inquiry")
-                                            span.form-radio__text その他
+                                        select.form-select(name="your-age" id="your-age")
+                                            option(value="") 選択してください
+                                            option(value="") 10代
+                                            option(value="") 20代
+                                            option(value="") 30代
+                                            option(value="") 40代
+                                            option(value="") 50代
+                                            option(value="") 60代
+                                            option(value="") 70代
+                                            option(value="") 80代
+                                .contact__field
+                                    .form-field
+                                        .form-field__item
+                                            .form-field__radios
+                                                label.form-field__radio.form-radio
+                                                    input.form-radio__input(type="radio" name="your-inquiry")
+                                                    span.form-radio__text 希望する
+                                                label.form-field__radio.form-radio
+                                                    input.form-radio__input(type="radio" name="your-inquiry")
+                                                    span.form-radio__text 希望しない
+                                .contact__field
+                                    .form-field
+                                        .form-field__head
+                                            label.form-field__label(for="your-message") メッセージ
+                                            span.form-field__tag 必須
+                                    .form-field__item
+                                        textarea.form-textarea(
+                                            name="your-message" 
+                                            id="your-message" 
+                                            cols="30" 
+                                            rows="10" 
+                                            placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"
+                                        )
+                                .contact__privacy
+                                    label.form-checkbox
+                                        input.form-checkbox__input(type="checkbox" name="your-privacy")
+                                        span.form-checkbox__text
+                                            a(href="" target="_blank") プライバシーポリシー
+                                            | に同意する
+                                .contact__button.button 上記の内容を送信する
+
+

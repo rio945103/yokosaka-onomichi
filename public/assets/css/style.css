@@ -18,13 +18,27 @@
 
 .title2 {
 	color: var(--LP-Blown, #4A3636);
+	display: inline-block; /* ✅ テキスト幅に合わせる */
 	font-family: "Kiwi Maru";
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 125%; /* 25px */
 	margin-top: 6px;
+	position: relative; /* ✅ 疑似要素の基準にする */
 	text-align: center;
+}
+
+.title2::after {
+	background-color: var(--LP-Yellow, #FFEE56);
+	bottom: -6px; /* ✅ テキストと下線の間隔 */
+	content: "";
+	display: block;
+	height: 6px;
+	left: 50%; /* ✅ 親要素の中央に配置 */
+	position: absolute;
+	transform: translateX(-50%); /* ✅ 自身の幅の半分だけ左にずらす */
+	width: 100%; /* ✅ テキストの幅と同じ */
 }
 
 .mv__text {
@@ -564,12 +578,43 @@ a {
 	margin-top: 32px;
 }
 
+.contact {
+	margin-top: 40px;
+}
+
 .contact__icon {
 	text-align: center;
 }
 
 .contact__inner {
 	padding-inline: 20px;
+}
+
+.contact__text {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.contact__field {
+	margin-top: 24px;
+}
+
+.form-field__head {
+	display: flex;
+	gap: 12px;
+}
+
+.form-field__item {
+	margin-top: 8px;
+}
+
+.contact__privacy {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.contact__button {
+	margin-top: 24px;
 }
 
 body {
@@ -596,6 +641,18 @@ header {
 
 .question__item-a {
 	background: var(--LP-Gray, #F5F5F5);
+}
+
+.contact {
+	background: var(--LP-White, #FFF);
+}
+
+.form-text,
+.form-select,
+.form-textarea {
+	background: var(--LP-Gray, #F5F5F5);
+	border: none;
+	border-radius: 8px;
 }
 
 .icon img {
@@ -851,6 +908,21 @@ header {
 .big__entry img {
 	height: 99px;
 	width: 375px;
+}
+
+.form-text {
+	padding: 16px;
+	width: 100%;
+}
+
+.form-select {
+	padding: 16px;
+	width: 100%;
+}
+
+.form-textarea {
+	padding: 16px;
+	width: 100%;
 }
 
 @media screen and (min-width: 768px) {

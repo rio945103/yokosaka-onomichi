@@ -18,8 +18,21 @@
     font-style: normal;
     font-weight: 500;
     line-height: 125%; /* 25px */
-    
     margin-top: 6px;
+    display: inline-block; /* ✅ テキスト幅に合わせる */
+    position: relative; /* ✅ 疑似要素の基準にする */
+}
+
+.title2::after {
+    content: "";
+    display: block;
+    width: 100%; /* ✅ テキストの幅と同じ */
+    height: 6px;
+    background-color: var(--LP-Yellow, #FFEE56);
+    position: absolute;
+    bottom: -6px; /* ✅ テキストと下線の間隔 */
+    left: 50%; /* ✅ 親要素の中央に配置 */
+    transform: translateX(-50%); /* ✅ 自身の幅の半分だけ左にずらす */
 }
 
 .mv__text {

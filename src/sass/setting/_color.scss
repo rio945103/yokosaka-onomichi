@@ -29,3 +29,13 @@ header {
 .question__item-a {
     background: var(--LP-Gray, #F5F5F5);
 }
+
+.contact {
+    background: var(--LP-White, #FFF);
+}
+
+.form-text,.form-select,.form-textarea {
+    border: none;
+    border-radius: 8px;
+    background: var(--LP-Gray, #F5F5F5);
+}

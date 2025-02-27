@@ -358,10 +358,41 @@
     margin-top: 32px;
 }
 
+.contact {
+    margin-top: 40px;
+}
+
 .contact__icon {
     text-align: center;
 }
 
 .contact__inner {
     padding-inline: 20px;
+}
+
+.contact__text {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.contact__field {
+    margin-top: 24px;
+}
+
+.form-field__head {
+    display: flex;
+    gap: 12px;
+}
+
+.form-field__item {
+    margin-top: 8px;
+}
+
+.contact__privacy {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.contact__button {
+    margin-top: 24px;
 }
