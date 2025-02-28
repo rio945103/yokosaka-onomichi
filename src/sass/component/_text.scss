@@ -1,3 +1,4 @@
+@use "../foundation/mixin" as *;
 .title1 {
     color: var(--LP-Blown, #4A3636);
     text-align: center;
@@ -6,8 +7,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 125%; /* 20px */
-
     margin-top: 6px;
+    @include mq(pc){
+        font-size: 20px;
+        margin-top: 8px;
+    }
 }
 
 .title2 {
@@ -18,21 +22,19 @@
     font-style: normal;
     font-weight: 500;
     line-height: 125%; /* 25px */
-    margin-top: 6px;
     display: inline-block; /* ✅ テキスト幅に合わせる */
-    position: relative; /* ✅ 疑似要素の基準にする */
+    border-bottom: 6px solid var(--LP-Yellow, #FFEE56);
+    padding-bottom: 6px;
+    margin-top: 6px;
+
+    @include mq(pc){
+        font-size: 32px;
+        margin-top: 8px;
+    }
 }
 
-.title2::after {
-    content: "";
-    display: block;
-    width: 100%; /* ✅ テキストの幅と同じ */
-    height: 6px;
-    background-color: var(--LP-Yellow, #FFEE56);
-    position: absolute;
-    bottom: -6px; /* ✅ テキストと下線の間隔 */
-    left: 50%; /* ✅ 親要素の中央に配置 */
-    transform: translateX(-50%); /* ✅ 自身の幅の半分だけ左にずらす */
+.tac {
+    text-align: center;
 }
 
 .mv__text {
@@ -44,6 +46,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 125%; /* 17.5px */
+    @include mq(pc){
+        font-size: 24px;
+    }
 }
 
 .how__step-title {
@@ -163,4 +168,78 @@
         top: -3px;
         margin-right: 4px;
     }
+}
+
+.form-field__label {
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 14px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
+}
+
+.form-field__tag {
+    /* JP/Text 12px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 19.2px */
+}
+
+.follow__title {
+    color: var(--LP-Blown, #4A3636);
+
+    /* En/Josefin Sans-20px */
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+}
+
+.follow__access-title {
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 12px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 19.2px */
+    white-space: nowrap;
+
+    &::before {
+        content:  "";     /* 空の要素作成 */
+        width:  10px;               /* 幅指定 */
+        height:  10px;              /* 高さ指定 */
+        display:  inline-block;     /* インラインブロックにする */
+        background-color: #9ED0E0;  /* 背景色指定 */
+        border-radius:  50%;        /* 要素を丸くする */
+        margin-right: 8px;
+    }
+}
+
+.follow__access-text {
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 12px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+    white-space: nowrap;
+}
+
+.footer__copyright {
+    color: var(--LP-White, #FFF);
+    font-family: "Noto Sans JP";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 16px */
 }

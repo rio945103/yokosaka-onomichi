@@ -3,23 +3,27 @@
 .mv__inner {
     padding-inline: 20px;
     padding-top: 17px;
+    @include mq(pc){
+        padding-top: 35px;
+    }
 }
 
 .mv__contents {
     position: relative;
 }
 
-.mv__text {
-   
-}
-
 .mv__title1 {
+    text-align: center;
     margin-top: 20px;
+    @include mq(pc){
+        margin-top: 24px;
+    }
 }
 
 .mv__title2 {
     margin-top: 12px;
     text-align: center;
+    margin-top: 16px;
 }
 
 .mv__content {
@@ -27,31 +31,57 @@
     justify-content: space-between;
     margin-top: 10px;
     gap: 58px;
+    @include mq(pc){
+        position: relative;
+    }
 }
 
 .mv__share  {
     margin-top: 7px;
+    @include mq(pc){
+        position: absolute;
+        top: 0;
+        left: 339px;
+    }
+}
+
+.mv__present {
+    @include mq(pc){
+        position: absolute;
+        top: 0;
+        right: 409px;
+    }
 }
 
 .mv__smart {
     text-align: center;
     top: -7px;
+    @include mq(pc){
+        margin-top: 33px;
+    }
 }
 
 .mv__food {
     position: absolute;
     top: 569px;
+    @include mq(pc){
+        top: 469px;
+        left: 332px;
+    }
 }
 
 .mv__cats {
     position: absolute;
-    top: 583px;
-    right: 0;
+    top: 551px;
+    right: 300px;
 }
 
 .about {
     margin-top: 43px;
     overflow: hidden;
+    @include mq(pc){
+        margin-top: 80px;
+    }
 }
 
 .about__bd-picture {
@@ -63,14 +93,20 @@
     position: absolute;
     left: -160px;
     top: 395px;
-    
+    @include mq(pc){
+        top: 74px;
+        left: -338px;
+    }
 }
 
 .about__picture-right {
     position: absolute;
     right: -160px;
     top: 273px;
-    
+    @include mq(pc){
+        top: 73px;
+        right: -284px;
+    }
 }
 .about__inner {
     padding-inline: 20px;
@@ -79,6 +115,11 @@
 .about__contents {
     padding: 40px 12px;
     position: relative;
+    @include mq(pc){
+        padding: 40px 114px;
+        max-width: 848px;
+        margin: auto; // ✅ ブロック要素を中央寄せ
+    }
 }
 
 .about__icon  {
@@ -132,18 +173,30 @@
     top: 0;
     left: -20px;
     z-index: 1;
+    @include mq(pc){
+        left: -130px;
+        top: -450px;
+    }
 }
 
 .about__goods {
     position: absolute;
     top: 54px;
     right: 37px;
+    @include mq(pc){
+        top: -71px;
+        right: 0;
+    }
 }
 
 .about__ball {
     position: absolute;
     top: 12px;
     right: 1px;
+    @include mq(pc){
+        top: -158px;
+        right: 130px;
+    }
 }
 
 .about__onomichi {
@@ -359,7 +412,7 @@
 }
 
 .contact {
-    margin-top: 40px;
+    
 }
 
 .contact__icon {
@@ -368,6 +421,8 @@
 
 .contact__inner {
     padding-inline: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .contact__text {
@@ -395,4 +450,53 @@
 
 .contact__button {
     margin-top: 24px;
+}
+
+.contact__button {
+    margin-top: 24px;
+    margin: auto;
+}
+
+.follow__inner {
+    padding-inline: 20px;
+    padding-top: 40px;
+}
+
+.follow__title {
+    text-align: center;
+}
+
+.follow__sns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 24px;
+}
+
+.follow__onomichi {
+    margin-top: 14px;
+}
+
+.follow__logo {
+    text-align: center;
+}
+
+.follow__accesses {
+    padding: 24px;
+}
+
+.follow__access {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.page__top {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.footer__copyright {
+    padding-bottom: 24px;
 }

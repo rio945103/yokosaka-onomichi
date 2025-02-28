@@ -17,6 +17,7 @@
 }
 
 .title2 {
+	border-bottom: 6px solid var(--LP-Yellow, #FFEE56);
 	color: var(--LP-Blown, #4A3636);
 	display: inline-block; /* ✅ テキスト幅に合わせる */
 	font-family: "Kiwi Maru";
@@ -25,20 +26,12 @@
 	font-weight: 500;
 	line-height: 125%; /* 25px */
 	margin-top: 6px;
-	position: relative; /* ✅ 疑似要素の基準にする */
+	padding-bottom: 6px;
 	text-align: center;
 }
 
-.title2::after {
-	background-color: var(--LP-Yellow, #FFEE56);
-	bottom: -6px; /* ✅ テキストと下線の間隔 */
-	content: "";
-	display: block;
-	height: 6px;
-	left: 50%; /* ✅ 親要素の中央に配置 */
-	position: absolute;
-	transform: translateX(-50%); /* ✅ 自身の幅の半分だけ左にずらす */
-	width: 100%; /* ✅ テキストの幅と同じ */
+.tac {
+	text-align: center;
 }
 
 .mv__text {
@@ -158,6 +151,71 @@
 	width: 4px; /* 幅指定 */
 }
 
+.form-field__label {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+}
+
+.form-field__tag { /* JP/Text 12px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 19.2px */
+}
+
+.follow__title {
+	color: var(--LP-Blown, #4A3636); /* En/Josefin Sans-20px */
+	font-family: "Josefin Sans";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%; /* 25px */
+}
+
+.follow__access-title {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 19.2px */
+	white-space: nowrap;
+}
+
+.follow__access-title::before {
+	background-color: #9ED0E0; /* 背景色指定 */
+	border-radius: 50%; /* 要素を丸くする */
+	content: ""; /* 空の要素作成 */
+	display: inline-block; /* インラインブロックにする */
+	height: 10px; /* 高さ指定 */
+	margin-right: 8px;
+	width: 10px; /* 幅指定 */
+}
+
+.follow__access-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+	white-space: nowrap;
+}
+
+.footer__copyright {
+	color: var(--LP-White, #FFF);
+	font-family: "Noto Sans JP";
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 16px */
+}
+
 *,
 *::before,
 *::after {
@@ -250,10 +308,12 @@ a {
 
 .mv__title1 {
 	margin-top: 20px;
+	text-align: center;
 }
 
 .mv__title2 {
 	margin-top: 12px;
+	margin-top: 16px;
 	text-align: center;
 }
 
@@ -280,8 +340,8 @@ a {
 
 .mv__cats {
 	position: absolute;
-	right: 0;
-	top: 583px;
+	right: 300px;
+	top: 551px;
 }
 
 .about {
@@ -578,16 +638,14 @@ a {
 	margin-top: 32px;
 }
 
-.contact {
-	margin-top: 40px;
-}
-
 .contact__icon {
 	text-align: center;
 }
 
 .contact__inner {
+	padding-bottom: 40px;
 	padding-inline: 20px;
+	padding-top: 40px;
 }
 
 .contact__text {
@@ -615,6 +673,55 @@ a {
 
 .contact__button {
 	margin-top: 24px;
+}
+
+.contact__button {
+	margin: auto;
+	margin-top: 24px;
+}
+
+.follow__inner {
+	padding-inline: 20px;
+	padding-top: 40px;
+}
+
+.follow__title {
+	text-align: center;
+}
+
+.follow__sns {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	margin-top: 24px;
+}
+
+.follow__onomichi {
+	margin-top: 14px;
+}
+
+.follow__logo {
+	text-align: center;
+}
+
+.follow__accesses {
+	padding: 24px;
+}
+
+.follow__access {
+	align-items: center;
+	display: flex;
+	margin-top: 24px;
+}
+
+.page__top {
+	margin-bottom: 24px;
+	margin-top: 24px;
+	text-align: center;
+}
+
+.footer__copyright {
+	padding-bottom: 24px;
 }
 
 body {
@@ -655,6 +762,23 @@ header {
 	border-radius: 8px;
 }
 
+.form-field__tag {
+	background: var(--LP-Red, #CE2073);
+	border-radius: 4px;
+	color: var(--LP-White, #FFF);
+	padding: 4px 8px;
+}
+
+.follow__accesses {
+	background: var(--LP-White, #FFF);
+	border-radius: 0 0 16px 16px;
+}
+
+.footer__copyright {
+	background: var(--LP-Dark-Blue, #67B0C7);
+	text-align: center;
+}
+
 .icon img {
 	height: 37.333px;
 	width: 37.333px;
@@ -672,6 +796,15 @@ header {
 .mv__bg img {
 	height: 554px;
 	width: 375px;
+}
+
+.mv__bg-pc {
+	position: absolute;
+}
+
+.mv__bg-pc img {
+	height: 740px;
+	width: 1512px;
 }
 
 .mv__title1 img {
@@ -760,10 +893,10 @@ header {
 }
 
 .about__button {
+	max-width: 192px;
 	padding: 6px 24px;
 	text-align: center;
 	white-space: nowrap;
-	width: 192px;
 }
 
 .about__arrow img {
@@ -925,10 +1058,231 @@ header {
 	width: 100%;
 }
 
+.contact__button {
+	max-width: 208px;
+	padding: 6px 24px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.follow__sns a img {
+	height: 32px;
+	width: 32px;
+}
+
+.follow__onomichi img {
+	max-width: 335px;
+}
+
+.follow__map img {
+	border-radius: 16px 16px 0 0;
+	height: 271px;
+	width: 335px;
+}
+
+.follow__logo img {
+	height: 20px;
+	width: 153px;
+}
+
+.follow__access-title {
+	width: 80px;
+}
+
+.page__top a img {
+	height: 78px;
+	width: 75px;
+}
+
+.footer__image img {
+	height: 45px;
+	width: 375px;
+}
+
 @media screen and (min-width: 768px) {
 
 .hidden-pc {
 	display: none;
+}
+
+.title1 {
+	font-size: 20px;
+	margin-top: 8px;
+}
+
+.title2 {
+	font-size: 32px;
+	margin-top: 8px;
+}
+
+.mv__text {
+	font-size: 24px;
+}
+
+.mv__inner {
+	padding-top: 35px;
+}
+
+.mv__title1 {
+	margin-top: 24px;
+}
+
+.mv__content {
+	position: relative;
+}
+
+.mv__share {
+	left: 339px;
+	position: absolute;
+	top: 0;
+}
+
+.mv__present {
+	position: absolute;
+	right: 409px;
+	top: 0;
+}
+
+.mv__smart {
+	margin-top: 33px;
+}
+
+.mv__food {
+	left: 332px;
+	top: 469px;
+}
+
+.about {
+	margin-top: 80px;
+}
+
+.about__picture-left {
+	left: -338px;
+	top: 74px;
+}
+
+.about__picture-right {
+	right: -284px;
+	top: 73px;
+}
+
+.about__contents {
+	margin: auto;
+	max-width: 848px;
+	padding: 40px 114px;
+}
+
+.about__sakamichi {
+	left: -130px;
+	top: -450px;
+}
+
+.about__goods {
+	right: 0;
+	top: -71px;
+}
+
+.about__ball {
+	right: 130px;
+	top: -158px;
+}
+
+.about__contents {
+	border-radius: 40px;
+}
+
+.icon img {
+	height: 48px;
+	width: 48px;
+}
+
+.mv__title1 img {
+	height: 82px;
+	width: 520px;
+}
+
+.mv__title2 img {
+	height: 60px;
+	width: 356px;
+}
+
+.mv__share img {
+	height: 130px;
+	width: 244px;
+}
+
+.mv__present img {
+	height: 180px;
+	width: 180px;
+}
+
+.mv__smart img {
+	height: 510px;
+	width: 250px;
+}
+
+.mv__food img {
+	height: 332px;
+	width: 202px;
+}
+
+.mv__cats img {
+	height: 294px;
+	width: 233px;
+}
+
+.about__text1 {
+	font-size: 16px;
+}
+
+.about__text2 {
+	font-size: 16px;
+}
+
+.about__text3 {
+	border-bottom: 2px dashed var(--LP-Blue, #9ED0E0);
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.about__picture1 img {
+	height: 100px;
+	width: 134px;
+}
+
+.about__picture2 img {
+	height: 100px;
+	width: 134px;
+}
+
+.about__picture-left img {
+	height: 480px;
+	width: 480px;
+}
+
+.about__picture-right img {
+	height: 480px;
+	width: 480px;
+}
+
+.about__button {
+	max-width: 260px;
+	padding: 10px 40px;
+}
+
+.about__sakamichi img {
+	height: 817px;
+	width: 427px;
+}
+
+.about__goods img {
+	height: 150.604px;
+	width: 308px;
+}
+
+.about__ball img {
+	height: 100.047px;
+	width: 101px;
 }
 
 }

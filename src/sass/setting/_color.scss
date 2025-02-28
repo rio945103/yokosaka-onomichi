@@ -11,6 +11,10 @@ header {
 .about__contents {
     border-radius: 24px;
     background: var(--LP-White, #FFF);
+    @include mq(pc){
+        border-radius: 40px;
+        
+    }
 }
 
 .prizes__inner {
@@ -38,4 +42,21 @@ header {
     border: none;
     border-radius: 8px;
     background: var(--LP-Gray, #F5F5F5);
+}
+
+.form-field__tag {
+    border-radius: 4px;
+    background: var(--LP-Red, #CE2073);
+    padding: 4px 8px;
+    color: var(--LP-White, #FFF);
+}
+
+.follow__accesses  {
+    border-radius: 0 0 16px 16px;
+    background: var(--LP-White, #FFF);
+}
+
+.footer__copyright {
+    background: var(--LP-Dark-Blue, #67B0C7);
+    text-align: center;
 }

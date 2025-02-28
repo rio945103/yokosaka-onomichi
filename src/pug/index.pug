@@ -4,6 +4,9 @@ html(lang="ja")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(name="robots", content="noindex")
         title onomichi
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         link(rel="stylesheet", href="./assets/css/reset.css")
         link(rel="stylesheet", href="./assets/css/style.css")
 
@@ -16,8 +19,10 @@ html(lang="ja")
                     .header__nav 
         
         .mv 
-            .mv__bg 
+            .mv__bg.hidden-pc
                 img(src="./assets/img/Onomichi.png", alt="")
+            .mv__bg-pc.hidden-sp
+                img(src="./assets/img/mv_bg-pc.png", alt="")
             .mv__inner
                .mv__contents 
                     .mv__text あなたの見つけたレトロな尾道の一枚を<br>Instagramに投稿しよう
@@ -53,17 +58,20 @@ html(lang="ja")
                     .about__picture2
                         img(src="./assets/img/about2.png", alt="")
                     .about__title1.title1 About
-                    .about__title2.title2 キャンペーンについて
+                    .tac
+                        .about__title2.title2 キャンペーンについて
                         
-                    .about__text1
+                    .about__text1.hidden-pc
                         |あなたの心が動いた尾道の瞬間を
-                        br
+                        br.
                         |＼ おしえてください！ ／
+                    .about__text1.hidden-sp
+                        |＼ あなたの心が動いた尾道の瞬間をおしえてください！ ／
                     .about__text2
                         |風情あふれる坂道に、静かに佇むお寺。
                         br
                         |路地裏の角をまがれば
-                        br
+                        br.hidden-pc
                         |気ままにお昼寝する猫に出会え、
                         br
                         |ふと振り返れば、美しい瀬戸内の海が。
@@ -72,7 +80,7 @@ html(lang="ja")
                         |数々の映画の舞台にもなってきたこの街には
                         br
                         |心がほどけるような、
-                        br
+                        br.hidden-pc
                         |レトロでやさしい風景が広がっています。
                         br
                         br
@@ -82,12 +90,16 @@ html(lang="ja")
                         br
                         br
                         |尾道観光部（@onomichi_retro）を
-                        br
-                        |フォロー&尾道で撮影した写真を、
-                        br
+                        br.hidden-pc
+                        |フォロー&
+                        br.hidden-sp
+                        |尾道で撮影した写真を、
+                        br.hidden-pc
                         |ハッシュタグ「#見つけて尾道レトロ」を
-                        br
-                        |つけてInstagramに投稿いただいた方の中から
+                        br.hidden-pc
+                        |つけて
+                        br.hidden-sp
+                        |Instagramに投稿いただいた方の中から
                     .about__text3 尾道のギフトを100名様にプレゼント！
                     .about__button.button 参加の仕方はこちら
                 .about__pictures 
@@ -113,7 +125,8 @@ html(lang="ja")
                     .how__picture-cats 
                         img(src="./assets/img/how_cats.png", alt="")
                     .how__title1.title1 How to Enter
-                    .how__title2.title2 応募の仕方
+                    .tac
+                        .how__title2.title2 応募の仕方
                 .how__steps 
                     .how__step 
                         .how__step-image
@@ -165,7 +178,8 @@ html(lang="ja")
                     .prizes__icon.icon
                         img(src="./assets/img/prizes_icon.png", alt="")
                     .prizes__title1.title1 Prizes
-                    .prizes__title2.title2 キャンペーン特典
+                    .tac
+                        .prizes__title2.title2 キャンペーン特典
                     .prizes__text
                         |キャンペーンにご参加いただたい方の中から100名様に、尾道
                         br
@@ -243,7 +257,8 @@ html(lang="ja")
                     .question__icon.icon
                         img(src="./assets/img/question_icon.png", alt="")
                     .question__title1.title1 Q&A
-                    .question__title2.title2 よくあるご質問
+                    .tac
+                        .question__title2.title2 よくあるご質問
                     .question__items
                         .question__item 
                             .question__item-q
@@ -295,7 +310,8 @@ html(lang="ja")
                 .entry__icon.icon
                     img(src="./assets/img/entry_icon.png", alt="")
                 .entry__title1.title1 Entry Requirements
-                .entry__title2.title2 参加要項
+                .tac
+                    .entry__title2.title2 参加要項
                 .entry__contents
                     .entry__content-title キャンペーン名
                     .entry__content-text #見つけて尾道レトロキャンペーン
@@ -326,7 +342,8 @@ html(lang="ja")
                     .contact__icon.icon
                         img(src="./assets/img/contact_icon.png", alt="")
                     .contact__title1.title1 Contact
-                    .contact__title2.title2 お問い合わせ
+                    .tac
+                        .contact__title2.title2 お問い合わせ
                     .contact__text
                         |本キャンペーンに関するお問い合わせは、
                         br
@@ -394,5 +411,45 @@ html(lang="ja")
                                             a(href="" target="_blank") プライバシーポリシー
                                             | に同意する
                                 .contact__button.button 上記の内容を送信する
+        .follow 
+            .follow__inner 
+                .follow__title \ Please Follow Us! /
+                .follow__sns 
+                    a(href="https://www.youtube.com/onomichi_retro" target="_blank")
+                        img(src="./assets/img/youtube_icon.png", alt="")
+                    a(href="https://www.instagram.com/onomichi_retro/" target="_blank")
+                        img(src="./assets/img/instagram_icon.png", alt="")
+                    a(href="https://twitter.com/onomichi_retro" target="_blank")
+                        img(src="./assets/img/twitter_icon.png", alt="")
+                .follow__onomichi 
+                        img(src="./assets/img/about_onomichi.png", alt="")
+                .follow__map
+                    img(src="./assets/img/follow_map.png", alt="")
+                .follow__accesses 
+                    .follow__logo 
+                        img(src="./assets/img/logo.png", alt="")
+                    .follow__access
+                        .follow__access-title 運営者
+                        .follow__access-text 観光キャンペーン運営事務局
+                    .follow__access
+                        .follow__access-title 住所
+                        .follow__access-text 広島県尾道市久保１丁目○−○
+                    .follow__access
+                        .follow__access-title 営業時間
+                        .follow__access-text 平日9:00-17:00（土・日・祝は休み）
+                    .follow__access
+                        .follow__access-title 電話番号
+                        .follow__access-text 000-0000-0000
+        
+        .page__top 
+            a(href="#") 
+                img(src="./assets/img/pagetop.png", alt="")
+
+        .footer
+            .footer__inner
+                .footer__image
+                    img(src="./assets/img/wave_pic.png", alt="")
+                .footer__copyright Copyright © Tourism campaign management office.
+
 
 
