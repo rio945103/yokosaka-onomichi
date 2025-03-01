@@ -34,7 +34,29 @@
 }
 
 .tac {
-    text-align: center;
+    text-align: center; //左右中央に配置したい場合に親要素として使用します。
+}
+
+.header__link {
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 12px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+}
+
+.header__button {
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 14px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
 }
 
 .mv__text {
@@ -87,6 +109,19 @@
     line-height: 160%; /* 22.4px */
 }
 
+.how__button {
+    @include mq(pc){
+        color: var(--LP-Blown, #4A3636);
+
+        /* JP/Text 20px Bold */
+        font-family: "Noto Sans JP";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%; /* 32px */
+    }
+}
+
 .prizes__button {
     color: var(--LP-Blown, #4A3636);
     font-feature-settings: 'pref' on;
@@ -97,6 +132,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 25.6px */
+
+    @include mq(pc){
+        font-size: 20px;
+    }
 }
 
 .spots__title {
@@ -120,6 +159,51 @@
     line-height: 160%; /* 18.311px */
 }
 
+.spots__button {
+    @include mq(pc){
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.question__item-q-text {
+    @include mq(pc){
+        color: var(--LP-Blown, #4A3636);
+
+        /* JP/Text 20px Bold */
+        font-family: "Noto Sans JP";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%; /* 32px */
+    }
+
+}
+
+.question__item-a-text {
+    @include mq(pc){
+        color: var(--LP-Blown, #4A3636);
+
+        /* JP/Text 16px Regular */
+        font-family: "Noto Sans JP";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 25.6px */
+    }
+}
+
+.entry__content {
+    @include mq(pc){
+        border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+}
+
 .entry__content-title {
     color: var(--LP-Blown, #4A3636);
 
@@ -130,6 +214,10 @@
     font-weight: 700;
     line-height: 160%; /* 22.4px */
 
+    @include mq(pc){
+        font-size: 16px;
+    }
+
     &::before {
         content:  "";     /* 空の要素作成 */
         width:  10px;               /* 幅指定 */
@@ -138,6 +226,7 @@
         background-color: #9ED0E0;  /* 背景色指定 */
         border-radius:  50%;        /* 要素を丸くする */
         margin-right: 8px;
+
     }
 }
 
@@ -150,6 +239,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 19.2px */
+
+    @include mq(pc){
+        font-size: 16px;
+    }
 }
 
 .entry__content-text ul {

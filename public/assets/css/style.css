@@ -34,6 +34,24 @@
 	text-align: center;
 }
 
+.header__link {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+}
+
+.header__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+}
+
 .mv__text {
 	color: var(--LP-Blown, #4A3636);
 	font-family: "Kiwi Maru";
@@ -297,6 +315,21 @@ a {
 	padding: 16px 20px;
 }
 
+.header__contents {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__nav {
+	align-items: center;
+	display: flex;
+	gap: 12px;
+}
+
+.header__button {
+	padding: 6px 24px;
+}
+
 .mv__inner {
 	padding-inline: 20px;
 	padding-top: 17px;
@@ -340,8 +373,8 @@ a {
 
 .mv__cats {
 	position: absolute;
-	right: 300px;
-	top: 551px;
+	right: 0;
+	top: 590px;
 }
 
 .about {
@@ -350,7 +383,14 @@ a {
 }
 
 .about__bd-picture {
+	overflow: visible;
 	position: relative;
+}
+
+.about__picture-naname {
+	left: -21px;
+	position: absolute;
+	top: -20px;
 }
 
 .about__picture-left {
@@ -468,8 +508,18 @@ a {
 	top: 0;
 }
 
+.how__picture-cats-pc {
+	position: absolute;
+	right: 0;
+	top: -26px;
+}
+
 .how__steps {
 	padding-top: 32px;
+}
+
+.step-2 {
+	margin-top: 68px;
 }
 
 .how__step-image {
@@ -500,6 +550,18 @@ a {
 	text-align: center;
 }
 
+.how__step-line-pc1 {
+	left: 425px;
+	position: absolute;
+	top: 245px;
+}
+
+.how__step-line-pc2 {
+	position: absolute;
+	right: 470px;
+	top: 245px;
+}
+
 .how__button {
 	margin-top: 16px;
 }
@@ -523,8 +585,8 @@ a {
 
 .prizes__cards {
 	display: grid;
-	gap: 15px; /* カード間の余白 */
-	grid-template-columns: repeat(2, 1fr); /* 2列（50%ずつ） */
+	gap: 15px;
+	grid-template-columns: repeat(2, 1fr); /* スマホ時は2列 */
 	margin-top: 24px;
 }
 
@@ -578,6 +640,15 @@ a {
 .under__wave img {
 	height: 45px;
 	width: 375px;
+}
+
+.under__wave-img {
+	position: relative;
+}
+
+.under_wave-pc {
+	position: absolute;
+	top: -1px;
 }
 
 .question {
@@ -882,6 +953,11 @@ header {
 	width: 80px;
 }
 
+.about__picture-naname img {
+	height: 250px;
+	width: 250px;
+}
+
 .about__picture-left img {
 	height: 200px;
 	width: 200px;
@@ -933,6 +1009,11 @@ header {
 	width: 160px;
 }
 
+.how__picture-cats-pc img {
+	height: 394px;
+	width: 433px;
+}
+
 .how__step-image img {
 	height: 210px;
 }
@@ -945,6 +1026,12 @@ header {
 .how__step-line img {
 	height: 34px;
 	width: 7px;
+}
+
+.how__step-line-pc1 img,
+.how__step-line-pc2 img {
+	height: 24px;
+	width: 113px;
 }
 
 .how__button {
@@ -1011,6 +1098,16 @@ header {
 	width: 384px;
 }
 
+.wave_pic-pc {
+	position: absolute;
+	top: -119px;
+}
+
+.wave_pic-pc img {
+	height: 120px;
+	max-width: 100%;
+}
+
 .spots__icon img {
 	height: 28px;
 	width: 28px;
@@ -1023,6 +1120,11 @@ header {
 .spots__sub-title img {
 	height: 55px;
 	width: 255px;
+}
+
+.under_wave-pc img {
+	height: 120px;
+	width: 100%;
 }
 
 .question__item-q-icon img {
@@ -1119,6 +1221,58 @@ header {
 	font-size: 24px;
 }
 
+.how__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 20px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 32px */
+}
+
+.prizes__button {
+	font-size: 20px;
+}
+
+.spots__button {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.question__item-q-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 20px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 32px */
+}
+
+.question__item-a-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
+}
+
+.entry__content {
+	border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
+}
+
+.entry__content:last-child {
+	border-bottom: none;
+}
+
+.entry__content-title {
+	font-size: 16px;
+}
+
+.entry__content-text {
+	font-size: 16px;
+}
+
 .mv__inner {
 	padding-top: 35px;
 }
@@ -1150,6 +1304,11 @@ header {
 .mv__food {
 	left: 332px;
 	top: 469px;
+}
+
+.mv__cats {
+	right: 300px;
+	top: 551px;
 }
 
 .about {
@@ -1185,6 +1344,133 @@ header {
 .about__ball {
 	right: 130px;
 	top: -158px;
+}
+
+.how {
+	margin-top: 120px;
+}
+
+.how__inner {
+	padding-inline: 36px;
+}
+
+.how__picture-map {
+	top: -60px;
+	z-index: 5;
+}
+
+.how__steps {
+	display: flex;
+	gap: 72px;
+	justify-content: center;
+	margin-top: 40px;
+	position: relative;
+	z-index: 10;
+}
+
+.how__button {
+	margin: auto;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.prizes__inner {
+	padding-bottom: 53px;
+	padding-inline: 56px;
+}
+
+.prizes__cards {
+	gap: 20px;
+	grid-template-columns: 1fr 1fr; /* 最初に2列（50%ずつ） */ /* ✅ 1行目: 50%ずつ */ /* ✅ 2行目: 3等分 */ /* ✅ ここで3列に変更 */
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.prizes__cards .prizes__card:nth-child(1) {
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+.prizes__cards .prizes__card:nth-child(2) {
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+.prizes__cards .prizes__card:nth-child(3) {
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+.prizes__cards .prizes__card:nth-child(4) {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.prizes__cards .prizes__card:nth-child(5) {
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+
+.prizes__button {
+	margin-top: 40px;
+}
+
+.spots__button {
+	margin-top: 40px;
+}
+
+.question {
+	margin-top: 240px;
+}
+
+.question__inner {
+	padding-inline: 244px;
+}
+
+.question__items {
+	margin-top: 40px;
+}
+
+.question__item {
+	border-radius: 16px;
+	margin-top: 24px;
+}
+
+.entry {
+	padding-inline: 244px;
+}
+
+.entry__inner {
+	padding-bottom: 40px;
+	padding-inline: 56px;
+	padding-top: 40px;
+}
+
+.entry__content {
+	display: flex;
+}
+
+.entry__content-title {
+	width: 240px;
+}
+
+.entry__content-text {
+	width: 672px;
+}
+
+.contact__inner {
+	padding-inline: 332px;
+}
+
+.contact__field {
+	display: flex;
+}
+
+.form-field__head {
+	width: 220px;
+}
+
+.form-field__item {
+	width: 628px;
 }
 
 .about__contents {
@@ -1283,6 +1569,69 @@ header {
 .about__ball img {
 	height: 100.047px;
 	width: 101px;
+}
+
+.about__onomichi img {
+	height: 97px;
+	width: 891px;
+}
+
+.how__picture-map img {
+	height: 689px;
+	width: 460px;
+}
+
+.how__step-image img {
+	height: 300px;
+}
+
+.how__button {
+	max-width: 437px;
+	padding: 10px 40px;
+}
+
+.prizes__card-image img {
+	height: 340px;
+	width: 440px;
+}
+
+.prize__card-number img {
+	height: 100px;
+	width: 100px;
+}
+
+.prizes__card-text {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Noto Sans JP";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 32px */
+	text-align: center;
+}
+
+.prizes__button {
+	max-width: 437px;
+	padding: 10px 40px;
+}
+
+.bg_pic img {
+	height: 100%;
+	width: 100%;
+}
+
+.spots__button {
+	max-width: 437px;
+	padding: 10px 40px;
+}
+
+.big__entry {
+	margin-top: 120px;
+}
+
+.big__entry img {
+	height: 400px;
+	width: 100%;
 }
 
 }

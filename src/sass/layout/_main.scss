@@ -1,5 +1,22 @@
 @use "../foundation/mixin" as *;
 
+.header__contents {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.header__nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.header__button {
+    padding: 6px 24px;
+}
+
+
 .mv__inner {
     padding-inline: 20px;
     padding-top: 17px;
@@ -72,8 +89,12 @@
 
 .mv__cats {
     position: absolute;
-    top: 551px;
-    right: 300px;
+    top: 590px;
+    right: 0;
+    @include mq(pc){
+        top: 551px;
+        right: 300px;
+    }
 }
 
 .about {
@@ -86,7 +107,13 @@
 
 .about__bd-picture {
     position: relative;
-    
+    overflow: visible;
+}
+
+.about__picture-naname {
+    position: absolute;
+    top: -20px;
+    left: -21px;
 }
 
 .about__picture-left {
@@ -207,10 +234,16 @@
 
 .how {
     margin-top: 32px;
+    @include mq(pc){
+        margin-top: 120px;
+    }
 }
 
 .how__inner {
     padding-inline: 20px;
+    @include mq(pc){
+        padding-inline: 36px;
+    }
 }
 
 .how__contents {
@@ -225,6 +258,10 @@
     position: absolute;
     top: 0;
     left: -20px;
+    @include mq(pc){
+        top: -60px;
+        z-index: 5;
+    }
 }
 
 .how__picture-cats {
@@ -233,10 +270,27 @@
     right: -51px;
 }
 
-.how__steps {
-    padding-top: 32px;
+.how__picture-cats-pc {
+    position: absolute;
+    right: 0;
+    top: -26px;
 }
 
+.how__steps {
+    padding-top: 32px;
+    @include mq(pc){
+        margin-top: 40px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 72px;
+        z-index: 10;
+    }
+}
+
+.step-2 {
+    margin-top: 68px;
+}
 
 .how__step-image {
     text-align: center;
@@ -266,8 +320,25 @@
     margin-top: 16px;
 }
 
+.how__step-line-pc1 {
+    position: absolute;
+    top: 245px;
+    left: 425px;
+}
+
+.how__step-line-pc2 {
+    position: absolute;
+    top: 245px;
+    right: 470px;
+}
+
 .how__button {
     margin-top: 16px;
+    @include mq(pc){
+        margin-top: 40px;
+        text-align: center;
+        margin: auto;
+    }
 }
 
 .prizes {
@@ -277,6 +348,10 @@
 .prizes__inner  {
     padding-inline: 20px;
     padding-bottom: 36px;
+    @include mq(pc){
+        padding-inline: 56px;
+        padding-bottom: 53px;
+    }
 }
 
 .prize__contents {
@@ -293,10 +368,50 @@
 
 .prizes__cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2列（50%ずつ） */
-    gap: 15px; /* カード間の余白 */
+    grid-template-columns: repeat(2, 1fr); /* スマホ時は2列 */
+    gap: 15px;
     margin-top: 24px;
+
+    @include mq(pc) {
+        grid-template-columns: 1fr 1fr; /* 最初に2列（50%ずつ） */
+        gap: 20px;
+
+        /* ✅ 1行目: 50%ずつ */
+        .prizes__card:nth-child(1) {
+            grid-column: 1 / 2; 
+            grid-row: 1 / 2;
+        }
+        .prizes__card:nth-child(2) {
+            grid-column: 2 / 3; 
+            grid-row: 1 / 2;
+        }
+
+        /* ✅ 2行目: 3等分 */
+        .prizes__card:nth-child(3) {
+            grid-column: 1 / 2; 
+            grid-row: 2 / 3;
+        }
+        .prizes__card:nth-child(4) {
+            grid-column: 2 / 3; 
+            grid-row: 2 / 3;
+        }
+        .prizes__card:nth-child(5) {
+            grid-column: 3 / 4; 
+            grid-row: 2 / 3;
+        }
+
+        /* ✅ ここで3列に変更 */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
+
+
+
+
+
+
+
+
 
 .prizes__card {
     position: relative;
@@ -319,6 +434,9 @@
     text-align: center;
     padding: 6px 24px;
     white-space: nowrap;
+    @include mq(pc){
+        margin-top: 40px;
+    }
 }
 
 .spots__inner {
@@ -342,6 +460,10 @@
     text-align: center;
     padding: 6px 24px;
     white-space: nowrap;
+    @include mq(pc){
+        margin-top: 40px;
+
+    }
 }
 
 .under__wave {
@@ -351,13 +473,28 @@
     }
 }
 
+.under__wave-img {
+    position: relative;
+}
+
+.under_wave-pc {
+    position: absolute;
+    top: -1px;
+}
+
 .question {
     margin-top: 40px;
+    @include mq(pc){
+        margin-top: 240px;
+    }
 }
 
 .question__inner {
     padding-inline: 20px;
     margin-bottom: 32px;
+    @include mq(pc){
+        padding-inline: 244px;
+    }
 }
 
 .question__icon {
@@ -366,6 +503,9 @@
 
 .question__items {
     margin-top: 12px;
+    @include mq(pc){
+        margin-top: 40px;
+    }
 }
 
 .question__item {
@@ -373,6 +513,10 @@
     border-radius: 12px;
     border: 2px solid var(--LP-Blown, #4A3636);
     background: var(--LP-White, #FFF);
+    @include mq(pc){
+        margin-top: 24px;
+        border-radius: 16px;
+    }
 }
 
 .question__item-q {
@@ -395,16 +539,44 @@
 
 .entry {
     padding-inline: 20px;
+    @include mq(pc){
+        padding-inline: 244px;
+    }
 }
 
 .entry__inner {
     padding-inline: 20px;
     border: 8px solid var(--LP-White, #FFF);
     background: rgba(255, 255, 255, 0.50);
+
+    @include mq(pc){
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-inline: 56px;
+    }
 }
 
 .entry__icon {
     text-align: center;
+}
+
+.entry__content {
+    @include mq(pc){
+        display: flex;
+        
+    }
+}
+
+.entry__content-title {
+    @include mq(pc){
+        width: 240px;
+    }
+}
+
+.entry__content-text {
+    @include mq(pc){
+        width: 672px;
+    }
 }
 
 .big__entry {
@@ -423,6 +595,9 @@
     padding-inline: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
+    @include mq(pc){
+        padding-inline: 332px;
+    }
 }
 
 .contact__text {
@@ -432,15 +607,25 @@
 
 .contact__field {
     margin-top: 24px;
+    @include mq(pc){
+        display: flex;
+    }
 }
+
 
 .form-field__head {
     display: flex;
     gap: 12px;
+    @include mq(pc){
+        width: 220px;
+    }
 }
 
 .form-field__item {
     margin-top: 8px;
+    @include mq(pc){
+        width: 628px;
+    }
 }
 
 .contact__privacy {
