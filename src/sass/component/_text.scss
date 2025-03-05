@@ -250,6 +250,10 @@
 }
 
 .text__dots {
+    display: flex;  /* 疑似要素とテキストを横並びにする */
+    align-items: flex-start; /* 上揃えにする */
+    gap: 4px; /* 疑似要素とテキストの間隔を設定 */
+    
     &::before {
         content:  "";     /* 空の要素作成 */
         width:  4px;               /* 幅指定 */
@@ -258,8 +262,9 @@
         background-color: #000;  /* 背景色指定 */
         border-radius:  50%;        /* 要素を丸くする */
         position: relative;
-        top: -3px;
+        top: 11px;
         margin-right: 4px;
+        flex-shrink: 0; /* 丸が縮まないようにする */
     }
 }
 
@@ -292,6 +297,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 125%; /* 25px */
+
+    @include mq(pc){
+        font-size: 24px;
+    }
 }
 
 .follow__access-title {
@@ -304,6 +313,9 @@
     font-weight: 700;
     line-height: 160%; /* 19.2px */
     white-space: nowrap;
+    @include mq(pc){
+        font-size: 16px;
+    }
 
     &::before {
         content:  "";     /* 空の要素作成 */
@@ -326,6 +338,10 @@
     font-weight: 400;
     line-height: 160%; /* 19.2px */
     white-space: nowrap;
+
+    @include mq(pc){
+        font-size: 16px;
+    }
 }
 
 .footer__copyright {
@@ -335,4 +351,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 16px */
+
+    @include mq(pc){
+        font-size: 14px;
+    }
 }

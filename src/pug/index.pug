@@ -449,23 +449,24 @@ html(lang="ja")
                         img(src="./assets/img/twitter_icon.png", alt="")
                 .follow__onomichi 
                         img(src="./assets/img/about_onomichi.png", alt="")
-                .follow__map
-                    img(src="./assets/img/follow_map.png", alt="")
-                .follow__accesses 
-                    .follow__logo 
-                        img(src="./assets/img/logo.png", alt="")
-                    .follow__access
-                        .follow__access-title 運営者
-                        .follow__access-text 観光キャンペーン運営事務局
-                    .follow__access
-                        .follow__access-title 住所
-                        .follow__access-text 広島県尾道市久保１丁目○−○
-                    .follow__access
-                        .follow__access-title 営業時間
-                        .follow__access-text 平日9:00-17:00（土・日・祝は休み）
-                    .follow__access
-                        .follow__access-title 電話番号
-                        .follow__access-text 000-0000-0000
+                .follow__contents
+                    .follow__map
+                        img(src="./assets/img/follow_map.png", alt="")
+                    .follow__accesses 
+                        .follow__logo 
+                            img(src="./assets/img/logo.png", alt="")
+                        .follow__access
+                            .follow__access-title 運営者
+                            .follow__access-text 観光キャンペーン運営事務局
+                        .follow__access
+                            .follow__access-title 住所
+                            .follow__access-text 広島県尾道市久保１丁目○−○
+                        .follow__access
+                            .follow__access-title 営業時間
+                            .follow__access-text 平日9:00-17:00（土・日・祝は休み）
+                        .follow__access
+                            .follow__access-title 電話番号
+                            .follow__access-text 000-0000-0000
         
         .page__top 
             a(href="#") 
@@ -474,7 +475,9 @@ html(lang="ja")
         .footer
             .footer__inner
                 .footer__image
-                    img(src="./assets/img/wave_pic.png", alt="")
+                    img(src="./assets/img/wave_pic.png", alt="").hidden-pc
+                    img(src="./assets/img/wave_pc.png", alt="").hidden-sp
+
                 .footer__copyright Copyright © Tourism campaign management office.
 
 
