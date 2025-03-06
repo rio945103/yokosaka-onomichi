@@ -343,6 +343,10 @@
 
 .prizes {
     margin-top: 32px;
+    @include mq(pc){
+        margin-top: 120px;
+        text-align: center;
+    }
 }
 
 .prizes__inner  {
@@ -351,6 +355,7 @@
     @include mq(pc){
         padding-inline: 56px;
         padding-bottom: 53px;
+        margin: auto;
     }
 }
 
@@ -409,6 +414,48 @@
     position: absolute;
     left: 56px;
     top: -24px;
+
+    @include mq(pc){
+        left: 40%;
+        top: -10%;
+    }
+}
+
+.prizes__card-text {
+    svg {
+        position: absolute; /* 絶対配置 */
+        right: 0; /* 右寄せ */
+        bottom: 0; /* 下寄せ */
+        border-radius: 0 0 8px 0; /* 丸みを付ける */
+        @include mq(pc){
+            border-radius: 0 0 24px 0; /* 丸みを付ける */
+             /* 1,2番目のカードは 100px */
+            
+        }
+        /* 1,2番目のカードは 100px */
+        .prizes__card:nth-child(1) &,
+        .prizes__card:nth-child(2) & {
+            width: 36px;
+            height: 36px;
+            @include mq(pc){
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* 3,4,5番目のカードは 64px */
+        .prizes__card:nth-child(3) &,
+        .prizes__card:nth-child(4) &,
+        .prizes__card:nth-child(5) & {
+            width: 36px;
+            height: 36px;
+            @include mq(pc){
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+    
 }
 
 .prizes__button {

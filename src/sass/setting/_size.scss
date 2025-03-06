@@ -33,8 +33,8 @@
 .mv__bg-pc{
     position: absolute;
     img {
-        width: 1512px;
-        height: 740px;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -348,6 +348,12 @@
     }
 }
 
+.prizes__inner {
+    @include mq(pc){
+        max-width: 1024px;
+    }
+}
+
 .prizes__text {
     color: var(--LP-Blown, #4A3636);
     text-align: center;
@@ -360,13 +366,28 @@
     line-height: 160%; /* 19.2px */
 }
 
+// 下のコードはPCのカードのサイズ
+
+@include mq(pc){
+    .prizes__card:nth-child(3) .prizes__card-image img,
+    .prizes__card:nth-child(4) .prizes__card-image img,
+    .prizes__card:nth-child(5) .prizes__card-image img {
+        width: 280px;
+        height: 240px;
+        border-radius: 16px 16px 0 0;
+    }
+}
+
 .prizes__card-image {
     img {
         width: 160px;
         height: 140px;
+        border-radius: 8px 8px 0 0;
         @include mq(pc){
             width: 440px;
             height: 340px;
+            border-radius: 24px 24px 0 0;
+
         }
     }
 }
@@ -382,6 +403,16 @@
     }
 }
 
+@include mq(pc) {
+    .prizes__card:nth-child(3) .prize__card-number img,
+    .prizes__card:nth-child(4) .prize__card-number img,
+    .prizes__card:nth-child(5) .prize__card-number img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
 .prizes__card-text {
     border-radius: 8px;
     background: var(--LP-Gray, #F5F5F5);
@@ -391,7 +422,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0 0 8px 8px;
     @include mq(pc){
+        width: 100%;
+        height: 120px;
         color: var(--LP-Blown, #4A3636);
         text-align: center;
         font-family: "Noto Sans JP";
@@ -399,6 +433,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 160%; /* 32px */
+        border-radius: 0 0 24px 24px;
     }
 }
 

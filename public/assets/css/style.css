@@ -613,6 +613,26 @@ a {
 	top: -24px;
 }
 
+.prizes__card-text svg {
+	border-radius: 0 0 8px 0; /* 丸みを付ける */
+	bottom: 0; /* 下寄せ */
+	position: absolute; /* 絶対配置 */
+	right: 0; /* 右寄せ */ /* 1,2番目のカードは 100px */ /* 3,4,5番目のカードは 64px */
+}
+
+.prizes__card:nth-child(1) .prizes__card-text svg,
+.prizes__card:nth-child(2) .prizes__card-text svg {
+	height: 36px;
+	width: 36px;
+}
+
+.prizes__card:nth-child(3) .prizes__card-text svg,
+.prizes__card:nth-child(4) .prizes__card-text svg,
+.prizes__card:nth-child(5) .prizes__card-text svg {
+	height: 36px;
+	width: 36px;
+}
+
 .prizes__button {
 	margin: auto;
 	margin-top: 24px;
@@ -889,8 +909,8 @@ header {
 }
 
 .mv__bg-pc img {
-	height: 740px;
-	width: 1512px;
+	height: 100%;
+	width: 100%;
 }
 
 .mv__title1 img {
@@ -1066,6 +1086,7 @@ header {
 }
 
 .prizes__card-image img {
+	border-radius: 8px 8px 0 0;
 	height: 140px;
 	width: 160px;
 }
@@ -1079,6 +1100,7 @@ header {
 	align-items: center;
 	background: var(--LP-Gray, #F5F5F5);
 	border-radius: 8px;
+	border-radius: 0 0 8px 8px;
 	display: flex;
 	flex-direction: column;
 	height: 56px;
@@ -1405,7 +1427,13 @@ header {
 	text-align: center;
 }
 
+.prizes {
+	margin-top: 120px;
+	text-align: center;
+}
+
 .prizes__inner {
+	margin: auto;
 	padding-bottom: 53px;
 	padding-inline: 56px;
 }
@@ -1432,6 +1460,28 @@ header {
 
 .prizes__cards .prizes__card:nth-child(5) {
 	grid-column: span 2;
+}
+
+.prize__card-number {
+	left: 40%;
+	top: -10%;
+}
+
+.prizes__card-text svg {
+	border-radius: 0 0 24px 0; /* 丸みを付ける */ /* 1,2番目のカードは 100px */
+}
+
+.prizes__card:nth-child(1) .prizes__card-text svg,
+.prizes__card:nth-child(2) .prizes__card-text svg {
+	height: 100px;
+	width: 100px;
+}
+
+.prizes__card:nth-child(3) .prizes__card-text svg,
+.prizes__card:nth-child(4) .prizes__card-text svg,
+.prizes__card:nth-child(5) .prizes__card-text svg {
+	height: 64px;
+	width: 64px;
 }
 
 .prizes__button {
@@ -1657,7 +1707,20 @@ header {
 	padding: 10px 40px;
 }
 
+.prizes__inner {
+	max-width: 1024px;
+}
+
+.prizes__card:nth-child(3) .prizes__card-image img,
+.prizes__card:nth-child(4) .prizes__card-image img,
+.prizes__card:nth-child(5) .prizes__card-image img {
+	border-radius: 16px 16px 0 0;
+	height: 240px;
+	width: 280px;
+}
+
 .prizes__card-image img {
+	border-radius: 24px 24px 0 0;
 	height: 340px;
 	width: 440px;
 }
@@ -1667,14 +1730,24 @@ header {
 	width: 100px;
 }
 
+.prizes__card:nth-child(3) .prize__card-number img,
+.prizes__card:nth-child(4) .prize__card-number img,
+.prizes__card:nth-child(5) .prize__card-number img {
+	height: 80px;
+	width: 80px;
+}
+
 .prizes__card-text {
+	border-radius: 0 0 24px 24px;
 	color: var(--LP-Blown, #4A3636);
 	font-family: "Noto Sans JP";
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 700;
+	height: 120px;
 	line-height: 160%; /* 32px */
 	text-align: center;
+	width: 100%;
 }
 
 .prizes__button {
