@@ -147,6 +147,12 @@
     font-style: normal;
     font-weight: 500;
     line-height: 125%; /* 35px */
+
+    @include mq(pc){
+        font-size: 40px;
+        line-height: normal; // ✅ 縦書きでは `line-height` を無効化
+        letter-spacing: 8px; // ✅ 文字の間隔を `letter-spacing` で調整
+    }
 }
 
 .spots__text {
@@ -157,6 +163,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 18.311px */
+    @include mq(pc){
+        font-size: 16px;
+    }
 }
 
 .spots__button {

@@ -4,23 +4,21 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssSorter = require("css-declaration-sorter");
 const mmq = require("gulp-merge-media-queries");
-
-const browserSync = require("browser-sync").create(); // 修正（`.create()`を追加）
-
+const browserSync = require("browser-sync").create();
 const cleanCss = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
-
 const htmlBeautify = require("gulp-html-beautify");
-const pug = require("gulp-pug"); // Pugを追加
+const pug = require("gulp-pug");
+const gulpIf = require("gulp-if"); // ✅ 条件分岐のために追加
 
 // ✅ PugをHTMLにコンパイル
 function compilePug() {
   return gulp
-    .src("./src/pug/**/*.pug") // Pugファイルを取得
-    .pipe(pug({ pretty: true })) // HTMLを整形して出力
-    .pipe(gulp.dest("./public")) // HTMLファイルを `public` に出力
-    .on("end", () => console.log("Pug compilation finished!"));
+    .src("./src/pug/**/*.pug")
+    .pipe(pug({ pretty: true }))
+    .pipe(gulp.dest("./public"))
+    .on("end", () => console.log("✅ Pug compilation finished!"));
 }
 
 // ✅ Sassをコンパイルし、CSSを圧縮
@@ -34,17 +32,29 @@ function compileSass() {
     .pipe(cleanCss())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("./public/assets/css"))
-    .on("end", () => console.log("Sass compilation finished!"));
+    .on("end", () => console.log("✅ Sass compilation finished!"));
 }
 
-// ✅ JSを圧縮
+// ✅ すでに `.min.js` のファイルはそのままコピー
+function copyMinJS() {
+  return gulp
+    .src("./src/js/**/*.min.js") // ✅ 既に .min の JS だけを取得
+    .pipe(gulp.dest("./public/assets/js"))
+    .on("end", () => console.log("✅ 既に min の JS をコピーしました！"));
+}
+
+// ✅ JSを圧縮（.min.js は圧縮・rename しない）
 function minJS() {
   return gulp
     .src("./src/js/**/*.js")
-    .pipe(uglify())
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("./public/assets/js"));
+    .pipe(gulpIf(file => !file.basename.endsWith(".min.js"), uglify())) // ✅ すでに `.min.js` のものは圧縮しない
+    .pipe(gulpIf(file => !file.basename.endsWith(".min.js"), rename({ suffix: ".min" }))) // ✅ すでに `.min.js` のものは rename しない
+    .pipe(gulp.dest("./public/assets/js"))
+    .on("end", () => console.log("✅ JS minify 完了！"));
 }
+
+// ✅ minJS と copyMinJS を並列実行するタスク
+const processJS = gulp.parallel(minJS, copyMinJS);
 
 // ✅ HTMLを整形
 function formatHTML() {
@@ -82,30 +92,28 @@ function browserInit() {
 // ✅ ファイル変更を監視
 function watch() {
   gulp.watch("./src/sass/**/*.scss", gulp.series(compileSass, browserReload));
-  gulp.watch("./src/pug/**/*.pug", gulp.series(compilePug, browserReload)); // Pugの監視を追加
-  gulp.watch("./src/js/**/*.js", gulp.series(minJS, browserReload));
+  gulp.watch("./src/pug/**/*.pug", gulp.series(compilePug, browserReload));
+  gulp.watch("./src/js/**/*.js", gulp.series(processJS, browserReload)); // ✅ minJS → processJS に変更
 }
 
 // ✅ Gulpのタスクを登録
-exports.compilePug = compilePug; // Pugコンパイルを追加
+exports.compilePug = compilePug;
 exports.compileSass = compileSass;
-exports.minJS = minJS;
+exports.minJS = processJS; // ✅ minJS を修正（gulp.parallel(minJS, copyMinJS) を適用）
 exports.formatHTML = formatHTML;
 exports.copyImage = copyImage;
 exports.watch = watch;
 exports.browserInit = browserInit;
 
+
 // ✅ `build` タスクに Pug を追加
 exports.build = gulp.parallel(
   compileSass,
   compilePug,
-  minJS,
+  processJS, // ✅ minJS を更新（修正後のバージョンを適用）
   formatHTML,
   copyImage
 );
 
-// ✅ `dev` タスクを実行すると開発環境が起動
-exports.dev = gulp.parallel(watch, browserInit);
-
-// ✅ `default` タスクを設定
+// ✅ `default` タスクを設定（watch と browserInit を実行）
 exports.default = gulp.parallel(watch, browserInit);

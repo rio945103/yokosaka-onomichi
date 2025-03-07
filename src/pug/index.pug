@@ -4,11 +4,15 @@ html(lang="ja")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(name="robots", content="noindex")
         title onomichi
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-        link(rel="stylesheet", href="./assets/css/reset.css")
-        link(rel="stylesheet", href="./assets/css/style.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap")
+
+        link(rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css")
+        link(rel="stylesheet" href="./assets/css/reset.css")
+        link(rel="stylesheet" href="./assets/css/style.css")
+
+    
 
     body
         header 
@@ -24,7 +28,7 @@ html(lang="ja")
                         a.header__link(href="#entry") 参加要項
                         a.header__button.button(href="#contact") 応募してみる
         
-        .mv 
+        section.mv 
             .mv__bg.hidden-pc
                 img(src="./assets/img/Onomichi.png", alt="")
             .mv__bg-pc.hidden-sp
@@ -48,7 +52,7 @@ html(lang="ja")
                     .mv__cats 
                         img(src="./assets/img/cats.png", alt="")
 
-        .about
+        section.about
             .about__bd-picture
                 .about__picture-naname.hidden-sp
                     img(src="./assets/img/naname.png", alt="")
@@ -123,7 +127,7 @@ html(lang="ja")
                         img(src="./assets/img/about_onomichi.png", alt="")
                 .about__scroll 
 
-        .how 
+        section.how 
             .how__inner
                 .how__contents
                     .how__icon.icon
@@ -186,7 +190,7 @@ html(lang="ja")
                             |100名様に尾道の豪華な商品をプレゼント！
                 .how__button.button #見つけて尾道レトロ の最新投稿を見る
 
-        .prizes
+        section.prizes
             .prizes__inner 
                 .prize__contents 
                     .prizes__icon.icon
@@ -272,18 +276,57 @@ html(lang="ja")
             .wave_pic-pc.hidden-sp
                 img(src="./assets/img/wave_pc.png", alt="")
         
-        .spots 
+        section.spots 
             .spots__inner
                 .spots__contents
                     .spots__head
                         .spots__icon 
                             img(src="./assets/img/spots_icon.png", alt="")
                         .spots__title おすすめスポット
+
                     .spots__slider 
+                        // ✅ Swiper のメインコンテナ
+                        .swiper.spots__swiper
+                        // ✅ 必須のラッパー
+                        .swiper-wrapper
+                            // ✅ 各スライドを `.swiper-slide` にする
+                            .swiper-slide 
+                                .spots-card
+                                    img(src="./assets/img/temple-card.png", alt="")
+                            .swiper-slide 
+                                .spots-card
+                                    img(src="./assets/img/cat-card.png", alt="")
+                            .swiper-slide 
+                                .spots-card
+                                    img(src="./assets/img/shop-card.png", alt="")
+                            .swiper-slide 
+                                .spots-card
+                                    img(src="./assets/img/bag-card.png", alt="")
+                            .swiper-slide 
+                                .spots-card
+                                    img(src="./assets/img/yu-yu-card.png", alt="")
+                            .swiper-slide 
+                                .spots-card
+                                    img(src="./assets/img/airship-card.png", alt="")
+                            .swiper-slide 
+                                .spots-card
+                                    img(src="./assets/img/higurashi-card.png", alt="")
+
+                        // ✅ ページネーション
+                        .swiper-pagination.spots__pagination
+
+                        // ✅ ナビゲーションボタン
+                        .swiper-button-prev.spots__button-prev
+                        .swiper-button-next.spots__button-next
+                .spots_foot.hidden-sp
+                    img(src="./assets/img/spots_foot.png", alt="")
+                .spots__sub
                     .spots__sub-title 
                         img(src="./assets/img/title_spots.png", alt="")
-                    .spots__text レトロな景色に出会える人気の撮影スポットをピックアップ！
-                    .spots__button.button #見つけて尾道レトロ の最新投稿を見る
+                    .spots__sub-content
+                        .spots__text レトロな景色に出会える人気の撮影スポットをピックアップ！
+                        .spots__button.button #見つけて尾道レトロ の最新投稿を見る
+
 
         .under__wave.hidden-pc
             img(src="./assets/img/under_wave.png", alt="")
@@ -291,7 +334,7 @@ html(lang="ja")
             .under_wave-pc.hidden-sp
                 img(src="./assets/img/under_wave-pc.png", alt="")
 
-        .question 
+        section.question 
             .question__inner
                 .question__contents
                     .question__icon.icon
@@ -345,7 +388,7 @@ html(lang="ja")
                                     img(src="./assets/img/a.png", alt="")
                                 .question__item-a-text 恐れ入りますが、プレゼントをお選びいただくことはできません。また、ご当選者の発表は当選者の方への連絡をもって代えさせていただきます。
 
-        .entry
+        section.entry
             .entry__inner 
                 .entry__icon.icon
                     img(src="./assets/img/entry_icon.png", alt="")
@@ -381,7 +424,7 @@ html(lang="ja")
         .big__entry 
             img(src="./assets/img/bg_entry.png", alt="")
 
-        .contact 
+        section.contact 
             .contact__inner
                 .contact__contents
                     .contact__icon.icon
@@ -458,7 +501,7 @@ html(lang="ja")
                                             a(href="" target="_blank") プライバシーポリシー
                                             | に同意する
                                 .contact__button.button 上記の内容を送信する
-        .follow 
+        section.follow 
             .follow__inner 
                 .follow__title \ Please Follow Us! /
                 .follow__sns 
@@ -489,17 +532,20 @@ html(lang="ja")
                             .follow__access-title 電話番号
                             .follow__access-text 000-0000-0000
         
-        .page__top 
+        section.page__top 
             a(href="#") 
                 img(src="./assets/img/pagetop.png", alt="")
 
-        .footer
+        section.footer
             .footer__inner
                 .footer__image
                     img(src="./assets/img/wave_pic.png", alt="").hidden-pc
                     img(src="./assets/img/wave_pc.png", alt="").hidden-sp
 
                 .footer__copyright Copyright © Tourism campaign management office.
+        script(src="./assets/js/lib/swiper-bundle.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+        script(src="./js/script.js")
 
 
 

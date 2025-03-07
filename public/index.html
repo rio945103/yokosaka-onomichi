@@ -4,9 +4,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="robots" content="noindex"/>
-    <title>onomichi</title><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <title>onomichi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&amp;family=Josefin+Sans:ital,wght@0,100..700;1,100..700&amp;family=Kiwi+Maru&amp;family=Noto+Sans+JP:wght@100..900&amp;display=swap"/>
+    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
   </head>
@@ -19,7 +21,7 @@
         </div>
       </div>
     </header>
-    <div class="mv"> 
+    <section class="mv"> 
       <div class="mv__bg hidden-pc"><img src="./assets/img/Onomichi.png" alt=""/></div>
       <div class="mv__bg-pc hidden-sp"><img src="./assets/img/mv_bg-pc.png" alt=""/></div>
       <div class="mv__inner">
@@ -36,8 +38,8 @@
           <div class="mv__cats"> <img src="./assets/img/cats.png" alt=""/></div>
         </div>
       </div>
-    </div>
-    <div class="about">
+    </section>
+    <section class="about">
       <div class="about__bd-picture">
         <div class="about__picture-naname hidden-sp"><img src="./assets/img/naname.png" alt=""/></div>
         <div class="about__picture-left"> <img src="./assets/img/about_Left.png" alt=""/></div>
@@ -67,8 +69,8 @@
         </div>
         <div class="about__scroll"> </div>
       </div>
-    </div>
-    <div class="how"> 
+    </section>
+    <section class="how"> 
       <div class="how__inner">
         <div class="how__contents">
           <div class="how__icon icon"><img src="./assets/img/how_icon.png" alt=""/></div>
@@ -108,8 +110,8 @@
         </div>
         <div class="how__button button">#見つけて尾道レトロ の最新投稿を見る</div>
       </div>
-    </div>
-    <div class="prizes">
+    </section>
+    <section class="prizes">
       <div class="prizes__inner"> 
         <div class="prize__contents"> 
           <div class="prizes__icon icon"><img src="./assets/img/prizes_icon.png" alt=""/></div>
@@ -168,31 +170,69 @@
           <div class="prizes__button button">#見つけて尾道レトロ の最新投稿を見る</div>
         </div>
       </div>
-    </div>
+    </section>
     <div class="bg_pic"><img src="./assets/img/bg_pic.png" alt=""/></div>
     <div class="wave">
       <div class="wave_pic hidden-pc"><img src="./assets/img/wave_pic.png" alt=""/></div>
       <div class="wave_pic-pc hidden-sp"><img src="./assets/img/wave_pc.png" alt=""/></div>
     </div>
-    <div class="spots"> 
+    <section class="spots"> 
       <div class="spots__inner">
         <div class="spots__contents">
           <div class="spots__head">
             <div class="spots__icon"> <img src="./assets/img/spots_icon.png" alt=""/></div>
             <div class="spots__title">おすすめスポット</div>
           </div>
-          <div class="spots__slider"> </div>
+          <div class="spots__slider"> 
+            <!-- ✅ Swiper のメインコンテナ-->
+            <div class="swiper spots__swiper"></div>
+            <!-- ✅ 必須のラッパー-->
+            <div class="swiper-wrapper">
+              <!-- ✅ 各スライドを `.swiper-slide` にする-->
+              <div class="swiper-slide"> 
+                <div class="spots-card"><img src="./assets/img/temple-card.png" alt=""/></div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="spots-card"><img src="./assets/img/cat-card.png" alt=""/></div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="spots-card"><img src="./assets/img/shop-card.png" alt=""/></div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="spots-card"><img src="./assets/img/bag-card.png" alt=""/></div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="spots-card"><img src="./assets/img/yu-yu-card.png" alt=""/></div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="spots-card"><img src="./assets/img/airship-card.png" alt=""/></div>
+              </div>
+              <div class="swiper-slide"> 
+                <div class="spots-card"><img src="./assets/img/higurashi-card.png" alt=""/></div>
+              </div>
+            </div>
+            <!-- ✅ ページネーション-->
+            <div class="swiper-pagination spots__pagination"></div>
+            <!-- ✅ ナビゲーションボタン-->
+            <div class="swiper-button-prev spots__button-prev"></div>
+            <div class="swiper-button-next spots__button-next"></div>
+          </div>
+        </div>
+        <div class="spots_foot hidden-sp"><img src="./assets/img/spots_foot.png" alt=""/></div>
+        <div class="spots__sub">
           <div class="spots__sub-title"> <img src="./assets/img/title_spots.png" alt=""/></div>
-          <div class="spots__text">レトロな景色に出会える人気の撮影スポットをピックアップ！</div>
-          <div class="spots__button button">#見つけて尾道レトロ の最新投稿を見る</div>
+          <div class="spots__sub-content">
+            <div class="spots__text">レトロな景色に出会える人気の撮影スポットをピックアップ！</div>
+            <div class="spots__button button">#見つけて尾道レトロ の最新投稿を見る</div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
     <div class="under__wave hidden-pc"><img src="./assets/img/under_wave.png" alt=""/></div>
     <div class="under__wave-img">
       <div class="under_wave-pc hidden-sp"><img src="./assets/img/under_wave-pc.png" alt=""/></div>
     </div>
-    <div class="question"> 
+    <section class="question"> 
       <div class="question__inner">
         <div class="question__contents">
           <div class="question__icon icon"><img src="./assets/img/question_icon.png" alt=""/></div>
@@ -248,8 +288,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="entry">
+    </section>
+    <section class="entry">
       <div class="entry__inner"> 
         <div class="entry__icon icon"><img src="./assets/img/entry_icon.png" alt=""/></div>
         <div class="entry__title1 title1">Entry Requirements</div>
@@ -289,9 +329,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <div class="big__entry"> <img src="./assets/img/bg_entry.png" alt=""/></div>
-    <div class="contact"> 
+    <section class="contact"> 
       <div class="contact__inner">
         <div class="contact__contents">
           <div class="contact__icon icon"><img src="./assets/img/contact_icon.png" alt=""/></div>
@@ -381,8 +421,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="follow"> 
+    </section>
+    <section class="follow"> 
       <div class="follow__inner"> 
         <div class="follow__title">\ Please Follow Us! /</div>
         <div class="follow__sns"> <a href="https://www.youtube.com/onomichi_retro" target="_blank"><img src="./assets/img/youtube_icon.png" alt=""/></a><a href="https://www.instagram.com/onomichi_retro/" target="_blank"><img src="./assets/img/instagram_icon.png" alt=""/></a><a href="https://twitter.com/onomichi_retro" target="_blank"><img src="./assets/img/twitter_icon.png" alt=""/></a></div>
@@ -410,13 +450,16 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="page__top"> <a href="#"> <img src="./assets/img/pagetop.png" alt=""/></a></div>
-    <div class="footer">
+    </section>
+    <section class="page__top"> <a href="#"> <img src="./assets/img/pagetop.png" alt=""/></a></section>
+    <section class="footer">
       <div class="footer__inner">
         <div class="footer__image"><img class="hidden-pc" src="./assets/img/wave_pic.png" alt=""/><img class="hidden-sp" src="./assets/img/wave_pc.png" alt=""/></div>
         <div class="footer__copyright">Copyright © Tourism campaign management office.</div>
       </div>
-    </div>
+    </section>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

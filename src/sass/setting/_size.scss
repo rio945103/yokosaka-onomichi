@@ -488,14 +488,30 @@
     img {
         width: 28px;
         height: 28px;
+        @include mq(pc){
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
+
+.spots_foot {
+    img {
+        @include mq(pc){
+            width: 100px;
+            height: 220px;
+        }
     }
 }
 
 .spots__sub-title {
-    text-align: center;
     img {
         width: 255px;
         height: 55px;
+        @include mq(pc){
+            width: 495px;
+            height: 107px;
+        }
     }
 }
 

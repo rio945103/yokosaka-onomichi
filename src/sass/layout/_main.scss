@@ -472,17 +472,98 @@
 .spots__inner {
     padding-inline: 20px;
     padding-bottom: 20px;
+    @include mq(pc){
+        position: relative;
+    }
+}
+
+.spots__contents {
+    @include mq(pc){
+        display: flex;
+    }
 }
 
 .spots__head {
     display: flex;
     justify-content: center;
     gap: 8px;
+    @include mq(pc){
+        flex-direction: column;
+        margin-left: 252px;
+        margin-right: 40px;
+        align-items: flex-start;
+    }
+}
+
+.spots__title {
+    @include mq(pc){
+        writing-mode: vertical-rl; // ✅ 右から左の縦書き
+        text-orientation: upright; // ✅ 文字の向きを正しくする（ひらがな・カタカナが横倒しにならない）
+        margin: 0 auto; // ✅ 中央揃え
+    }
 }
 
 .spots__text {
     margin-top: 16px;
+    
 }
+
+.swiper-wrapper {
+    margin-top: 24px;
+    height: auto !important; // ✅ 高さの固定を防ぐ
+    display: flex;
+    justify-content: center; // ✅ スライドを中央寄せ
+    align-items: center; // ✅ 縦方向の中央揃え
+    @include mq(pc){
+        margin-top: 0;
+    }
+}
+
+.swiper-slide {
+    width: auto !important;  // ✅ Swiper のデフォルトを上書き
+    height: auto !important; // ✅ 高さを内容に応じて調整
+    margin-right: 16px; // ✅ 画像の間隔を 20px にする
+}
+
+.swiper-slide:last-child {
+    margin-right: 0; // ✅ 最後のスライドの余白をなくす
+}
+
+.spots-card {
+    
+    
+    @include mq(pc){
+
+    }
+    img {
+        width: 240px;
+        @include mq(pc){
+            width: 344px;
+        }
+    }
+}
+
+.spots_foot {
+    position: absolute;
+    left: 36px;
+    bottom: 0;
+
+}
+
+.spots__sub {
+    @include mq(pc){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        gap: 81px;
+    }
+}
+
+.spots__sub-title {
+    text-align: center;
+}
+
 
 .spots__button {
     margin-top: 16px;
@@ -491,7 +572,7 @@
     padding: 6px 24px;
     white-space: nowrap;
     @include mq(pc){
-        margin-top: 40px;
+        margin-top: 24px;
 
     }
 }

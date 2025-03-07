@@ -24,3 +24,8 @@ $breakpoints: (
       display: none;
   }
 }
+
+html,
+body {
+  overflow-x: hidden; // ✅ 横スクロールを防ぐ
+}
