@@ -286,7 +286,7 @@ html(lang="ja")
 
                     .spots__slider 
                         // ✅ Swiper のメインコンテナ
-                        .swiper.spots__swiper
+                        .swiper#js-gallery-swiper.spots__swiper
                         // ✅ 必須のラッパー
                         .swiper-wrapper
                             // ✅ 各スライドを `.swiper-slide` にする
@@ -313,11 +313,12 @@ html(lang="ja")
                                     img(src="./assets/img/higurashi-card.png", alt="")
 
                         // ✅ ページネーション
-                        .swiper-pagination.spots__pagination
+                        .swiper-pagination#js-gallery-pagenation.spots__pagination
 
                         // ✅ ナビゲーションボタン
-                        .swiper-button-prev.spots__button-prev
-                        .swiper-button-next.spots__button-next
+                        .swiper-button-prev#js-gallery-prev.spots__button-prev
+                        .swiper-button-next#js-gallery-next.spots__button-next
+
                 .spots_foot.hidden-sp
                     img(src="./assets/img/spots_foot.png", alt="")
                 .spots__sub
@@ -543,9 +544,15 @@ html(lang="ja")
                     img(src="./assets/img/wave_pc.png", alt="").hidden-sp
 
                 .footer__copyright Copyright © Tourism campaign management office.
-        script(src="./assets/js/lib/swiper-bundle.min.js")
+        // ✅ 1. jQuery を最初に読み込む
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
-        script(src="./js/script.js")
+
+        // ✅ 2. Swiper を次に読み込む
+        script(src="./assets/js/lib/swiper-bundle.min.js")
+
+        // ✅ 3. 自作のスクリプトを最後に読み込む
+        script(src="./assets/js/script.min.js")
+
 
 
 

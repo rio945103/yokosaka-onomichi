@@ -663,7 +663,7 @@ a {
 
 .swiper-wrapper {
 	align-items: center;
-	display: flex;
+	gap: 16px;
 	height: auto !important;
 	justify-content: center;
 	margin-top: 24px;
@@ -671,8 +671,7 @@ a {
 
 .swiper-slide {
 	height: auto !important;
-	margin-right: 16px;
-	width: auto !important;
+	width: 240px !important;
 }
 
 .swiper-slide:last-child {
@@ -1553,7 +1552,12 @@ header {
 }
 
 .swiper-wrapper {
+	gap: 32px;
 	margin-top: 0;
+}
+
+.swiper-slide {
+	width: 344px !important;
 }
 
 .spots-card img {

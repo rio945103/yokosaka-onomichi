@@ -511,23 +511,30 @@
 .swiper-wrapper {
     margin-top: 24px;
     height: auto !important; // ✅ 高さの固定を防ぐ
-    display: flex;
     justify-content: center; // ✅ スライドを中央寄せ
     align-items: center; // ✅ 縦方向の中央揃え
+    gap: 16px; // ✅ 画像の間隔を 20px にする
+
     @include mq(pc){
         margin-top: 0;
+        gap: 32px;
     }
 }
 
 .swiper-slide {
-    width: auto !important;  // ✅ Swiper のデフォルトを上書き
-    height: auto !important; // ✅ 高さを内容に応じて調整
-    margin-right: 16px; // ✅ 画像の間隔を 20px にする
+    width: 240px !important; // ✅ スライドの幅を 240px に固定
+    height: auto !important;
+    @include mq(pc){
+        width: 344px !important; // ✅ PC では 344px に固定
+    }
 }
+
+
 
 .swiper-slide:last-child {
     margin-right: 0; // ✅ 最後のスライドの余白をなくす
 }
+
 
 .spots-card {
     
