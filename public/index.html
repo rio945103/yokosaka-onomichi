@@ -18,9 +18,15 @@
         <div class="header__contents"> 
           <div class="header__logo"> <img src="./assets/img/logo.png" alt=""/></div>
           <div class="header__nav hidden-sp"><a class="header__link" href="#about">キャンペーンについて</a><a class="header__link" href="#prizes">特典</a><a class="header__link" href="#spots">おすすめスポット</a><a class="header__link" href="#question">よくある質問</a><a class="header__link" href="#entry">参加要項</a><a class="header__button button" href="#contact">応募してみる</a></div>
+          <button class="header__open drawer-icon is-checked" id="js-drawer-icon">
+            <div class="drawer-icon__bars"><span class="drawer-icon__bar-long"></span><span class="drawer-icon__bar-short"></span></div><span class="drawer-icon__bar"></span><span class="drawer-icon__bar"></span>
+          </button>
         </div>
       </div>
     </header>
+    <div class="drawer-content is-checked" id="js-drawer-content">
+      <nav class="drawer-content__menu"><a class="drawer-content__link">キャンペーンについて</a><a class="drawer-content__link">キャンペーン特典</a><a class="drawer-content__link">おすすめスポット</a><a class="drawer-content__link">よくある質問</a><a class="drawer-content__link">参加要項</a><a class="drawer-content__link">お問い合わせ</a><a class="drawer-content__button button">応募してみる</a></nav>
+    </div>
     <section class="mv"> 
       <div class="mv__bg hidden-pc"><img src="./assets/img/Onomichi.png" alt=""/></div>
       <div class="mv__bg-pc hidden-sp"><img src="./assets/img/mv_bg-pc.png" alt=""/></div>
@@ -92,7 +98,7 @@
               <div class="how__follow-icon"> <img src="./assets/img/how_follow.png" alt=""/></div>
               <div class="how__follow-text">onomichi_tabi をフォロー</div>
             </div>
-            <div class="how__step-line-sp hidden-pc"><img src="./assets/img/how_step-line.png" alt=""/></div>
+            <div class="how__step-line hidden-pc"><img src="./assets/img/how_step-line.png" alt=""/></div>
             <div class="how__step-line-pc1 hidden-sp"><img src="./assets/img/step_line-pc.png" alt=""/></div>
           </div>
           <div class="how__step step-2">
@@ -241,45 +247,45 @@
             <div class="question__title2 title2">よくあるご質問</div>
           </div>
           <div class="question__items">
-            <div class="question__item"> 
-              <div class="question__item-q">
+            <div class="question__item is-open">
+              <button class="question__item-q js-accordion">
                 <div class="question__item-q-icon"><img src="./assets/img/q.png" alt=""/></div>
                 <div class="question__item-q-text">ひとりで複数回投稿してもいいですか？</div>
                 <div class="question__item-button"><img src="./assets/img/q_button-.png" alt=""/></div>
-              </div>
-              <div class="question__item-a"> 
+              </button>
+              <div class="question__item-a">
                 <div class="question__item-a-icon"><img src="./assets/img/a.png" alt=""/></div>
                 <div class="question__item-a-text">期間中であれば何度でも投稿可能ですが、当選は１回限りとなります。</div>
               </div>
             </div>
             <div class="question__item"> 
-              <div class="question__item-q">
+              <button class="question__item-q js-accordion">
                 <div class="question__item-q-icon"><img src="./assets/img/q.png" alt=""/></div>
                 <div class="question__item-q-text">過去の尾道旅行の写真でもいいですか？</div>
                 <div class="question__item-button"><img src="./assets/img/q_button+.png" alt=""/></div>
-              </div>
+              </button>
               <div class="question__item-a"> 
                 <div class="question__item-a-icon"><img src="./assets/img/a.png" alt=""/></div>
                 <div class="question__item-a-text"> キャンペーン以前の期間に撮影した写真での参加も可能です。ただし、過去のInstagramに投稿済みのものに編集で「#見つけて尾道レトロ」を追加されてもシステム上反映することはできません。ご注意ください。</div>
               </div>
             </div>
             <div class="question__item"> 
-              <div class="question__item-q">
+              <button class="question__item-q js-accordion">
                 <div class="question__item-q-icon"><img src="./assets/img/q.png" alt=""/></div>
                 <div class="question__item-q-text">お店の中で写真を撮ってもいいですか？</div>
                 <div class="question__item-button"><img src="./assets/img/q_button+.png" alt=""/></div>
-              </div>
+              </button>
               <div class="question__item-a"> 
                 <div class="question__item-a-icon"><img src="./assets/img/a.png" alt=""/></div>
                 <div class="question__item-a-text">店内で撮影した写真での参加も可能ですが、他人のプライバシーを侵害する写真によるご応募は無効です。店内撮影の際は、必ずお店の人へご確認ください。</div>
               </div>
             </div>
             <div class="question__item"> 
-              <div class="question__item-q">
+              <button class="question__item-q js-accordion">
                 <div class="question__item-q-icon"><img src="./assets/img/q.png" alt=""/></div>
                 <div class="question__item-q-text">当選したらプレゼントは選べますか？</div>
                 <div class="question__item-button"><img src="./assets/img/q_button+.png" alt=""/></div>
-              </div>
+              </button>
               <div class="question__item-a"> 
                 <div class="question__item-a-icon"><img src="./assets/img/a.png" alt=""/></div>
                 <div class="question__item-a-text">恐れ入りますが、プレゼントをお選びいただくことはできません。また、ご当選者の発表は当選者の方への連絡をもって代えさせていただきます。</div>
@@ -458,8 +464,7 @@
         <div class="footer__copyright">Copyright © Tourism campaign management office.</div>
       </div>
     </section>
-    <!-- ✅ 1. jQuery を最初に読み込む-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- ✅ 1. jQuery を最初に読み込む--><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- ✅ 2. Swiper を次に読み込む-->
     <script src="./assets/js/lib/swiper-bundle.min.js"></script>
     <!-- ✅ 3. 自作のスクリプトを最後に読み込む-->

@@ -8,6 +8,20 @@ header {
     background: var(--LP-White, #FFF);
 }
 
+.drawer-content {
+    background: var(--LP-White, #FFF);
+}
+
+.header__open {
+    background: var(--LP-White, #FFF);
+}
+
+.drawer-icon__bar-long, .drawer-icon__bar-short, .drawer-icon__bar{
+    background: #4A3636;
+    border-radius: 6px;
+}
+
+
 .about__contents {
     border-radius: 24px;
     background: var(--LP-White, #FFF);
@@ -28,6 +42,10 @@ header {
 
 .spots {
     background: var(--LP-Dark-Blue, #67B0C7);
+}
+
+.question__item-q {
+    background: var(--LP-White, #FFF);
 }
 
 .question__item-a {
