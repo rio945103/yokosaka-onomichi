@@ -833,10 +833,19 @@ a {
 }
 
 .question__item-a {
-	display: flex;
-	display: none;
+	align-items: center;
+	display: none; /* ✅ 初期状態では非表示 */
+	flex-direction: row; /* ✅ 横並びにする */
 	gap: 12px;
-	padding: 16px 16px;
+	padding: 16px;
+}
+
+.question__item-a.is-open {
+	display: flex; /* ✅ 開いたときは `display: flex;` を適用 */
+}
+
+.question__item-button {
+	margin-left: auto;
 }
 
 .entry {
@@ -1322,6 +1331,10 @@ header {
 
 .under_wave-pc img {
 	height: 120px;
+	width: 100%;
+}
+
+.question__item-q {
 	width: 100%;
 }
 

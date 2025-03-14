@@ -709,21 +709,33 @@
     display: flex;
     padding: 12px 16px;
     gap: 12px;
+    
 }
 
 .question__item-q-icon {
+    
     img {
         width: 22px;
     }
 }
 
 .question__item-a {
-    display: flex;
-    padding: 16px 16px;
+    display: none; /* ✅ 初期状態では非表示 */
+    padding: 16px;
+    align-items: center;
     gap: 12px;
-    display: none;
-    
+    flex-direction: row; /* ✅ 横並びにする */
+
+    &.is-open {
+        display: flex; /* ✅ 開いたときは `display: flex;` を適用 */
+    }
 }
+
+.question__item-button {
+    margin-left: auto;
+}
+
+
 
 .entry {
     padding-inline: 20px;

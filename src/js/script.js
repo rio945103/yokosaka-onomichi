@@ -37,22 +37,33 @@ document.addEventListener("DOMContentLoaded", function () {
     jQuery("#js-drawer-content").toggleClass("is-checked");
   });
 
-  jQuery(".js-accordion").on("click", function (e) {
-    e.preventDefault();
+  jQuery(document).ready(function () {
+    // ✅ 最初の .is-open の .question__item-a を表示
+    jQuery(".question__item.is-open .question__item-a").css("display", "flex");
 
-    const parent = jQuery(this).parent(); // ✅ アコーディオンの親要素
-    const img = jQuery(this).find(".question__item-button img"); // ✅ 画像要素を取得
+    jQuery(".js-accordion").on("click", function (e) {
+        e.preventDefault();
 
-    if (parent.hasClass("is-open")) {
-        parent.removeClass("is-open");
-        jQuery(this).next().slideUp();
-        img.attr("src", "./assets/img/q_button+.png"); // ✅ 閉じたとき `q_button+.png` に戻す
-    } else {
-        parent.addClass("is-open");
-        jQuery(this).next().slideDown();
-        img.attr("src", "./assets/img/q_button-.png"); // ✅ 開いたとき `q_button-.png` に変更
-    }
+        const parent = jQuery(this).parent(); // ✅ アコーディオンの親要素
+        const answer = jQuery(this).next(".question__item-a"); // ✅ アコーディオンの答え部分
+        const img = jQuery(this).find(".question__item-button img"); // ✅ 画像ボタン
+
+        if (parent.hasClass("is-open")) {
+            parent.removeClass("is-open");
+            answer.slideUp(300, function () {
+                jQuery(this).removeClass("is-open"); // ✅ クラスを削除
+            });
+            img.attr("src", "./assets/img/q_button+.png"); // ✅ 閉じたときの画像
+        } else {
+            parent.addClass("is-open");
+            answer.addClass("is-open").hide().slideDown(300); // ✅ `is-open` を追加して `display: flex;` を適用
+            img.attr("src", "./assets/img/q_button-.png"); // ✅ 開いたときの画像
+        }
+    });
 });
+
+
+
 
 
 

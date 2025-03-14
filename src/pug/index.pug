@@ -27,7 +27,7 @@ html(lang="ja")
                         a.header__link(href="#question") よくある質問
                         a.header__link(href="#entry") 参加要項
                         a.header__button.button(href="#contact") 応募してみる
-                    button.header__open.drawer-icon.is-checked(id="js-drawer-icon")
+                    button.header__open.drawer-icon(id="js-drawer-icon").hidden-pc
                         .drawer-icon__bars
                             span.drawer-icon__bar-long
                             span.drawer-icon__bar-short
@@ -36,7 +36,7 @@ html(lang="ja")
 
                         
         
-        .drawer-content.is-checked(id="js-drawer-content")
+        .drawer-content(id="js-drawer-content").hidden-pc
             nav.drawer-content__menu
                 a.drawer-content__link キャンペーンについて
                 a.drawer-content__link キャンペーン特典
