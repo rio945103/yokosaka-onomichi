@@ -13,15 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Swiper の初期化
   const swiper = new Swiper(".spots__swiper", {
     slidesPerView: 1, // ✅ 1枚ずつ表示
+    slidesPerGroup: 1, // ✅ 1枚ずつ移動
     spaceBetween: 16, // ✅ スライド間の間隔
-    loop: true, // ✅ 無限ループ
+    loop: false, // ✅ 無限ループを有効にする
+    centeredSlides: false, // ✅ スライドを中央に配置
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    on: {
+      slideChangeTransitionEnd: function () {
+        console.log("✅ スライド変更完了: 現在のスライド", this.realIndex);
+      },
     },
   });
 

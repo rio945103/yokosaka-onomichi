@@ -7,8 +7,7 @@
     <title>onomichi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&amp;family=Josefin+Sans:ital,wght@0,100..700;1,100..700&amp;family=Kiwi+Maru&amp;family=Noto+Sans+JP:wght@100..900&amp;display=swap"/>
-    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&amp;family=Josefin+Sans:ital,wght@0,100..700;1,100..700&amp;family=Kiwi+Maru&amp;family=Noto+Sans+JP:wght@100..900&amp;display=swap"/><link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
   </head>
@@ -191,30 +190,31 @@
           </div>
           <div class="spots__slider"> 
             <!-- ✅ Swiper のメインコンテナ-->
-            <div class="swiper spots__swiper" id="js-gallery-swiper"></div>
-            <!-- ✅ 必須のラッパー-->
-            <div class="swiper-wrapper">
-              <!-- ✅ 各スライドを `.swiper-slide` にする-->
-              <div class="swiper-slide"> 
-                <div class="spots-card"><img src="./assets/img/temple-card.png" alt=""/></div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="spots-card"><img src="./assets/img/cat-card.png" alt=""/></div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="spots-card"><img src="./assets/img/shop-card.png" alt=""/></div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="spots-card"><img src="./assets/img/bag-card.png" alt=""/></div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="spots-card"><img src="./assets/img/yu-yu-card.png" alt=""/></div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="spots-card"><img src="./assets/img/airship-card.png" alt=""/></div>
-              </div>
-              <div class="swiper-slide"> 
-                <div class="spots-card"><img src="./assets/img/higurashi-card.png" alt=""/></div>
+            <div class="swiper spots__swiper" id="js-gallery-swiper">
+              <!-- ✅ 必須のラッパー-->
+              <div class="swiper-wrapper">
+                <!-- ✅ 各スライドを `.swiper-slide` にする-->
+                <div class="swiper-slide"> 
+                  <div class="spots-card"><img src="./assets/img/temple-card.png" alt=""/></div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="spots-card"><img src="./assets/img/cat-card.png" alt=""/></div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="spots-card"><img src="./assets/img/shop-card.png" alt=""/></div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="spots-card"><img src="./assets/img/bag-card.png" alt=""/></div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="spots-card"><img src="./assets/img/yu-yu-card.png" alt=""/></div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="spots-card"><img src="./assets/img/airship-card.png" alt=""/></div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="spots-card"><img src="./assets/img/higurashi-card.png" alt=""/></div>
+                </div>
               </div>
             </div>
             <!-- ✅ ページネーション-->
@@ -464,9 +464,8 @@
         <div class="footer__copyright">Copyright © Tourism campaign management office.</div>
       </div>
     </section>
+    <!-- ✅ 2. Swiper を次に読み込む--><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- ✅ 1. jQuery を最初に読み込む--><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- ✅ 2. Swiper を次に読み込む-->
-    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
     <!-- ✅ 3. 自作のスクリプトを最後に読み込む-->
     <script src="./assets/js/script.min.js"></script>
   </body>
