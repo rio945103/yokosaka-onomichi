@@ -30,6 +30,7 @@
     @include mq(pc){
         font-size: 32px;
         margin-top: 8px;
+        border-bottom: 8px solid var(--LP-Yellow, #FFEE56);
     }
 }
 
@@ -145,6 +146,22 @@
     }
 }
 
+.prizes__text {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+
+    /* JP/Text 12px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+
+    @include mq(pc){
+        font-size: 16px;
+    }
+}
+
 .prizes__button {
     color: var(--LP-Blown, #4A3636);
     font-feature-settings: 'pref' on;
@@ -159,6 +176,47 @@
     @include mq(pc){
         font-size: 20px;
     }
+}
+
+.prizes__modal-title {
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 20px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 32px */
+    @include mq(pc){
+        font-size: 20px;
+    }
+}
+
+
+.prizes__modal-text {
+    color: #000;
+    
+    /* JP/Text 16px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+    @include mq(pc){
+        font-size: 16px;
+    }
+}
+
+.prizes__modal-button {
+    color: var(--LP-Blown, #4A3636);
+    font-feature-settings: 'pref' on;
+
+    /* JP/Text 16px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 25.6px */
 }
 
 .spots__title {

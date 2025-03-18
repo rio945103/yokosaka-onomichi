@@ -1,39 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("✅ DOMContentLoaded: Swiper 初期化を試みます");
+const swiper = new Swiper("#js-gallery-swiper", {
+  slidesPerView: 1, // ✅ 1枚ずつ表示
+  slidesPerGroup: 1, // ✅ 1枚ずつ移動
+  spaceBetween: 16, // ✅ スライド間の余白
+  loop: true, // ✅ ループを有効化（最後のスライドの次に最初のスライドが来る）
+  loopedSlides: 3, // ✅ スライドの総数を明示的に指定
+  loopAdditionalSlides: 3, // ✅ `loopedSlides` の影響を正しく適用
 
-  // Swiper の要素があるか確認
-  const swiperElement = document.querySelector(".spots__swiper");
-  if (!swiperElement) {
-    console.error("🚨 Swiper の要素が見つかりませんでした！");
-    return; // 要素がない場合は処理を中断
-  }
 
-  console.log("✅ Swiper の要素を発見！初期化を実行");
+  // If we need pagination
+  pagination: {
+    el: "#js-gallery-pagenation",
+    clickable: true, // ✅ クリック可能にする
+  },
 
-  // Swiper の初期化
-  const swiper = new Swiper(".spots__swiper", {
-    slidesPerView: 1, // ✅ 1枚ずつ表示
-    slidesPerGroup: 1, // ✅ 1枚ずつ移動
-    spaceBetween: 16, // ✅ スライド間の間隔
-    loop: false, // ✅ 無限ループを有効にする
-    centeredSlides: false, // ✅ スライドを中央に配置
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    on: {
-      slideChangeTransitionEnd: function () {
-        console.log("✅ スライド変更完了: 現在のスライド", this.realIndex);
-      },
-    },
-  });
-
-  console.log("✅ Swiper 初期化成功！", swiper);
+  // Navigation arrows
+  navigation: {
+    nextEl: "#js-gallery-next",
+    prevEl: "#js-gallery-prev",
+  },
 });
+
 
 
 
@@ -73,19 +59,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+jQuery(".js-modal-open").on("click", function (e) {
+  e.preventDefault();
+  
+  // クリックされたボタンの `data-target` の値を取得
+  let targetModal = jQuery(this).data("target");
 
-  jQuery(".js-modal-open").on("click", function (e) {
-    e.preventDefault();
-    jQuery("#js-about-modal")[0].showModal();
-  });
+  // 取得した `id` を持つモーダルを開く
+  jQuery(`#${targetModal}`)[0].showModal();
+});
 
-  jQuery(".js-modal-close").on("click", function (e) {
-    e.preventDefault();
-    jQuery("#js-about-modal")[0].close();
-  });
+jQuery(".js-modal-close").on("click", function (e) {
+  e.preventDefault();
+
+  // 閉じるボタンが含まれる `dialog` を取得して閉じる
+  jQuery(this).closest("dialog")[0].close();
+});
+
 
   jQuery("#js-drawer-content a[href^='#']").on("click", function (e) {
-    jQuery("#js-drawer-icon").removeClass("is-checked");
     jQuery("#js-drawer-content").removeClass("is-checked");
   });
 

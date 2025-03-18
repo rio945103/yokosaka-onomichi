@@ -374,6 +374,13 @@
     }
 }
 
+.prizes__bg-left,.prizes__bg-right {
+    img {
+        width: 315px;
+        height: 86px;
+    }
+}
+
 .prizes__inner {
     @include mq(pc){
         max-width: 1024px;
@@ -398,7 +405,7 @@
     .prizes__card:nth-child(3) .prizes__card-image img,
     .prizes__card:nth-child(4) .prizes__card-image img,
     .prizes__card:nth-child(5) .prizes__card-image img {
-        width: 280px;
+        width: 100%;
         height: 240px;
         border-radius: 16px 16px 0 0;
     }
@@ -410,7 +417,7 @@
         height: 140px;
         border-radius: 8px 8px 0 0;
         @include mq(pc){
-            width: 440px;
+            width: 100%;
             height: 340px;
             border-radius: 24px 24px 0 0;
 
@@ -468,6 +475,46 @@
         padding: 10px 40px;
         max-width: 437px;
     }
+}
+
+.prizes__modal {
+    border-radius: 24px;
+    max-width: 336px; // ✅ 最大幅を 336px にする
+    max-height: 480px; // ✅ 最大高さを 480px にする
+    
+    @include mq(pc){
+        max-width: 480px; // ✅ PC では 480px にする
+        max-height: 650px;
+    }
+}
+.prizes__modal-image {
+    img {
+        border-radius: 24px 24px 0 0;
+        width: 336px;
+        height: 210px;
+        @include mq(pc){
+            height: 300px;
+            width: 480px;
+        }
+    }
+}
+
+.prizes__modal-texts {
+    border-radius: 0 0 24px 24px;
+    background: #FFF;
+    width: 336px;
+    height: 270px;
+    @include mq(pc){
+        width: 480px;
+        height: 350px;
+        padding-bottom: 80px;
+    }
+}
+
+.prizes__modal-button {
+    padding: 6px 24px 6px 24px;
+    width: 96px;
+    white-space: nowrap;
 }
 
 .bg_pic {

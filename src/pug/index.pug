@@ -21,12 +21,12 @@ html(lang="ja")
                     .header__logo 
                         img(src="./assets/img/logo.png", alt="")
                     .header__nav.hidden-sp
-                        a.header__link(href="#about") キャンペーンについて
-                        a.header__link(href="#prizes") 特典
-                        a.header__link(href="#spots") おすすめスポット
-                        a.header__link(href="#question") よくある質問
-                        a.header__link(href="#entry") 参加要項
-                        a.header__button.button(href="#contact") 応募してみる
+                        a(href="#about").header__link キャンペーンについて
+                        a(href="#prizes").header__link 特典
+                        a(href="#spots").header__link おすすめスポット
+                        a(href="#question").header__link よくある質問
+                        a(href="#entry").header__link 参加要項
+                        a(href="#contact").header__button.button 応募してみる
                     button.header__open.drawer-icon(id="js-drawer-icon").hidden-pc
                         .drawer-icon__bars
                             span.drawer-icon__bar-long
@@ -38,21 +38,21 @@ html(lang="ja")
         
         .drawer-content(id="js-drawer-content").hidden-pc
             nav.drawer-content__menu
-                a.drawer-content__link キャンペーンについて
-                a.drawer-content__link キャンペーン特典
-                a.drawer-content__link おすすめスポット
-                a.drawer-content__link よくある質問
-                a.drawer-content__link 参加要項
-                a.drawer-content__link お問い合わせ
-                a.drawer-content__button.button 応募してみる
+                a(href="#about").drawer-content__link キャンペーンについて
+                a(href="#prizes").drawer-content__link キャンペーン特典
+                a(href="#spots").drawer-content__link おすすめスポット
+                a(href="#question").drawer-content__link よくある質問
+                a(href="#entry").drawer-content__link 参加要項
+                a(href="#contact").drawer-content__link お問い合わせ
+                a(href="#contact").drawer-content__button.button 応募してみる
 
-        section.mv 
+        section.mv
             .mv__bg.hidden-pc
                 img(src="./assets/img/Onomichi.png", alt="")
             .mv__bg-pc.hidden-sp
                 img(src="./assets/img/mv_bg-pc.png", alt="")
             .mv__inner
-               .mv__contents 
+                .mv__contents 
                     .mv__text あなたの見つけたレトロな尾道の一枚を<br>Instagramに投稿しよう
                     .mv__title1
                         img(src="./assets/img/mv_title1.png", alt="")
@@ -69,11 +69,11 @@ html(lang="ja")
                         img(src="./assets/img/food.png", alt="")
                     .mv__cats 
                         img(src="./assets/img/cats.png", alt="")
-
-        section.about
-            .about__bd-picture
                 .about__picture-naname.hidden-sp
                     img(src="./assets/img/naname.png", alt="")
+
+        section(id="about").about
+            .about__bd-picture
                 .about__picture-left 
                     img(src="./assets/img/about_Left.png", alt="")
                 .about__picture-right 
@@ -87,7 +87,7 @@ html(lang="ja")
                         img(src="./assets/img/about1.png", alt="")
                     .about__picture2
                         img(src="./assets/img/about2.png", alt="")
-                    .about__title1.title1 About
+                    .about__title1.title1.fade-in-up.is-in-view About
                     .tac
                         .about__title2.title2 キャンペーンについて
                         
@@ -145,7 +145,7 @@ html(lang="ja")
                         img(src="./assets/img/about_onomichi.png", alt="")
                 .about__scroll 
 
-        section.how 
+        section(id="how").how 
             .how__inner
                 .how__contents
                     .how__icon.icon
@@ -208,53 +208,62 @@ html(lang="ja")
                             |100名様に尾道の豪華な商品をプレゼント！
                 .how__button.button #見つけて尾道レトロ の最新投稿を見る
 
-        section.prizes
+        section(id="prizes").prizes
+            .prizes__bg.hidden-sp
+                .prizes__bg-left 
+                    img(src="./assets/img/bg_triangle-left.png", alt="")
+                .prizes__bg-right 
+                    img(src="./assets/img/bg_triangle-right.png", alt="")
             .prizes__inner 
-                .prize__contents 
+                .prizes__head
                     .prizes__icon.icon
                         img(src="./assets/img/prizes_icon.png", alt="")
                     .prizes__title1.title1 Prizes
                     .tac
                         .prizes__title2.title2 キャンペーン特典
+                .prize__contents 
                     .prizes__text
                         |キャンペーンにご参加いただたい方の中から100名様に、尾道
-                        br
+                        br.hidden-pc
                         |で人気のお土産セットやオリジナルグッズをプレゼント！
                     .prizes__cards 
                         .prizes__card 
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number1.png", alt="")
-                            .prizes__card-image
-                                img(src="./assets/img/prizes_sweets.png", alt="")
+                            .prizes__card-image-wrapper 
+                                .prizes__card-image
+                                    img(src="./assets/img/prizes_sweets.png", alt="")
                             .prizes__card-text
                                 |海街洋菓子店
                                 br
                                 |スイーツセット
-                                a(href="#" target="_blank")
+                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-sweets")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
                         .prizes__card 
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number2.png", alt="")
-                            .prizes__card-image
-                                img(src="./assets/img/prizes_manekineko.png", alt="")
+                            .prizes__card-image-wrapper 
+                                .prizes__card-image
+                                    img(src="./assets/img/prizes_manekineko.png", alt="")
                             .prizes__card-text
                                 |ねこねこ
                                 br
                                 |グッズセット 
-                                a(href="#" target="_blank")
+                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-cats")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
                         .prizes__card 
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number3.png", alt="")
-                            .prizes__card-image
-                                img(src="./assets/img/prizes_onomichiramen.png", alt="")
+                            .prizes__card-image-wrapper 
+                                .prizes__card-image
+                                    img(src="./assets/img/prizes_onomichiramen.png", alt="")
                             .prizes__card-text
                                 |尾道ラーメンセット 
-                                a(href="#" target="_blank")
+                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-ramen")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
@@ -262,30 +271,107 @@ html(lang="ja")
                         .prizes__card 
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number4.png", alt="")
-                            .prizes__card-image
-                                img(src="./assets/img/prizes_cafe.png", alt="")
+                            .prizes__card-image-wrapper 
+                                .prizes__card-image
+                                    img(src="./assets/img/prizes_cafe.png", alt="")
                             .prizes__card-text
                                 |おうちで
                                 br
                                 |喫茶店セット 
-                                a(href="#" target="_blank")
+                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-cafe")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
                         .prizes__card 
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number5.png", alt="")
-                            .prizes__card-image
-                                img(src="./assets/img/prizes_to-to.png", alt="")
+                            .prizes__card-image-wrapper 
+                                .prizes__card-image
+                                    img(src="./assets/img/prizes_to-to.png", alt="")
                             .prizes__card-text
                                 |工房尾道帆布
                                 br
                                 |オリジナルトート 
-                                a(href="#" target="_blank")
+                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-to-to")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
                     .prizes__button.button #見つけて尾道レトロ の最新投稿を見る
+        dialog(id="prizes__modal-sweets").prizes__modal
+            .prizes__modal-image 
+                img(src="./assets/img/prizes_sweets.png", alt="")
+            .prizes__modal-texts
+                .prizes__modal-title 海街洋菓子店 スイーツセット
+                .prizes__modal-text 海沿いにあるケーキ屋さん、
+                                    br 
+                                    |海街洋菓子店の人気焼き菓子詰め合わせセット。
+                                    br 
+                                    |こだわりのバターをふんだんに使ったリッチな味わい
+                                    br
+                                    |で、濃厚なコクが後を引く美味しさです。
+                .prizes__modal-button.button.js-modal-close 閉じる
+        dialog(id="prizes__modal-cats").prizes__modal
+            .prizes__modal-image 
+                img(src="./assets/img/prizes_manekineko.png", alt="")
+            .prizes__modal-texts
+                .prizes__modal-title ねこねこグッズセット
+                .prizes__modal-text お土産としても大人気の猫グッズを集めました。
+                                    br 
+                                    |お家で、オフィスで、
+                                    br 
+                                    |眺めているだけでも癒されてしまう
+                                    br
+                                    |愛らしい猫たちと一緒に。
+                .prizes__modal-button.button.js-modal-close 閉じる
+        dialog(id="prizes__modal-ramen").prizes__modal
+            .prizes__modal-image 
+                img(src="./assets/img/prizes_onomichiramen.png", alt="")
+            .prizes__modal-texts
+                .prizes__modal-title 尾道ラーメンセット
+                .prizes__modal-text 全国にファンがいる本格的な尾道ラーメンをお家で。
+                                    br 
+                                    |尾道ラーメンといえば、透き通った醤油スープと、
+                                    br 
+                                    |平打ち麺が特徴です。
+                                    br
+                                    |コクがありながらまろやかな味のスープは
+                                    br
+                                    |思わず飲み干したくなるお味。
+                .prizes__modal-button.button.js-modal-close 閉じる
+        dialog(id="prizes__modal-cafe").prizes__modal
+            .prizes__modal-image 
+                img(src="./assets/img/prizes_cafe.png", alt="")
+            .prizes__modal-texts
+                .prizes__modal-title おうちで喫茶店セット
+                .prizes__modal-text 尾道の人気喫茶店のコーヒー豆を使用したドリップバッ
+                                    br 
+                                    |グとマグカップのセット。
+                                    br 
+                                    |香り高い深煎りの豆は、カフェオレにするのも◎
+                                    br
+                                    |カンタンに楽しめるドリップバッグは、
+                                    br
+                                    |オフィスや在宅ワーク時、忙しい家事の合間など
+                                    br
+                                    |日常のさまざまなシーンで大活躍。
+                .prizes__modal-button.button.js-modal-close 閉じる
+        dialog(id="prizes__modal-to-to").prizes__modal
+            .prizes__modal-image 
+                img(src="./assets/img/prizes_to-to.png", alt="")
+            .prizes__modal-texts
+                .prizes__modal-title 工房尾道帆布オリジナルトート
+                .prizes__modal-text 工房尾道帆布とコラボした、
+                                    br 
+                                    |本キャンペーンオリジナルトート。
+                                    br 
+                                    |シンプルなデザインで、シーンを選ばず
+                                    br
+                                    |お使いいただけます。
+                                    br
+                                    |しっかりした生地で、
+                                    br
+                                    |年月とともに変化していく風合いも魅力。
+                .prizes__modal-button.button.js-modal-close 閉じる
         .bg_pic
             img(src="./assets/img/bg_pic.png", alt="")
         .wave
@@ -294,7 +380,7 @@ html(lang="ja")
             .wave_pic-pc.hidden-sp
                 img(src="./assets/img/wave_pc.png", alt="")
         
-        section.spots 
+        section(id="spots").spots 
             .spots__inner
                 .spots__contents
                     .spots__head
@@ -330,12 +416,12 @@ html(lang="ja")
                                     .spots-card
                                         img(src="./assets/img/higurashi-card.png", alt="")
 
-                        // ✅ ページネーション
-                        .swiper-pagination#js-gallery-pagenation.spots__pagination
+                            // ✅ ページネーション
+                            .swiper-pagination#js-gallery-pagenation.spots__pagination
 
-                        // ✅ ナビゲーションボタン
-                        .swiper-button-prev#js-gallery-prev.spots__button-prev
-                        .swiper-button-next#js-gallery-next.spots__button-next
+                            // ✅ ナビゲーションボタン
+                            .swiper-button-prev#js-gallery-prev.spots__button-prev
+                            .swiper-button-next#js-gallery-next.spots__button-next
 
                 .spots_foot.hidden-sp
                     img(src="./assets/img/spots_foot.png", alt="")
@@ -353,7 +439,7 @@ html(lang="ja")
             .under_wave-pc.hidden-sp
                 img(src="./assets/img/under_wave-pc.png", alt="")
 
-        section.question 
+        section(id="question").question 
             .question__inner
                 .question__contents
                     .question__icon.icon
@@ -407,7 +493,7 @@ html(lang="ja")
                                     img(src="./assets/img/a.png", alt="")
                                 .question__item-a-text 恐れ入りますが、プレゼントをお選びいただくことはできません。また、ご当選者の発表は当選者の方への連絡をもって代えさせていただきます。
 
-        section.entry
+        section(id="entry").entry
             .entry__inner 
                 .entry__icon.icon
                     img(src="./assets/img/entry_icon.png", alt="")
@@ -443,7 +529,7 @@ html(lang="ja")
         .big__entry 
             img(src="./assets/img/bg_entry.png", alt="")
 
-        section.contact 
+        section(id="contact").contact 
             .contact__inner
                 .contact__contents
                     .contact__icon.icon

@@ -24,9 +24,9 @@
       </div>
     </header>
     <div class="drawer-content hidden-pc" id="js-drawer-content">
-      <nav class="drawer-content__menu"><a class="drawer-content__link">キャンペーンについて</a><a class="drawer-content__link">キャンペーン特典</a><a class="drawer-content__link">おすすめスポット</a><a class="drawer-content__link">よくある質問</a><a class="drawer-content__link">参加要項</a><a class="drawer-content__link">お問い合わせ</a><a class="drawer-content__button button">応募してみる</a></nav>
+      <nav class="drawer-content__menu"><a class="drawer-content__link" href="#about">キャンペーンについて</a><a class="drawer-content__link" href="#prizes">キャンペーン特典</a><a class="drawer-content__link" href="#spots">おすすめスポット</a><a class="drawer-content__link" href="#question">よくある質問</a><a class="drawer-content__link" href="#entry">参加要項</a><a class="drawer-content__link" href="#contact">お問い合わせ</a><a class="drawer-content__button button" href="#contact">応募してみる</a></nav>
     </div>
-    <section class="mv"> 
+    <section class="mv">
       <div class="mv__bg hidden-pc"><img src="./assets/img/Onomichi.png" alt=""/></div>
       <div class="mv__bg-pc hidden-sp"><img src="./assets/img/mv_bg-pc.png" alt=""/></div>
       <div class="mv__inner">
@@ -42,11 +42,11 @@
           <div class="mv__food"> <img src="./assets/img/food.png" alt=""/></div>
           <div class="mv__cats"> <img src="./assets/img/cats.png" alt=""/></div>
         </div>
+        <div class="about__picture-naname hidden-sp"><img src="./assets/img/naname.png" alt=""/></div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__bd-picture">
-        <div class="about__picture-naname hidden-sp"><img src="./assets/img/naname.png" alt=""/></div>
         <div class="about__picture-left"> <img src="./assets/img/about_Left.png" alt=""/></div>
         <div class="about__picture-right"> <img src="./assets/img/about_Right.png" alt=""/></div>
       </div>
@@ -55,7 +55,7 @@
           <div class="about__icon icon"><img src="./assets/img/about_icon.png" alt=""/></div>
           <div class="about__picture1"><img src="./assets/img/about1.png" alt=""/></div>
           <div class="about__picture2"><img src="./assets/img/about2.png" alt=""/></div>
-          <div class="about__title1 title1">About</div>
+          <div class="about__title1 title1 fade-in-up is-in-view">About</div>
           <div class="tac">
             <div class="about__title2 title2">キャンペーンについて</div>
           </div>
@@ -75,7 +75,7 @@
         <div class="about__scroll"> </div>
       </div>
     </section>
-    <section class="how"> 
+    <section class="how" id="how"> 
       <div class="how__inner">
         <div class="how__contents">
           <div class="how__icon icon"><img src="./assets/img/how_icon.png" alt=""/></div>
@@ -116,20 +116,28 @@
         <div class="how__button button">#見つけて尾道レトロ の最新投稿を見る</div>
       </div>
     </section>
-    <section class="prizes">
+    <section class="prizes" id="prizes">
+      <div class="prizes__bg hidden-sp">
+        <div class="prizes__bg-left"> <img src="./assets/img/bg_triangle-left.png" alt=""/></div>
+        <div class="prizes__bg-right"> <img src="./assets/img/bg_triangle-right.png" alt=""/></div>
+      </div>
       <div class="prizes__inner"> 
-        <div class="prize__contents"> 
+        <div class="prizes__head">
           <div class="prizes__icon icon"><img src="./assets/img/prizes_icon.png" alt=""/></div>
           <div class="prizes__title1 title1">Prizes</div>
           <div class="tac">
             <div class="prizes__title2 title2">キャンペーン特典</div>
           </div>
-          <div class="prizes__text">キャンペーンにご参加いただたい方の中から100名様に、尾道<br/>で人気のお土産セットやオリジナルグッズをプレゼント！</div>
+        </div>
+        <div class="prize__contents"> 
+          <div class="prizes__text">キャンペーンにご参加いただたい方の中から100名様に、尾道<br class="hidden-pc"/>で人気のお土産セットやオリジナルグッズをプレゼント！</div>
           <div class="prizes__cards"> 
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number1.png" alt=""/></div>
-              <div class="prizes__card-image"><img src="./assets/img/prizes_sweets.png" alt=""/></div>
-              <div class="prizes__card-text">海街洋菓子店<br/>スイーツセット<a href="#" target="_blank">
+              <div class="prizes__card-image-wrapper"> 
+                <div class="prizes__card-image"><img src="./assets/img/prizes_sweets.png" alt=""/></div>
+              </div>
+              <div class="prizes__card-text">海街洋菓子店<br/>スイーツセット<a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-sweets">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
@@ -137,8 +145,10 @@
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number2.png" alt=""/></div>
-              <div class="prizes__card-image"><img src="./assets/img/prizes_manekineko.png" alt=""/></div>
-              <div class="prizes__card-text">ねこねこ<br/>グッズセット <a href="#" target="_blank">
+              <div class="prizes__card-image-wrapper"> 
+                <div class="prizes__card-image"><img src="./assets/img/prizes_manekineko.png" alt=""/></div>
+              </div>
+              <div class="prizes__card-text">ねこねこ<br/>グッズセット <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-cats">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
@@ -146,8 +156,10 @@
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number3.png" alt=""/></div>
-              <div class="prizes__card-image"><img src="./assets/img/prizes_onomichiramen.png" alt=""/></div>
-              <div class="prizes__card-text">尾道ラーメンセット <a href="#" target="_blank">
+              <div class="prizes__card-image-wrapper"> 
+                <div class="prizes__card-image"><img src="./assets/img/prizes_onomichiramen.png" alt=""/></div>
+              </div>
+              <div class="prizes__card-text">尾道ラーメンセット <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-ramen">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
@@ -155,8 +167,10 @@
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number4.png" alt=""/></div>
-              <div class="prizes__card-image"><img src="./assets/img/prizes_cafe.png" alt=""/></div>
-              <div class="prizes__card-text">おうちで<br/>喫茶店セット <a href="#" target="_blank">
+              <div class="prizes__card-image-wrapper"> 
+                <div class="prizes__card-image"><img src="./assets/img/prizes_cafe.png" alt=""/></div>
+              </div>
+              <div class="prizes__card-text">おうちで<br/>喫茶店セット <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-cafe">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
@@ -164,8 +178,10 @@
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number5.png" alt=""/></div>
-              <div class="prizes__card-image"><img src="./assets/img/prizes_to-to.png" alt=""/></div>
-              <div class="prizes__card-text">工房尾道帆布<br/>オリジナルトート <a href="#" target="_blank">
+              <div class="prizes__card-image-wrapper"> 
+                <div class="prizes__card-image"><img src="./assets/img/prizes_to-to.png" alt=""/></div>
+              </div>
+              <div class="prizes__card-text">工房尾道帆布<br/>オリジナルトート <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-to-to">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
@@ -176,12 +192,52 @@
         </div>
       </div>
     </section>
+    <dialog class="prizes__modal" id="prizes__modal-sweets">
+      <div class="prizes__modal-image"> <img src="./assets/img/prizes_sweets.png" alt=""/></div>
+      <div class="prizes__modal-texts">
+        <div class="prizes__modal-title">海街洋菓子店 スイーツセット</div>
+        <div class="prizes__modal-text">海沿いにあるケーキ屋さん、<br/>海街洋菓子店の人気焼き菓子詰め合わせセット。<br/>こだわりのバターをふんだんに使ったリッチな味わい<br/>で、濃厚なコクが後を引く美味しさです。</div>
+        <div class="prizes__modal-button button js-modal-close">閉じる</div>
+      </div>
+    </dialog>
+    <dialog class="prizes__modal" id="prizes__modal-cats">
+      <div class="prizes__modal-image"> <img src="./assets/img/prizes_manekineko.png" alt=""/></div>
+      <div class="prizes__modal-texts">
+        <div class="prizes__modal-title">ねこねこグッズセット</div>
+        <div class="prizes__modal-text">お土産としても大人気の猫グッズを集めました。<br/>お家で、オフィスで、<br/>眺めているだけでも癒されてしまう<br/>愛らしい猫たちと一緒に。</div>
+        <div class="prizes__modal-button button js-modal-close">閉じる</div>
+      </div>
+    </dialog>
+    <dialog class="prizes__modal" id="prizes__modal-ramen">
+      <div class="prizes__modal-image"> <img src="./assets/img/prizes_onomichiramen.png" alt=""/></div>
+      <div class="prizes__modal-texts">
+        <div class="prizes__modal-title">尾道ラーメンセット</div>
+        <div class="prizes__modal-text">全国にファンがいる本格的な尾道ラーメンをお家で。<br/>尾道ラーメンといえば、透き通った醤油スープと、<br/>平打ち麺が特徴です。<br/>コクがありながらまろやかな味のスープは<br/>思わず飲み干したくなるお味。</div>
+        <div class="prizes__modal-button button js-modal-close">閉じる</div>
+      </div>
+    </dialog>
+    <dialog class="prizes__modal" id="prizes__modal-cafe">
+      <div class="prizes__modal-image"> <img src="./assets/img/prizes_cafe.png" alt=""/></div>
+      <div class="prizes__modal-texts">
+        <div class="prizes__modal-title">おうちで喫茶店セット</div>
+        <div class="prizes__modal-text">尾道の人気喫茶店のコーヒー豆を使用したドリップバッ<br/>グとマグカップのセット。<br/>香り高い深煎りの豆は、カフェオレにするのも◎<br/>カンタンに楽しめるドリップバッグは、<br/>オフィスや在宅ワーク時、忙しい家事の合間など<br/>日常のさまざまなシーンで大活躍。</div>
+        <div class="prizes__modal-button button js-modal-close">閉じる</div>
+      </div>
+    </dialog>
+    <dialog class="prizes__modal" id="prizes__modal-to-to">
+      <div class="prizes__modal-image"> <img src="./assets/img/prizes_to-to.png" alt=""/></div>
+      <div class="prizes__modal-texts">
+        <div class="prizes__modal-title">工房尾道帆布オリジナルトート</div>
+        <div class="prizes__modal-text">工房尾道帆布とコラボした、<br/>本キャンペーンオリジナルトート。<br/>シンプルなデザインで、シーンを選ばず<br/>お使いいただけます。<br/>しっかりした生地で、<br/>年月とともに変化していく風合いも魅力。</div>
+        <div class="prizes__modal-button button js-modal-close">閉じる</div>
+      </div>
+    </dialog>
     <div class="bg_pic"><img src="./assets/img/bg_pic.png" alt=""/></div>
     <div class="wave">
       <div class="wave_pic hidden-pc"><img src="./assets/img/wave_pic.png" alt=""/></div>
       <div class="wave_pic-pc hidden-sp"><img src="./assets/img/wave_pc.png" alt=""/></div>
     </div>
-    <section class="spots"> 
+    <section class="spots" id="spots"> 
       <div class="spots__inner">
         <div class="spots__contents">
           <div class="spots__head">
@@ -216,12 +272,12 @@
                   <div class="spots-card"><img src="./assets/img/higurashi-card.png" alt=""/></div>
                 </div>
               </div>
+              <!-- ✅ ページネーション-->
+              <div class="swiper-pagination spots__pagination" id="js-gallery-pagenation"></div>
+              <!-- ✅ ナビゲーションボタン-->
+              <div class="swiper-button-prev spots__button-prev" id="js-gallery-prev"></div>
+              <div class="swiper-button-next spots__button-next" id="js-gallery-next"></div>
             </div>
-            <!-- ✅ ページネーション-->
-            <div class="swiper-pagination spots__pagination" id="js-gallery-pagenation"></div>
-            <!-- ✅ ナビゲーションボタン-->
-            <div class="swiper-button-prev spots__button-prev" id="js-gallery-prev"></div>
-            <div class="swiper-button-next spots__button-next" id="js-gallery-next"></div>
           </div>
         </div>
         <div class="spots_foot hidden-sp"><img src="./assets/img/spots_foot.png" alt=""/></div>
@@ -238,7 +294,7 @@
     <div class="under__wave-img">
       <div class="under_wave-pc hidden-sp"><img src="./assets/img/under_wave-pc.png" alt=""/></div>
     </div>
-    <section class="question"> 
+    <section class="question" id="question"> 
       <div class="question__inner">
         <div class="question__contents">
           <div class="question__icon icon"><img src="./assets/img/question_icon.png" alt=""/></div>
@@ -295,7 +351,7 @@
         </div>
       </div>
     </section>
-    <section class="entry">
+    <section class="entry" id="entry">
       <div class="entry__inner"> 
         <div class="entry__icon icon"><img src="./assets/img/entry_icon.png" alt=""/></div>
         <div class="entry__title1 title1">Entry Requirements</div>
@@ -337,7 +393,7 @@
       </div>
     </section>
     <div class="big__entry"> <img src="./assets/img/bg_entry.png" alt=""/></div>
-    <section class="contact"> 
+    <section class="contact" id="contact"> 
       <div class="contact__inner">
         <div class="contact__contents">
           <div class="contact__icon icon"><img src="./assets/img/contact_icon.png" alt=""/></div>
