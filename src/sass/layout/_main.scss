@@ -171,7 +171,7 @@
     margin-top: 43px;
     overflow: hidden;
     @include mq(pc){
-        margin-top: 80px;
+        
     }
 }
 
@@ -191,7 +191,7 @@
     left: -160px;
     top: 395px;
     @include mq(pc){
-        top: 74px;
+        top: 154px;
         left: -338px;
     }
 }
@@ -201,9 +201,14 @@
     right: -160px;
     top: 273px;
     @include mq(pc){
-        top: 73px;
+        top: 153px;
         right: -284px;
     }
+}
+
+.about_foot {
+    position: absolute;
+    right: 165px;
 }
 .about__inner {
     padding-inline: 20px;
@@ -213,6 +218,7 @@
     padding: 40px 12px;
     position: relative;
     @include mq(pc){
+        margin-top: 80px;
         padding: 40px 114px;
         max-width: 848px;
         margin: auto; // ✅ ブロック要素を中央寄せ
@@ -253,8 +259,13 @@
 }
 
 .about__button {
-    margin-top: 24px;
+    display: block;
     margin: auto;
+    margin-top: 24px;
+    @include mq(pc){
+       
+        margin-top: 32px;
+    }
 }
 
 .about__pictures {

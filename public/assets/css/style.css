@@ -103,6 +103,16 @@ body {
 	text-shadow: 0px 0px 30px #FFF;
 }
 
+.about__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
+	font-family: "Noto Sans JP";
+	font-feature-settings: "pref" on;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 25.6px */
+}
+
 .how__step-title {
 	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
 	font-family: "Noto Sans JP";
@@ -555,6 +565,11 @@ a {
 	top: 273px;
 }
 
+.about_foot {
+	position: absolute;
+	right: 165px;
+}
+
 .about__inner {
 	padding-inline: 20px;
 }
@@ -593,6 +608,7 @@ a {
 }
 
 .about__button {
+	display: block;
 	margin: auto;
 	margin-top: 24px;
 }
@@ -1303,6 +1319,11 @@ header {
 	width: 200px;
 }
 
+.about_foot img {
+	height: 220px;
+	width: 100px;
+}
+
 .about__button {
 	max-width: 192px;
 	padding: 6px 24px;
@@ -1590,6 +1611,10 @@ header {
 	font-size: 24px;
 }
 
+.about__button {
+	font-size: 20px;
+}
+
 .how__button {
 	color: var(--LP-Blown, #4A3636); /* JP/Text 20px Bold */
 	font-family: "Noto Sans JP";
@@ -1721,24 +1746,25 @@ header {
 	top: 551px;
 }
 
-.about {
-	margin-top: 80px;
-}
-
 .about__picture-left {
 	left: -338px;
-	top: 74px;
+	top: 154px;
 }
 
 .about__picture-right {
 	right: -284px;
-	top: 73px;
+	top: 153px;
 }
 
 .about__contents {
 	margin: auto;
+	margin-top: 80px;
 	max-width: 848px;
 	padding: 40px 114px;
+}
+
+.about__button {
+	margin-top: 32px;
 }
 
 .about__sakamichi {
