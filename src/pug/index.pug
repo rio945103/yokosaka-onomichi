@@ -147,7 +147,9 @@ html(lang="ja")
                     .about__onomichi 
                         img(src="./assets/img/about_onomichi.png", alt="")
                 .about__scroll 
-
+                    .about__slider 
+                        .swiper#js-about-swiper.about__swiper
+                            .about__swiper-wrapper
         section(id="how").how 
             .how__inner
                 .how__contents
@@ -397,25 +399,25 @@ html(lang="ja")
                             // ✅ 必須のラッパー
                             .swiper-wrapper
                                 // ✅ 各スライドを `.swiper-slide` にする
-                                .swiper-slide 
+                                .swiper-slide.spots__slide
                                     .spots-card
                                         img(src="./assets/img/temple-card.png", alt="")
-                                .swiper-slide 
+                                .swiper-slide.spots__slide
                                     .spots-card
                                         img(src="./assets/img/cat-card.png", alt="")
-                                .swiper-slide 
+                                .swiper-slide.spots__slide
                                     .spots-card
                                         img(src="./assets/img/shop-card.png", alt="")
-                                .swiper-slide 
+                                .swiper-slide.spots__slide
                                     .spots-card
                                         img(src="./assets/img/bag-card.png", alt="")
-                                .swiper-slide 
+                                .swiper-slide.spots__slide
                                     .spots-card
                                         img(src="./assets/img/yu-yu-card.png", alt="")
-                                .swiper-slide 
+                                .swiper-slide.spots__slide
                                     .spots-card
                                         img(src="./assets/img/airship-card.png", alt="")
-                                .swiper-slide 
+                                .swiper-slide.spots__slide
                                     .spots-card
                                         img(src="./assets/img/higurashi-card.png", alt="")
 
@@ -569,14 +571,10 @@ html(lang="ja")
                                     .form-field__item
                                         select.form-select(name="your-age" id="your-age")
                                             option(value="") 選択してください
-                                            option(value="") 10代
-                                            option(value="") 20代
-                                            option(value="") 30代
-                                            option(value="") 40代
-                                            option(value="") 50代
-                                            option(value="") 60代
-                                            option(value="") 70代
-                                            option(value="") 80代
+                                            option(value="") 選択１
+                                            option(value="") 選択２
+                                            option(value="") 選択３
+                                            
                                 .contact__field
                                     .form-field
                                         .form-field__head

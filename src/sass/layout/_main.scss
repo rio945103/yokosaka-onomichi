@@ -83,6 +83,10 @@
     padding: 84px 110px;
 }
 
+.mv {
+    margin-top: 59px;
+}
+
 
 .mv__inner {
     padding-inline: 20px;
@@ -125,7 +129,7 @@
     @include mq(pc){
         position: absolute;
         top: 0;
-        left: 339px;
+        left: 319px;
         z-index: 40;
     }
 }
@@ -135,7 +139,7 @@
         position: absolute;
         top: 0;
         right: 409px;
-        z-index: 40;
+        z-index: 1;
     }
 }
 
@@ -144,6 +148,7 @@
     top: -7px;
     @include mq(pc){
         margin-top: 33px;
+        position: relative; // ← 追加
         z-index: 30;
     }
 }
@@ -698,7 +703,7 @@
     }
 }
 
-.swiper-slide {
+.spots__slide {
     width: 240px !important; // ✅ スライドの幅を 240px に固定
     height: auto !important;
     @include mq(pc){
@@ -708,7 +713,7 @@
 
 
 
-.swiper-slide:last-child {
+.spots__slide:last-child {
     margin-right: 0; // ✅ 最後のスライドの余白をなくす
 }
 
@@ -876,19 +881,28 @@
 }
 
 .entry__content {
+    margin-bottom: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #CCCCCC; 
     @include mq(pc){
         display: flex;
         
     }
 }
 
+.entry__content:nth-of-type(5) {
+    border-bottom: none;
+}
+
 .entry__content-title {
+
     @include mq(pc){
         width: 240px;
     }
 }
 
 .entry__content-text {
+    margin-top: 8px;
     @include mq(pc){
         width: 672px;
     }
