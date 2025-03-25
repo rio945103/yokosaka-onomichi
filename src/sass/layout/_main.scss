@@ -67,11 +67,11 @@
     top: 0;
     left: 0;
     z-index: 50;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     transition: transform 0.3s linear;
 
     &.is-checked {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
@@ -175,14 +175,26 @@
 .about {
     margin-top: 43px;
     overflow: hidden;
+    position: relative;
     @include mq(pc){
         
     }
 }
 
-.about__bd-picture {
+.about__inner {
     position: relative;
+    z-index: 1;
+}
+  
+
+.about__bd-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     overflow: visible;
+    z-index: 0; // 背景レイヤー
+    pointer-events: none;
 }
 
 .about__picture-naname {
@@ -313,6 +325,7 @@
 }
 
 .about__onomichi {
+    position: relative;
     text-align: center;
     margin-top: 140px;
     z-index: 100;
@@ -345,7 +358,6 @@
     top: 0;
     left: -20px;
     @include mq(pc){
-        top: -60px;
         z-index: 5;
     }
 }
@@ -651,6 +663,10 @@
     }
 }
 
+.spots {
+    overflow: hidden;
+}
+
 .spots__inner {
     padding-inline: 20px;
     padding-bottom: 20px;
@@ -762,6 +778,15 @@
         margin-top: 24px;
 
     }
+}
+
+.spots__button-prev,
+.spots__button-next {
+    display: none;
+    @include mq(pc){
+        display: block;
+    }
+
 }
 
 .under__wave {
@@ -1046,6 +1071,9 @@
     margin-bottom: 24px;
     text-align: center;
     z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
     @include mq(pc){
         position: fixed;
         right: 16px;

@@ -1,24 +1,31 @@
 const swiper = new Swiper("#js-gallery-swiper", {
-  slidesPerView: 1, // ✅ 1枚ずつ表示
-  slidesPerGroup: 1, // ✅ 1枚ずつ移動
-  spaceBetween: 16, // ✅ スライド間の余白
-  loop: true, // ✅ ループを有効化（最後のスライドの次に最初のスライドが来る）
-  loopedSlides: 3, // ✅ スライドの総数を明示的に指定
-  loopAdditionalSlides: 3, // ✅ `loopedSlides` の影響を正しく適用
-
-
-  // If we need pagination
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 16,
+  loop: true,
   pagination: {
     el: "#js-gallery-pagenation",
-    clickable: true, // ✅ クリック可能にする
+    clickable: true,
   },
-
-  // Navigation arrows
   navigation: {
-    nextEl: "#js-gallery-next",
-    prevEl: "#js-gallery-prev",
+    nextEl: ".spots__button-next",
+    prevEl: ".spots__button-prev",
+  },
+  breakpoints: {
+    // PC（768px以上）
+    768: {
+      slidesPerView: 3,
+      loopedSlides: 3,
+    },
+    // SP（767px以下）
+    0: {
+      slidesPerView: 1,
+      loopedSlides: 1,
+    },
   },
 });
+
+
 
 
 
@@ -81,19 +88,35 @@ jQuery("#js-drawer-content a[href^='#']").on("click", function (e) {
   jQuery("#js-drawer-content").removeClass("is-checked");
 });
 
-jQuery("a[href^='#']").on("click", function (e) {
-  const speed = 300;
+jQuery('a[href^="#"]').on("click", function (e) {
+  e.preventDefault();
+
+  const speed = 500;
   const id = jQuery(this).attr("href");
-  const target = jQuery("#" == id ? "html" : id);
-  const position = jQuery(target).offset().top;
+  const target = jQuery(id === "#" ? "html" : id);
+
+  console.log("スクロール先:", id); // ← これを追加して動作チェック
+  console.log("スクロール位置:", target.offset().top);
+
+  if (!target.length) {
+    console.warn("🚨 スクロール先のターゲットが見つかりません:", id);
+    return;
+  }
+
+  const offset = 80; // 固定ヘッダーの高さ調整
+  const position = target.offset().top - offset;
+
   jQuery("html, body").animate(
     {
       scrollTop: position,
     },
     speed,
-    "swing" //swing or linear
+    "swing"
   );
 });
+
+
+
 
 jQuery(window).on("scroll", function () {
   if (100 < jQuery(window).scrollTop()) {
