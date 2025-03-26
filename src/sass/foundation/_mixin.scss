@@ -40,7 +40,24 @@ html{
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  display: none;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain; // ✅ 縦横比を保ちつつ収まる
+  background-position: center bottom; // ✅ ボタン中央に配置
+  cursor: pointer;
+}
+
+.swiper-button-prev::after {
+  background-image: url(../img/spots_prev-button.png);
+  
+}
+/* 次に進む矢印の画像パス */
+.swiper-button-next::after {
+  background-image: url(../img/spots_next-button.png);
+  background-position: bottom; // ✅
 }

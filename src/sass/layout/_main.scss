@@ -736,7 +736,8 @@
 
 .spots-card {
     @include mq(pc){
-
+        margin-left: 48px;
+        margin-bottom: 20px;
     }
     img {
         width: 240px;
