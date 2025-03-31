@@ -11,6 +11,12 @@
     }
 }
 
+header {
+    height: 64px;
+    box-sizing: border-box;
+}
+
+
 .header__logo  {
     img {
         width: 210px;
@@ -144,60 +150,12 @@
     }
 }
 
-
-
-.about__text1 {
-    color: var(--LP-Blown, #4A3636);
-    text-align: center;
-
-    /* JP/Text 14px Bold */
-    font-family: "Noto Sans JP";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%; /* 22.4px */
-    @include mq(pc){
-        font-size: 16px;
-    }
-}
-
-.about__text2 {
-    color: var(--LP-Blown, #4A3636);
-    text-align: center;
-    font-family: "Noto Sans JP";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%; /* 19.2px */
-    @include mq(pc){
-        font-size: 16px;
-        
-    }
-}
-
-.about__text3 {
-    color: var(--LP-Blown, #4A3636);
-    text-align: center;
-
-    /* JP/Text 14px Bold */
-    font-family: "Noto Sans JP";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%; /* 22.4px */
-    @include mq(pc){
-        font-size: 20px;
-        border-bottom: 2px dashed var(--LP-Blue, #9ED0E0);
-        padding-bottom: 10px;
-    }
-}
-
-
-
 .about__picture1 {
+    margin-top: -4px;
+    margin-left: -2px;
     img {
-        width: 80px;
-        height: 60px;
+        width: 87px;
+        height: auto;
         @include mq(pc){
             width: 134px;
             height: 100px;
@@ -206,9 +164,11 @@
 }
 
 .about__picture2 {
+    margin-top: -7px;
+    margin-right: -16px;
     img {
-        width: 80px;
-        height: 60px;
+        width: 90px;
+        height: auto;
         @include mq(pc){
             width: 134px;
             height: 100px;
@@ -272,11 +232,7 @@
 
 .about__sakamichi {
     img {
-        height: 176px;
-        @include mq(pc){
-            width: 427px;
-            height: 817px;
-        }
+        height: 212px;
     }
 }
 
@@ -314,6 +270,24 @@
     }
 }
 
+
+
+.about__slide {
+    max-width: 100px;
+    @include mq(pc){
+        max-width: 200px;
+    }
+    
+    img {
+        width: 100px;
+        height: 100px;
+        @include mq(pc){
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
 .how__picture-map {
     img {
         width: 149px;
@@ -337,6 +311,19 @@
         width: 433px;
         height: 394px;
 
+    }
+}
+
+.how__cats-foot1,.how__cats-foot2 {
+    img {
+        transform: rotate(180deg);
+        width: 55px;
+    }
+}
+
+.how__cats-foot2 {
+    img {
+        transform: rotate(180deg) scaleX(-1); // ← 左右反転を追加
     }
 }
 
@@ -602,6 +589,26 @@
     }
 }
 
+.spots-card{
+    max-width: 240px;
+    height: 371px;
+    @include mq(pc){
+        max-width: 296px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+  }
+  
+  .spots__slide {
+    max-width: 296px;
+    max-height: 371px;
+    margin-bottom: 31px;
+  }
+
+
 .spots__button-prev,.spots__button-next {
     width: 80px;
     height: 80px;
@@ -620,13 +627,13 @@
 
 .question__item-q-icon {
     img {
-        width: 22px;
+        width: 20px;
     }
 }
 
 .question__item-a-icon {
     img {
-        width: 22px;
+        width: 14px;
     }
 }
 

@@ -1,5 +1,6 @@
 @use "../foundation/mixin" as *;
 
+
 .header__contents {
     display: flex;
     justify-content: space-between;
@@ -19,6 +20,8 @@
 
 
 .drawer-icon {
+    right: 4px;
+    top: 4px;
     width: 32px;
     height: 24px;
     position: relative;
@@ -54,11 +57,11 @@
     transition: transform 0.3s linear, top 0.3s linear;
   
     &:nth-of-type(1) {
-      top: 9px;
+      top: 10px;
     }
   
     &:nth-of-type(2) {
-      top: 18px;
+      top: 21px;
     }
 }
 
@@ -87,10 +90,14 @@
     margin-top: 59px;
 }
 
+.mv__bg {
+    margin-top: 4px;
+}
+
 
 .mv__inner {
     padding-inline: 20px;
-    padding-top: 17px;
+    padding-top: 22px;
     @include mq(pc){
         padding-top: 35px;
     }
@@ -111,14 +118,16 @@
 .mv__title2 {
     margin-top: 12px;
     text-align: center;
-    margin-top: 16px;
+    @include mq(pc){
+        margin-top: 16px;
+    }
 }
 
 .mv__content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: flex-start;
     gap: 58px;
+    margin-top: 10px;
     @include mq(pc){
         position: relative;
     }
@@ -145,7 +154,7 @@
 
 .mv__smart {
     text-align: center;
-    top: -7px;
+    margin-top: -7px;
     @include mq(pc){
         margin-top: 33px;
         position: relative; // ← 追加
@@ -155,7 +164,8 @@
 
 .mv__food {
     position: absolute;
-    top: 569px;
+    top: 552px;
+    left: 2px;
     @include mq(pc){
         top: 469px;
         left: 332px;
@@ -164,7 +174,7 @@
 
 .mv__cats {
     position: absolute;
-    top: 590px;
+    top: 565px;
     right: 0;
     @include mq(pc){
         top: 551px;
@@ -205,7 +215,7 @@
 
 .about__picture-left {
     position: absolute;
-    left: -160px;
+    left: -140px;
     top: 395px;
     @include mq(pc){
         top: 154px;
@@ -215,7 +225,7 @@
 
 .about__picture-right {
     position: absolute;
-    right: -160px;
+    right: -140px;
     top: 273px;
     @include mq(pc){
         top: 153px;
@@ -278,7 +288,7 @@
 .about__button {
     display: block;
     margin: auto;
-    margin-top: 24px;
+    margin-top: 29px;
     @include mq(pc){
        
         margin-top: 32px;
@@ -327,12 +337,20 @@
 .about__onomichi {
     position: relative;
     text-align: center;
-    margin-top: 140px;
+    margin-top: 100px;
+    left: -9px;
     z-index: 100;
 }
 
+.about__scroll {
+    margin-top: -20px;
+}
+
+
+
 .how {
-    margin-top: 32px;
+    margin-top: 64px;
+    overflow: hidden;
     @include mq(pc){
         margin-top: 120px;
     }
@@ -372,6 +390,17 @@
     position: absolute;
     right: 0;
     top: -26px;
+}
+
+.how__cats-foot1 {
+    position: absolute;
+    left: 0;
+    top: 550px;
+}
+.how__cats-foot2 {
+    position: absolute;
+    right: 0;
+    top: 880px;
 }
 
 .how__steps {
@@ -433,7 +462,8 @@
 }
 
 .how__button {
-    margin-top: 16px;
+    margin-top: 14px;
+    margin-bottom: 10px;
     @include mq(pc){
         margin-top: 40px;
         text-align: center;
@@ -442,7 +472,7 @@
 }
 
 .prizes {
-    margin-top: 32px;
+    margin-top: 24px;
     @include mq(pc){
         margin-top: 120px;
         text-align: center;
@@ -491,6 +521,10 @@
     }
 }
 
+.prizes__title2 {
+    margin-top: 7px;
+}
+
 .prize__contents {
     padding-top: 60px;
     padding-inline: 20px;
@@ -509,7 +543,7 @@
 .prizes__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* スマホ時は2列 */
-    gap: 15px;
+    gap: 10px;
     margin-top: 24px;
 
     @include mq(pc){
@@ -625,7 +659,7 @@
 }
 
 .prizes__button {
-    margin-top: 24px;
+    margin-top: 18px;
     margin: auto;
     text-align: center;
     padding: 6px 24px;
@@ -663,6 +697,10 @@
     }
 }
 
+.bg_pic {
+    margin-top: -47px;
+}
+
 .spots {
     overflow: hidden;
 }
@@ -670,14 +708,15 @@
 .spots__inner {
     padding-inline: 20px;
     padding-bottom: 20px;
-    @include mq(pc){
-        position: relative;
-    }
+    position: relative;
+    
 }
 
 .spots__contents {
     @include mq(pc){
         display: flex;
+        gap: 32px;
+        align-items: flex-start; // ← これ追加！
     }
 }
 
@@ -687,9 +726,8 @@
     gap: 8px;
     @include mq(pc){
         flex-direction: column;
-        margin-left: 252px;
-        margin-right: 40px;
         align-items: flex-start;
+        margin-left: 252px;
     }
 }
 
@@ -708,22 +746,14 @@
 
 .swiper-wrapper {
     margin-top: 24px;
-    height: auto !important; // ✅ 高さの固定を防ぐ
-    justify-content: center; // ✅ スライドを中央寄せ
-    align-items: center; // ✅ 縦方向の中央揃え
-    gap: 16px; // ✅ 画像の間隔を 20px にする
-
-    @include mq(pc){
-        margin-top: 0;
-        gap: 32px;
-    }
-}
-
-.spots__slide {
-    width: 240px !important; // ✅ スライドの幅を 240px に固定
     height: auto !important;
-    @include mq(pc){
-        width: 344px !important; // ✅ PC では 344px に固定
+  
+    display: flex; // 念のため明示
+    justify-content: unset; // ✅ Swiperに任せる
+    align-items: unset; // ✅ 不要な揃えを外す
+  
+    @include mq(pc) {
+      margin-top: 0;
     }
 }
 
@@ -736,14 +766,14 @@
 
 .spots-card {
     @include mq(pc){
-        margin-left: 48px;
+        margin-left: 0;
         margin-bottom: 20px;
     }
     img {
-        width: 240px;
-        @include mq(pc){
-            width: 344px;
-        }
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 }
 
@@ -770,7 +800,7 @@
 
 
 .spots__button {
-    margin-top: 16px;
+    margin-top: 22px;
     margin: auto;
     text-align: center;
     padding: 6px 24px;
@@ -781,16 +811,43 @@
     }
 }
 
+.spots__slider {
+    @include mq(pc) {
+      position: relative;
+      
+    }
+  }
+  
+
 .spots__button-prev,
 .spots__button-next {
     display: none;
     @include mq(pc){
         display: block;
+        top: auto !important; // ← Swiperのデフォルトを無効にする
     }
 
 }
 
+.spots__button-prev {
+    
+    position: absolute;
+    bottom: 0; // ⬅ 高さを一番下に
+    left: -48px;   // ⬅ 左端（必要なら margin-left で微調整）
+    z-index: 10;
+    
+  }
+
+.spots__button-next {
+    position: absolute;
+    bottom: 0; // ⬅ 高さを同じく一番下に
+    left: 800px; // ⬅ 左から800pxの位置に配置（prev基準）
+    z-index: 10;
+}
+
 .under__wave {
+    position: relative;
+    top: -1px;
     img {
         width: 375px;
         height: 45px;
@@ -826,7 +883,7 @@
 }
 
 .question__items {
-    margin-top: 12px;
+    margin-top: 24px;
     @include mq(pc){
         margin-top: 40px;
     }
@@ -846,21 +903,22 @@
 
 .question__item-q {
     display: flex;
-    padding: 12px 16px;
+    padding: 9px 14px;
     gap: 12px;
+    align-items: center;
     
 }
 
 .question__item-q-icon {
     
     img {
-        width: 22px;
+        width: 18px;
     }
 }
 
 .question__item-a {
     display: none; /* ✅ 初期状態では非表示 */
-    padding: 16px;
+    padding: 19px;
     align-items: center;
     gap: 12px;
     flex-direction: row; /* ✅ 横並びにする */

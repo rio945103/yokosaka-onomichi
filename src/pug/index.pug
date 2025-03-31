@@ -75,7 +75,9 @@ html(lang="ja")
         section(id="about").about
             .about__bd-picture
                 .about__picture-left 
-                    img(src="./assets/img/about_Left.png", alt="")
+                    img(src="./assets/img/about_Left-sp.png", alt="")
+                    img(src="./assets/img/about_Left.png", alt="").hidden-sp
+
                 .about__picture-right 
                     img(src="./assets/img/about_Right.png", alt="")
                 .about_foot.hidden-sp
@@ -139,17 +141,22 @@ html(lang="ja")
                     .about__arrow 
                         img(src="./assets/img/arrow.png", alt="")
                     .about__sakamichi 
-                        img(src="./assets/img/sakamichi.png", alt="")
+                        img(src="./assets/img/sakamichi-sp.png", alt="")
+                        img(src="./assets/img/sakamichi.png", alt="").hidden-sp
                     .about__goods 
                         img(src="./assets/img/about_goods.png", alt="")
                     .about__ball 
                         img(src="./assets/img/about_ball.png", alt="")
                     .about__onomichi 
                         img(src="./assets/img/about_onomichi.png", alt="")
-                .about__scroll 
-                    .about__slider 
-                        .swiper#js-about-swiper.about__swiper
-                            .about__swiper-wrapper
+        .about__scroll 
+            .about__slider 
+                .swiper#js-about-swiper.about__swiper
+                    .swiper-wrapper.about__swiper-wrapper
+                        each i in [1,2,3,4,5,6,7,8,9,10]
+                            .swiper-slide.about__slide
+                                img(src=`./assets/img/about_scroll${i}.png`, alt="")
+
         section(id="how").how 
             .how__inner
                 .how__contents
@@ -161,6 +168,10 @@ html(lang="ja")
                         img(src="./assets/img/how_cats.png", alt="")
                     .how__picture-cats-pc.hidden-sp
                         img(src="./assets/img/cats_step_pc.png", alt="")
+                    .how__cats-foot1.hidden-pc 
+                        img(src="./assets/img/how_cats-foot-sp.png", alt="")
+                    .how__cats-foot2.hidden-pc 
+                        img(src="./assets/img/how_cats-foot-sp.png", alt="")
                     .how__title1.title1 How to Enter
                     .tac
                         .how__title2.title2 応募の仕方
@@ -242,7 +253,7 @@ html(lang="ja")
                                 |海街洋菓子店
                                 br
                                 |スイーツセット
-                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-sweets")
+                                button.js-modal-open(data-target="prizes__modal-sweets")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
@@ -256,7 +267,7 @@ html(lang="ja")
                                 |ねこねこ
                                 br
                                 |グッズセット 
-                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-cats")
+                                button.js-modal-open(data-target="prizes__modal-cats")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
@@ -268,7 +279,7 @@ html(lang="ja")
                                     img(src="./assets/img/prizes_onomichiramen.png", alt="")
                             .prizes__card-text
                                 |尾道ラーメンセット 
-                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-ramen")
+                                button.js-modal-open(data-target="prizes__modal-ramen")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
@@ -283,7 +294,7 @@ html(lang="ja")
                                 |おうちで
                                 br
                                 |喫茶店セット 
-                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-cafe")
+                                button.js-modal-open(data-target="prizes__modal-cafe")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
@@ -297,7 +308,7 @@ html(lang="ja")
                                 |工房尾道帆布
                                 br
                                 |オリジナルトート 
-                                a(href="#" target="_blank").js-modal-open(data-target="prizes__modal-to-to")
+                                button.js-modal-open(data-target="prizes__modal-to-to")
                                     svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
                                         path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
                                         image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
@@ -425,6 +436,7 @@ html(lang="ja")
                             .swiper-pagination#js-gallery-pagenation.spots__pagination
 
                             // ✅ ナビゲーションボタン
+                        .spots__nav
                             .swiper-button-prev#js-gallery-prev.spots__button-prev
                             .swiper-button-next#js-gallery-next.spots__button-next
 

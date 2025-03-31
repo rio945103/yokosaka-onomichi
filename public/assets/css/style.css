@@ -10,24 +10,9 @@
 	cursor: pointer;
 }
 
-html {
-	overflow-x: hidden;
-}
-
-.fade-in-up {
-	opacity: 0;
-	transform: translateY(24px);
-	transition: opacity 1s, transform 1s;
-}
-
-.fade-in-up.is-in-view {
-	opacity: 1;
-	transform: translateY(0);
-}
-
 .swiper-button-prev::after,
 .swiper-button-next::after {
-	background-position: center bottom;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -45,7 +30,29 @@ html {
 
 .swiper-button-next::after {
 	background-image: url(../img/spots_next-button.png);
-	background-position: bottom;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity 1s, transform 1s;
+}
+
+.fade-in-up.is-in-view {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.swiper-slide {
+	width: 100%;
+}
+
+.about__swiper-wrapper {
+	transition-timing-function: linear !important;
 }
 
 .title1 {
@@ -125,6 +132,42 @@ html {
 	text-shadow: 0px 0px 30px #FFF;
 }
 
+.about__text1 {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+	text-align: center;
+}
+
+.about__text2 {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 158%; /* 19.2px */
+	text-align: center;
+}
+
+.about__text2 br {
+	line-height: 19px; /* 19.2px */
+	margin: 0;
+	padding: 0;
+}
+
+.about__text3 {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
+	text-align: center;
+}
+
 .about__button {
 	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
 	font-family: "Noto Sans JP";
@@ -166,12 +209,32 @@ html {
 	text-align: center;
 }
 
+.how__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
+	font-family: "Noto Sans JP";
+	font-feature-settings: "pref" on;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 25.6px */
+}
+
 .prizes__text {
 	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
 	font-family: "Noto Sans JP";
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+	text-align: center;
+}
+
+.prizes__card-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
 	line-height: 160%; /* 19.2px */
 	text-align: center;
 }
@@ -233,6 +296,34 @@ html {
 	font-weight: 400;
 	line-height: 160%; /* 18.311px */
 	text-align: center;
+}
+
+.spots__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
+	font-family: "Noto Sans JP";
+	font-feature-settings: "pref" on;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 25.6px */
+}
+
+.question__item-q-text {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 32px */
+}
+
+.question__item-a-text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 22.4px */
 }
 
 .entry__content-title {
@@ -458,6 +549,8 @@ header {
 .drawer-icon {
 	height: 24px;
 	position: relative;
+	right: 4px;
+	top: 4px;
 	width: 32px;
 	z-index: 51;
 }
@@ -492,11 +585,11 @@ header {
 }
 
 .drawer-icon__bar:nth-of-type(1) {
-	top: 9px;
+	top: 10px;
 }
 
 .drawer-icon__bar:nth-of-type(2) {
-	top: 18px;
+	top: 21px;
 }
 
 .drawer-content {
@@ -524,9 +617,13 @@ header {
 	margin-top: 59px;
 }
 
+.mv__bg {
+	margin-top: 4px;
+}
+
 .mv__inner {
 	padding-inline: 20px;
-	padding-top: 17px;
+	padding-top: 22px;
 }
 
 .mv__contents {
@@ -540,14 +637,13 @@ header {
 
 .mv__title2 {
 	margin-top: 12px;
-	margin-top: 16px;
 	text-align: center;
 }
 
 .mv__content {
 	display: flex;
 	gap: 58px;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-top: 10px;
 }
 
@@ -556,19 +652,20 @@ header {
 }
 
 .mv__smart {
+	margin-top: -7px;
 	text-align: center;
-	top: -7px;
 }
 
 .mv__food {
+	left: 2px;
 	position: absolute;
-	top: 569px;
+	top: 552px;
 }
 
 .mv__cats {
 	position: absolute;
 	right: 0;
-	top: 590px;
+	top: 565px;
 }
 
 .about {
@@ -599,14 +696,14 @@ header {
 }
 
 .about__picture-left {
-	left: -160px;
+	left: -140px;
 	position: absolute;
 	top: 395px;
 }
 
 .about__picture-right {
 	position: absolute;
-	right: -160px;
+	right: -140px;
 	top: 273px;
 }
 
@@ -655,7 +752,7 @@ header {
 .about__button {
 	display: block;
 	margin: auto;
-	margin-top: 24px;
+	margin-top: 29px;
 }
 
 .about__pictures {
@@ -686,14 +783,20 @@ header {
 }
 
 .about__onomichi {
-	margin-top: 140px;
+	left: -9px;
+	margin-top: 100px;
 	position: relative;
 	text-align: center;
 	z-index: 100;
 }
 
+.about__scroll {
+	margin-top: -20px;
+}
+
 .how {
-	margin-top: 32px;
+	margin-top: 64px;
+	overflow: hidden;
 }
 
 .how__inner {
@@ -724,6 +827,18 @@ header {
 	position: absolute;
 	right: 0;
 	top: -26px;
+}
+
+.how__cats-foot1 {
+	left: 0;
+	position: absolute;
+	top: 550px;
+}
+
+.how__cats-foot2 {
+	position: absolute;
+	right: 0;
+	top: 880px;
 }
 
 .how__steps {
@@ -771,11 +886,12 @@ header {
 }
 
 .how__button {
-	margin-top: 16px;
+	margin-bottom: 10px;
+	margin-top: 14px;
 }
 
 .prizes {
-	margin-top: 32px;
+	margin-top: 24px;
 }
 
 .prizes__bg {
@@ -805,6 +921,10 @@ header {
 	width: 237.6px;
 }
 
+.prizes__title2 {
+	margin-top: 7px;
+}
+
 .prize__contents {
 	padding-bottom: 36px;
 	padding-inline: 20px;
@@ -817,7 +937,7 @@ header {
 
 .prizes__cards {
 	display: grid;
-	gap: 15px;
+	gap: 10px;
 	grid-template-columns: repeat(2, 1fr); /* スマホ時は2列 */
 	margin-top: 24px;
 }
@@ -883,7 +1003,7 @@ header {
 
 .prizes__button {
 	margin: auto;
-	margin-top: 24px;
+	margin-top: 18px;
 	padding: 6px 24px;
 	text-align: center;
 	white-space: nowrap;
@@ -912,6 +1032,10 @@ header {
 	margin-top: 16px;
 }
 
+.bg_pic {
+	margin-top: -47px;
+}
+
 .spots {
 	overflow: hidden;
 }
@@ -919,6 +1043,7 @@ header {
 .spots__inner {
 	padding-bottom: 20px;
 	padding-inline: 20px;
+	position: relative;
 }
 
 .spots__head {
@@ -932,16 +1057,11 @@ header {
 }
 
 .swiper-wrapper {
-	align-items: center;
-	gap: 16px;
+	align-items: unset;
+	display: flex;
 	height: auto !important;
-	justify-content: center;
+	justify-content: unset;
 	margin-top: 24px;
-}
-
-.spots__slide {
-	height: auto !important;
-	width: 240px !important;
 }
 
 .spots__slide:last-child {
@@ -949,7 +1069,10 @@ header {
 }
 
 .spots-card img {
-	width: 240px;
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: 100%;
 }
 
 .spots_foot {
@@ -964,7 +1087,7 @@ header {
 
 .spots__button {
 	margin: auto;
-	margin-top: 16px;
+	margin-top: 22px;
 	padding: 6px 24px;
 	text-align: center;
 	white-space: nowrap;
@@ -973,6 +1096,25 @@ header {
 .spots__button-prev,
 .spots__button-next {
 	display: none;
+}
+
+.spots__button-prev {
+	bottom: 0;
+	left: -48px;
+	position: absolute;
+	z-index: 10;
+}
+
+.spots__button-next {
+	bottom: 0;
+	left: 800px;
+	position: absolute;
+	z-index: 10;
+}
+
+.under__wave {
+	position: relative;
+	top: -1px;
 }
 
 .under__wave img {
@@ -1003,7 +1145,7 @@ header {
 }
 
 .question__items {
-	margin-top: 12px;
+	margin-top: 24px;
 }
 
 .question__item {
@@ -1014,13 +1156,14 @@ header {
 }
 
 .question__item-q {
+	align-items: center;
 	display: flex;
 	gap: 12px;
-	padding: 12px 16px;
+	padding: 9px 14px;
 }
 
 .question__item-q-icon img {
-	width: 22px;
+	width: 18px;
 }
 
 .question__item-a {
@@ -1028,7 +1171,7 @@ header {
 	display: none; /* ✅ 初期状態では非表示 */
 	flex-direction: row; /* ✅ 横並びにする */
 	gap: 12px;
-	padding: 16px;
+	padding: 19px;
 }
 
 .question__item-a.is-open {
@@ -1253,6 +1396,11 @@ header {
 	width: 37.333px;
 }
 
+header {
+	box-sizing: border-box;
+	height: 64px;
+}
+
 .header__logo img {
 	height: 27px;
 	width: 210px;
@@ -1336,44 +1484,24 @@ header {
 	width: 107px;
 }
 
-.about__text1 {
-	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
-	font-family: "Noto Sans JP";
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 160%; /* 22.4px */
-	text-align: center;
-}
-
-.about__text2 {
-	color: var(--LP-Blown, #4A3636);
-	font-family: "Noto Sans JP";
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 160%; /* 19.2px */
-	text-align: center;
-}
-
-.about__text3 {
-	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
-	font-family: "Noto Sans JP";
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 160%; /* 22.4px */
-	text-align: center;
+.about__picture1 {
+	margin-left: -2px;
+	margin-top: -4px;
 }
 
 .about__picture1 img {
-	height: 60px;
-	width: 80px;
+	height: auto;
+	width: 87px;
+}
+
+.about__picture2 {
+	margin-right: -16px;
+	margin-top: -7px;
 }
 
 .about__picture2 img {
-	height: 60px;
-	width: 80px;
+	height: auto;
+	width: 90px;
 }
 
 .about__picture-naname img {
@@ -1409,7 +1537,7 @@ header {
 }
 
 .about__sakamichi img {
-	height: 176px;
+	height: 212px;
 }
 
 .about__goods img {
@@ -1427,6 +1555,15 @@ header {
 	width: 354.642px;
 }
 
+.about__slide {
+	max-width: 100px;
+}
+
+.about__slide img {
+	height: 100px;
+	width: 100px;
+}
+
 .how__picture-map img {
 	height: 223px;
 	width: 149px;
@@ -1440,6 +1577,16 @@ header {
 .how__picture-cats-pc img {
 	height: 394px;
 	width: 433px;
+}
+
+.how__cats-foot1 img,
+.how__cats-foot2 img {
+	transform: rotate(180deg);
+	width: 55px;
+}
+
+.how__cats-foot2 img {
+	transform: rotate(180deg) scaleX(-1);
 }
 
 .how__step-image img {
@@ -1579,6 +1726,23 @@ header {
 	width: 255px;
 }
 
+.spots-card {
+	height: 371px;
+	max-width: 240px;
+}
+
+.spots-card img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.spots__slide {
+	margin-bottom: 31px;
+	max-height: 371px;
+	max-width: 296px;
+}
+
 .spots__button-prev,
 .spots__button-next {
 	height: 80px;
@@ -1595,11 +1759,11 @@ header {
 }
 
 .question__item-q-icon img {
-	width: 22px;
+	width: 20px;
 }
 
 .question__item-a-icon img {
-	width: 22px;
+	width: 14px;
 }
 
 .question__item-button img {
@@ -1689,17 +1853,26 @@ header {
 	font-size: 24px;
 }
 
+.about__text1 {
+	font-size: 16px;
+}
+
+.about__text2 {
+	font-size: 16px;
+}
+
+.about__text3 {
+	border-bottom: 2px dashed var(--LP-Blue, #9ED0E0);
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
 .about__button {
 	font-size: 20px;
 }
 
 .how__button {
-	color: var(--LP-Blown, #4A3636); /* JP/Text 20px Bold */
-	font-family: "Noto Sans JP";
 	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 160%; /* 32px */
 }
 
 .prizes__text {
@@ -1734,21 +1907,11 @@ header {
 }
 
 .question__item-q-text {
-	color: var(--LP-Blown, #4A3636); /* JP/Text 20px Bold */
-	font-family: "Noto Sans JP";
 	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 160%; /* 32px */
 }
 
 .question__item-a-text {
-	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Regular */
-	font-family: "Noto Sans JP";
 	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 160%; /* 25.6px */
 }
 
 .entry__content {
@@ -1789,6 +1952,10 @@ header {
 
 .mv__title1 {
 	margin-top: 24px;
+}
+
+.mv__title2 {
+	margin-top: 16px;
 }
 
 .mv__content {
@@ -1987,19 +2154,16 @@ header {
 	margin-top: 24px;
 }
 
-.spots__inner {
-	position: relative;
-}
-
 .spots__contents {
+	align-items: flex-start;
 	display: flex;
+	gap: 32px;
 }
 
 .spots__head {
 	align-items: flex-start;
 	flex-direction: column;
 	margin-left: 252px;
-	margin-right: 40px;
 }
 
 .spots__title {
@@ -2009,21 +2173,12 @@ header {
 }
 
 .swiper-wrapper {
-	gap: 32px;
 	margin-top: 0;
-}
-
-.spots__slide {
-	width: 344px !important;
 }
 
 .spots-card {
 	margin-bottom: 20px;
-	margin-left: 48px;
-}
-
-.spots-card img {
-	width: 344px;
+	margin-left: 0;
 }
 
 .spots__sub {
@@ -2038,9 +2193,14 @@ header {
 	margin-top: 24px;
 }
 
+.spots__slider {
+	position: relative;
+}
+
 .spots__button-prev,
 .spots__button-next {
 	display: block;
+	top: auto !important;
 }
 
 .question {
@@ -2192,20 +2352,6 @@ header {
 	width: 233px;
 }
 
-.about__text1 {
-	font-size: 16px;
-}
-
-.about__text2 {
-	font-size: 16px;
-}
-
-.about__text3 {
-	border-bottom: 2px dashed var(--LP-Blue, #9ED0E0);
-	font-size: 20px;
-	padding-bottom: 10px;
-}
-
 .about__picture1 img {
 	height: 100px;
 	width: 134px;
@@ -2231,11 +2377,6 @@ header {
 	padding: 10px 40px;
 }
 
-.about__sakamichi img {
-	height: 817px;
-	width: 427px;
-}
-
 .about__goods img {
 	height: 150.604px;
 	width: 308px;
@@ -2249,6 +2390,15 @@ header {
 .about__onomichi img {
 	height: 97px;
 	width: 891px;
+}
+
+.about__slide {
+	max-width: 200px;
+}
+
+.about__slide img {
+	height: 200px;
+	width: 200px;
 }
 
 .how__picture-map img {
@@ -2352,6 +2502,10 @@ header {
 .spots__button {
 	max-width: 437px;
 	padding: 10px 40px;
+}
+
+.spots-card {
+	max-width: 296px;
 }
 
 .big__entry {

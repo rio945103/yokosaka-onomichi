@@ -47,7 +47,7 @@
     </section>
     <section class="about" id="about">
       <div class="about__bd-picture">
-        <div class="about__picture-left"> <img src="./assets/img/about_Left.png" alt=""/></div>
+        <div class="about__picture-left"> <img src="./assets/img/about_Left-sp.png" alt=""/><img class="hidden-sp" src="./assets/img/about_Left.png" alt=""/></div>
         <div class="about__picture-right"> <img src="./assets/img/about_Right.png" alt=""/></div>
         <div class="about_foot hidden-sp"><img src="./assets/img/about_cats-foot.png" alt=""/></div>
       </div>
@@ -67,20 +67,31 @@
         </div>
         <div class="about__pictures"> 
           <div class="about__arrow"> <img src="./assets/img/arrow.png" alt=""/></div>
-          <div class="about__sakamichi"> <img src="./assets/img/sakamichi.png" alt=""/></div>
+          <div class="about__sakamichi"> <img src="./assets/img/sakamichi-sp.png" alt=""/><img class="hidden-sp" src="./assets/img/sakamichi.png" alt=""/></div>
           <div class="about__goods"> <img src="./assets/img/about_goods.png" alt=""/></div>
           <div class="about__ball"> <img src="./assets/img/about_ball.png" alt=""/></div>
           <div class="about__onomichi"> <img src="./assets/img/about_onomichi.png" alt=""/></div>
         </div>
-        <div class="about__scroll"> 
-          <div class="about__slider"> 
-            <div class="swiper about__swiper" id="js-about-swiper">
-              <div class="about__swiper-wrapper"></div>
-            </div>
+      </div>
+    </section>
+    <div class="about__scroll"> 
+      <div class="about__slider"> 
+        <div class="swiper about__swiper" id="js-about-swiper">
+          <div class="swiper-wrapper about__swiper-wrapper">
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll1.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll2.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll3.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll4.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll5.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll6.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll7.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll8.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll9.png" alt=""/></div>
+            <div class="swiper-slide about__slide"><img src="./assets/img/about_scroll10.png" alt=""/></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <section class="how" id="how"> 
       <div class="how__inner">
         <div class="how__contents">
@@ -88,6 +99,8 @@
           <div class="how__picture-map"> <img src="./assets/img/how_map.png" alt=""/></div>
           <div class="how__picture-cats hidden-pc"><img src="./assets/img/how_cats.png" alt=""/></div>
           <div class="how__picture-cats-pc hidden-sp"><img src="./assets/img/cats_step_pc.png" alt=""/></div>
+          <div class="how__cats-foot1 hidden-pc"> <img src="./assets/img/how_cats-foot-sp.png" alt=""/></div>
+          <div class="how__cats-foot2 hidden-pc"> <img src="./assets/img/how_cats-foot-sp.png" alt=""/></div>
           <div class="how__title1 title1">How to Enter</div>
           <div class="tac">
             <div class="how__title2 title2">応募の仕方</div>
@@ -143,55 +156,70 @@
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_sweets.png" alt=""/></div>
               </div>
-              <div class="prizes__card-text">海街洋菓子店<br/>スイーツセット<a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-sweets">
+              <div class="prizes__card-text">海街洋菓子店<br/>スイーツセット
+                <button class="js-modal-open" data-target="prizes__modal-sweets">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg></a></div>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number2.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_manekineko.png" alt=""/></div>
               </div>
-              <div class="prizes__card-text">ねこねこ<br/>グッズセット <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-cats">
+              <div class="prizes__card-text">ねこねこ<br/>グッズセット 
+                <button class="js-modal-open" data-target="prizes__modal-cats">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg></a></div>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number3.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_onomichiramen.png" alt=""/></div>
               </div>
-              <div class="prizes__card-text">尾道ラーメンセット <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-ramen">
+              <div class="prizes__card-text">尾道ラーメンセット 
+                <button class="js-modal-open" data-target="prizes__modal-ramen">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg></a></div>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number4.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_cafe.png" alt=""/></div>
               </div>
-              <div class="prizes__card-text">おうちで<br/>喫茶店セット <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-cafe">
+              <div class="prizes__card-text">おうちで<br/>喫茶店セット 
+                <button class="js-modal-open" data-target="prizes__modal-cafe">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg></a></div>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="prizes__card"> 
               <div class="prize__card-number"> <img src="./assets/img/prizes_number5.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_to-to.png" alt=""/></div>
               </div>
-              <div class="prizes__card-text">工房尾道帆布<br/>オリジナルトート <a class="js-modal-open" href="#" target="_blank" data-target="prizes__modal-to-to">
+              <div class="prizes__card-text">工房尾道帆布<br/>オリジナルトート 
+                <button class="js-modal-open" data-target="prizes__modal-to-to">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                     <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
                     <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg></a></div>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <div class="prizes__button button">#見つけて尾道レトロ の最新投稿を見る</div>
@@ -281,6 +309,8 @@
               <!-- ✅ ページネーション-->
               <div class="swiper-pagination spots__pagination" id="js-gallery-pagenation"></div>
               <!-- ✅ ナビゲーションボタン-->
+            </div>
+            <div class="spots__nav">
               <div class="swiper-button-prev spots__button-prev" id="js-gallery-prev"></div>
               <div class="swiper-button-next spots__button-next" id="js-gallery-next"></div>
             </div>
