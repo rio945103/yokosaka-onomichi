@@ -888,10 +888,12 @@ header {
 .how__button {
 	margin-bottom: 10px;
 	margin-top: 14px;
+	position: relative;
+	z-index: 2;
 }
 
 .prizes {
-	margin-top: 24px;
+	margin-top: 26px;
 }
 
 .prizes__bg {
@@ -918,7 +920,9 @@ header {
 	height: 83px;
 	margin: auto;
 	padding-top: 20px;
+	position: relative;
 	width: 237.6px;
+	z-index: 2;
 }
 
 .prizes__title2 {
@@ -929,6 +933,8 @@ header {
 	padding-bottom: 36px;
 	padding-inline: 20px;
 	padding-top: 60px;
+	position: relative;
+	z-index: 1;
 }
 
 .prizes__icon {
@@ -975,9 +981,9 @@ header {
 }
 
 .prize__card-number {
-	left: 56px;
+	left: 54px;
 	position: absolute;
-	top: -24px;
+	top: -26px;
 	z-index: 51;
 }
 
@@ -1003,7 +1009,7 @@ header {
 
 .prizes__button {
 	margin: auto;
-	margin-top: 18px;
+	margin-top: 15px;
 	padding: 6px 24px;
 	text-align: center;
 	white-space: nowrap;
@@ -1033,7 +1039,14 @@ header {
 }
 
 .bg_pic {
+	left: -102px;
 	margin-top: -47px;
+	position: absolute;
+	z-index: 0;
+}
+
+.wave {
+	margin-top: 212px;
 }
 
 .spots {
@@ -1050,6 +1063,10 @@ header {
 	display: flex;
 	gap: 8px;
 	justify-content: center;
+}
+
+.spots__icon {
+	margin-top: 4px;
 }
 
 .spots__text {

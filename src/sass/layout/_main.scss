@@ -462,6 +462,8 @@
 }
 
 .how__button {
+    position: relative;
+    z-index: 2; // ← .bg_pic より上に来るように
     margin-top: 14px;
     margin-bottom: 10px;
     @include mq(pc){
@@ -472,7 +474,7 @@
 }
 
 .prizes {
-    margin-top: 24px;
+    margin-top: 26px;
     @include mq(pc){
         margin-top: 120px;
         text-align: center;
@@ -502,6 +504,8 @@
 }
 
 .prizes__head {
+    position: relative;
+    z-index: 2; // ✅ 背景より上に来るように
     margin: auto;
     padding-top: 20px;
     width: 237.6px;
@@ -526,6 +530,8 @@
 }
 
 .prize__contents {
+    position: relative;
+    z-index: 1; // ✅ 背景より上に来るように
     padding-top: 60px;
     padding-inline: 20px;
     padding-bottom: 36px;
@@ -612,8 +618,8 @@
 
 .prize__card-number  {
     position: absolute;
-    left: 56px;
-    top: -24px;
+    left: 54px;
+    top: -26px;
     z-index: 51;
     @include mq(pc){
         left: 40%;
@@ -659,7 +665,7 @@
 }
 
 .prizes__button {
-    margin-top: 18px;
+    margin-top: 15px;
     margin: auto;
     text-align: center;
     padding: 6px 24px;
@@ -699,6 +705,13 @@
 
 .bg_pic {
     margin-top: -47px;
+    position: absolute;
+    z-index: 0;
+    left: -102px;
+}
+
+.wave {
+    margin-top: 212px;
 }
 
 .spots {
@@ -729,6 +742,10 @@
         align-items: flex-start;
         margin-left: 252px;
     }
+}
+
+.spots__icon {
+    margin-top: 4px;
 }
 
 .spots__title {
