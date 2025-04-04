@@ -49,6 +49,11 @@ header {
     background: var(--LP-Dark-Blue, #67B0C7);
 }
 
+.spots-card__texts {
+    border-radius: 0 0 12px 12px;
+    background: var(--LP-White, #FFF);
+}
+
 .question__item-q {
     background: var(--LP-White, #FFF);
 }

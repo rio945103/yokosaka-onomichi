@@ -703,15 +703,24 @@
     }
 }
 
+.bg {
+    overflow-x: hidden;
+    overflow-y: visible; // 縦方向はそのまま表示（デフォルトでもOK）
+    position: relative;
+    height: 260px;
+    margin-top: -48px; // ⬅ 上にずらす
+}
+
 .bg_pic {
-    margin-top: -47px;
     position: absolute;
+    left: -103px;
+    top: 0px;
+    width: 100%; 
     z-index: 0;
-    left: -102px;
 }
 
 .wave {
-    margin-top: 212px;
+    margin-top: 0;
 }
 
 .spots {
@@ -792,6 +801,23 @@
         height: auto;
         display: block;
     }
+}
+
+.spots-card__image {
+    img {
+        border-radius: 12px 12px 0 0;
+        width: 240px;
+    }
+}
+
+.spots-card__title {
+    padding-top: 16px;
+    text-align: center;
+}
+
+.spots-card__text {
+    margin-top: 16px;
+    padding-inline: 24px;
 }
 
 .spots_foot {

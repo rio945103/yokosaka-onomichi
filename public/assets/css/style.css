@@ -298,6 +298,25 @@ html {
 	text-align: center;
 }
 
+.spots-card__title {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
+	font-family: "Noto Sans JP";
+	font-feature-settings: "pref" on;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 25.6px */
+}
+
+.spots-card__text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+}
+
 .spots__button {
 	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
 	font-family: "Noto Sans JP";
@@ -1038,15 +1057,24 @@ header {
 	margin-top: 16px;
 }
 
+.bg {
+	height: 260px;
+	margin-top: -48px;
+	overflow-x: hidden;
+	overflow-y: visible;
+	position: relative;
+}
+
 .bg_pic {
-	left: -102px;
-	margin-top: -47px;
+	left: -103px;
 	position: absolute;
+	top: 0px;
+	width: 100%;
 	z-index: 0;
 }
 
 .wave {
-	margin-top: 212px;
+	margin-top: 0;
 }
 
 .spots {
@@ -1090,6 +1118,21 @@ header {
 	height: auto;
 	max-width: 100%;
 	width: 100%;
+}
+
+.spots-card__image img {
+	border-radius: 12px 12px 0 0;
+	width: 240px;
+}
+
+.spots-card__title {
+	padding-top: 16px;
+	text-align: center;
+}
+
+.spots-card__text {
+	margin-top: 16px;
+	padding-inline: 24px;
 }
 
 .spots_foot {
@@ -1369,6 +1412,11 @@ header {
 
 .spots {
 	background: var(--LP-Dark-Blue, #67B0C7);
+}
+
+.spots-card__texts {
+	background: var(--LP-White, #FFF);
+	border-radius: 0 0 12px 12px;
 }
 
 .question__item-q {
@@ -1696,14 +1744,8 @@ header {
 	width: 96px;
 }
 
-.bg_pic {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
-}
-
 .bg_pic img {
+	display: block;
 	height: 260px;
 	width: 580px;
 }
@@ -1741,6 +1783,10 @@ header {
 .spots__sub-title img {
 	height: 55px;
 	width: 255px;
+}
+
+.spots-card__texts {
+	height: 222px;
 }
 
 .spots-card {
@@ -1915,6 +1961,14 @@ header {
 }
 
 .spots__text {
+	font-size: 16px;
+}
+
+.spots-card__title {
+	font-size: 20px;
+}
+
+.spots-card__text {
 	font-size: 16px;
 }
 
@@ -2514,6 +2568,10 @@ header {
 .spots__sub-title img {
 	height: 107px;
 	width: 495px;
+}
+
+.spots-card__texts {
+	height: 302px;
 }
 
 .spots__button {

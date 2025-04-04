@@ -512,11 +512,8 @@ header {
 }
 
 .bg_pic {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     img {
+        display: block;
         width: 580px;
         height: 260px;
         @include mq(pc){
@@ -579,6 +576,13 @@ header {
             width: 495px;
             height: 107px;
         }
+    }
+}
+
+.spots-card__texts {
+    height: 222px;
+    @include mq(pc){
+        height: 302px;
     }
 }
 

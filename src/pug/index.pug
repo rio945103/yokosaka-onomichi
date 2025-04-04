@@ -388,8 +388,9 @@ html(lang="ja")
                                     br
                                     |年月とともに変化していく風合いも魅力。
                 .prizes__modal-button.button.js-modal-close 閉じる
-        .bg_pic
-            img(src="./assets/img/bg_pic.png", alt="")
+        .bg
+            .bg_pic
+                img(src="./assets/img/bg_pic.png", alt="")
         .wave
             .wave_pic.hidden-pc
                 img(src="./assets/img/wave_pic.png", alt="")
@@ -412,25 +413,53 @@ html(lang="ja")
                                 // ✅ 各スライドを `.swiper-slide` にする
                                 .swiper-slide.spots__slide
                                     .spots-card
-                                        img(src="./assets/img/temple-card.png", alt="")
+                                        .spots-card__image
+                                            img(src="./assets/img/temple_card-sp.png", alt="")
+                                        .spots-card__texts 
+                                            .spots-card__title 天寧寺　海雲塔
+                                            .spots-card__text 尾道のシンボルともいえる三重の塔。海雲塔ごしに見える坂と海のパノラマは、まさに絶景そのもの。
                                 .swiper-slide.spots__slide
                                     .spots-card
-                                        img(src="./assets/img/cat-card.png", alt="")
+                                        .spots-card__image
+                                            img(src="./assets/img/cat_card-sp.png", alt="")
+                                        .spots-card__texts 
+                                            .spots-card__title 猫の細道
+                                            .spots-card__text 尾道名物といえば、やっぱり猫！猫たちが集まりやすいスポットとして有名な猫の細道は、神社の手前からお寺までおよそ200メートル続きます。あちこちに飾られた猫のアートを見るのも楽しいですよ。
                                 .swiper-slide.spots__slide
                                     .spots-card
-                                        img(src="./assets/img/shop-card.png", alt="")
+                                        .spots-card__image
+                                            img(src="./assets/img/shop_card-sp.png", alt="")
+                                        .spots-card__texts 
+                                            .spots-card__title 本通商店街
+                                            .spots-card__text 東西にのびる通りには、個性豊かなお店が並びます。尾道ならではのお土産探しにもぴったりのエリアです。風情あふれる通りを歩きながら、自分だけの宝物探しにでかけましょう！
                                 .swiper-slide.spots__slide
                                     .spots-card
-                                        img(src="./assets/img/bag-card.png", alt="")
+                                        .spots-card__image
+                                            img(src="./assets/img/bag_card-sp.png", alt="")
+                                        .spots-card__texts 
+                                            .spots-card__title 工房尾道帆布
+                                            .spots-card__text 向島産の帆布を使ったバッグや小物がそろうお店。ポケット追加などのオーダー（有料）も可能です。店内には、帆布の織機も展示してあります。旅の相棒になるバッグを探してみるのもいいかも！
                                 .swiper-slide.spots__slide
                                     .spots-card
-                                        img(src="./assets/img/yu-yu-card.png", alt="")
+                                        .spots-card__image
+                                            img(src="./assets/img/yu-yu_card-sp.png", alt="")
+                                        .spots-card__texts 
+                                            .spots-card__title ゆーゆー
+                                            .spots-card__text 約100年続いた銭湯を改装したユニークなカフェ。のれんの向こうには、脱衣ロッカーやタイル張りの壁が残っており、当時のおもかげを色濃く感じることができます。地元産のジュースや調味料なども扱っており、お土産にもぴったり。
                                 .swiper-slide.spots__slide
                                     .spots-card
-                                        img(src="./assets/img/airship-card.png", alt="")
+                                        .spots-card__image
+                                            img(src="./assets/img/airship_card-sp.png", alt="")
+                                        .spots-card__texts 
+                                            .spots-card__title AIRSHIP COFFEE
+                                            .spots-card__text 元航海士のコーヒー専門家が営むカフェ。大のコーヒー好きであるオーナー自身が、古民家を再生して開いたお店です。こだわりの詰まったコーヒーは、コーヒー通も唸るおいしさ。テイクアウトして海辺で飲むのもおすすめ！
                                 .swiper-slide.spots__slide
                                     .spots-card
-                                        img(src="./assets/img/higurashi-card.png", alt="")
+                                        .spots-card__image
+                                            img(src="./assets/img/higurashi_card-sp.png", alt="")
+                                        .spots-card__texts 
+                                            .spots-card__title 日暮亭（ひぐらしてい）
+                                            .spots-card__text 築百年のお家をリノベーションし、畳や梁が建築当時のまま残る喫茶店。和のスイーツが楽しめます。人気メニューはみたらしパフェ。
 
                             // ✅ ページネーション
                             .swiper-pagination#js-gallery-pagenation.spots__pagination
