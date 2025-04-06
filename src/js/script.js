@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('#js-gallery-swiper', {
     slidesPerView: 'auto',
     slidesPerGroup: 1,
-    spaceBetween: 32,
+    spaceBetween: 16,
     loop: true,
     loopedSlides: 7,
     centeredSlides: true, // ← デフォルトはSP用に true
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     breakpoints: {
       768: {
         centeredSlides: false, // ← PC時は false にして左寄せや通常表示に
+        spaceBetween: 32,
       }
     },
 

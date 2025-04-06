@@ -20,8 +20,8 @@
 
 
 .drawer-icon {
-    right: 4px;
-    top: 4px;
+    right: 5px;
+    top: 1px;
     width: 32px;
     height: 24px;
     position: relative;
@@ -57,11 +57,11 @@
     transition: transform 0.3s linear, top 0.3s linear;
   
     &:nth-of-type(1) {
-      top: 10px;
+      top: 12px;
     }
   
     &:nth-of-type(2) {
-      top: 21px;
+      top: 24px;
     }
 }
 
@@ -628,6 +628,7 @@
 }
 
 .prizes__card-text {
+    margin-top: 0;
     svg {
         position: absolute; /* 絶対配置 */
         right: 0; /* 右寄せ */
@@ -758,6 +759,7 @@
 }
 
 .spots__title {
+    margin-top: 2px;
     @include mq(pc){
         writing-mode: vertical-rl; // ✅ 右から左の縦書き
         text-orientation: upright; // ✅ 文字の向きを正しくする（ひらがな・カタカナが横倒しにならない）
@@ -843,7 +845,7 @@
 
 
 .spots__button {
-    margin-top: 22px;
+    margin-top: 23px;
     margin: auto;
     text-align: center;
     padding: 6px 24px;
@@ -855,6 +857,7 @@
 }
 
 .spots__slider {
+    margin-inline: -20px; // ← 親のpaddingと相殺
     @include mq(pc) {
       position: relative;
       
@@ -946,24 +949,33 @@
 
 .question__item-q {
     display: flex;
-    padding: 9px 14px;
+    padding: 11px 16px;
     gap: 12px;
     align-items: center;
     
+}
+
+.question__item-q-text {
+    display: block;
+    margin-top: -2px;
+    margin-left: 1px;
+    flex: 1;
+    text-align: left;
 }
 
 .question__item-q-icon {
-    
-    img {
-        width: 18px;
-    }
+    margin-top: -9px;
+    margin-left: -1px;
 }
+
+
+
 
 .question__item-a {
     display: none; /* ✅ 初期状態では非表示 */
-    padding: 19px;
+    padding: 13px;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
     flex-direction: row; /* ✅ 横並びにする */
 
     &.is-open {
@@ -971,13 +983,23 @@
     }
 }
 
+.question__item-a-icon {
+    padding-bottom: 4px;
+}
+
+.question__item-a-text {
+    padding: 1px 0;
+    margin-top: 2px;
+}
+
 .question__item-button {
-    margin-left: auto;
+    margin-left: 0px;
 }
 
 
 
 .entry {
+    margin-top: -3px;
     padding-inline: 20px;
     @include mq(pc){
         padding-inline: 244px;
@@ -985,6 +1007,7 @@
 }
 
 .entry__inner {
+    padding-top: 16px;
     padding-inline: 20px;
     border: 8px solid var(--LP-White, #FFF);
     background: rgba(255, 255, 255, 0.50);
@@ -1008,11 +1031,17 @@
 }
 
 .entry__content {
-    margin-bottom: 12px;
-    padding-bottom: 16px;
+    margin-bottom: 11px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #CCCCCC; 
     @include mq(pc){
         display: flex;
+        
+        border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
+
+        &:last-child {
+            border-bottom: none;
+        }
         
     }
 }
@@ -1023,6 +1052,7 @@
 
 .entry__content-title {
 
+
     @include mq(pc){
         width: 240px;
     }
@@ -1030,6 +1060,7 @@
 
 .entry__content-text {
     margin-top: 8px;
+    margin-left: -5px;
     @include mq(pc){
         width: 672px;
     }

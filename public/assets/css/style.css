@@ -359,9 +359,10 @@ html {
 	border-radius: 50%; /* 要素を丸くする */
 	content: ""; /* 空の要素作成 */
 	display: inline-block; /* インラインブロックにする */
-	height: 10px; /* 高さ指定 */
+	height: 8px; /* 高さ指定 */
+	margin-left: -6px;
 	margin-right: 8px;
-	width: 10px; /* 幅指定 */
+	width: 8px; /* 幅指定 */
 }
 
 .entry__content-text {
@@ -389,11 +390,11 @@ html {
 	content: ""; /* 空の要素作成 */
 	display: inline-block; /* インラインブロックにする */
 	flex-shrink: 0; /* 丸が縮まないようにする */
-	height: 4px; /* 高さ指定 */
+	height: 3px; /* 高さ指定 */
 	margin-right: 4px;
 	position: relative;
 	top: 11px;
-	width: 4px; /* 幅指定 */
+	width: 3px; /* 幅指定 */
 }
 
 .form-field__label {
@@ -568,8 +569,8 @@ header {
 .drawer-icon {
 	height: 24px;
 	position: relative;
-	right: 4px;
-	top: 4px;
+	right: 5px;
+	top: 1px;
 	width: 32px;
 	z-index: 51;
 }
@@ -604,11 +605,11 @@ header {
 }
 
 .drawer-icon__bar:nth-of-type(1) {
-	top: 10px;
+	top: 12px;
 }
 
 .drawer-icon__bar:nth-of-type(2) {
-	top: 21px;
+	top: 24px;
 }
 
 .drawer-content {
@@ -1006,6 +1007,10 @@ header {
 	z-index: 51;
 }
 
+.prizes__card-text {
+	margin-top: 0;
+}
+
 .prizes__card-text svg {
 	border-radius: 0 0 8px 0; /* 丸みを付ける */
 	bottom: 0; /* 下寄せ */
@@ -1097,6 +1102,10 @@ header {
 	margin-top: 4px;
 }
 
+.spots__title {
+	margin-top: 2px;
+}
+
 .spots__text {
 	margin-top: 16px;
 }
@@ -1147,10 +1156,14 @@ header {
 
 .spots__button {
 	margin: auto;
-	margin-top: 22px;
+	margin-top: 23px;
 	padding: 6px 24px;
 	text-align: center;
 	white-space: nowrap;
+}
+
+.spots__slider {
+	margin-inline: -20px;
 }
 
 .spots__button-prev,
@@ -1219,30 +1232,49 @@ header {
 	align-items: center;
 	display: flex;
 	gap: 12px;
-	padding: 9px 14px;
+	padding: 11px 16px;
 }
 
-.question__item-q-icon img {
-	width: 18px;
+.question__item-q-text {
+	display: block;
+	flex: 1;
+	margin-left: 1px;
+	margin-top: -2px;
+	text-align: left;
+}
+
+.question__item-q-icon {
+	margin-left: -1px;
+	margin-top: -9px;
 }
 
 .question__item-a {
 	align-items: center;
 	display: none; /* ✅ 初期状態では非表示 */
 	flex-direction: row; /* ✅ 横並びにする */
-	gap: 12px;
-	padding: 19px;
+	gap: 18px;
+	padding: 13px;
 }
 
 .question__item-a.is-open {
 	display: flex; /* ✅ 開いたときは `display: flex;` を適用 */
 }
 
+.question__item-a-icon {
+	padding-bottom: 4px;
+}
+
+.question__item-a-text {
+	margin-top: 2px;
+	padding: 1px 0;
+}
+
 .question__item-button {
-	margin-left: auto;
+	margin-left: 0px;
 }
 
 .entry {
+	margin-top: -3px;
 	padding-inline: 20px;
 }
 
@@ -1250,6 +1282,7 @@ header {
 	background: rgba(255, 255, 255, 0.5);
 	border: 8px solid var(--LP-White, #FFF);
 	padding-inline: 20px;
+	padding-top: 16px;
 }
 
 .entry__icon {
@@ -1262,8 +1295,8 @@ header {
 
 .entry__content {
 	border-bottom: 1px solid #CCCCCC;
-	margin-bottom: 12px;
-	padding-bottom: 16px;
+	margin-bottom: 11px;
+	padding-bottom: 15px;
 }
 
 .entry__content:nth-of-type(5) {
@@ -1271,6 +1304,7 @@ header {
 }
 
 .entry__content-text {
+	margin-left: -5px;
 	margin-top: 8px;
 }
 
@@ -1710,7 +1744,6 @@ header {
 .prizes__card-text {
 	align-items: center;
 	background: var(--LP-Gray, #F5F5F5);
-	border-radius: 8px;
 	border-radius: 0 0 8px 8px;
 	display: flex;
 	flex-direction: column;
@@ -1790,8 +1823,7 @@ header {
 }
 
 .spots-card {
-	height: 371px;
-	max-width: 240px;
+	width: 240px;
 }
 
 .spots-card img {
@@ -1800,10 +1832,9 @@ header {
 	width: 100%;
 }
 
-.spots__slide {
-	margin-bottom: 31px;
-	max-height: 371px;
-	max-width: 296px;
+.swiper-slide {
+	max-width: 100%;
+	width: 240px !important;
 }
 
 .spots__button-prev,
@@ -1826,7 +1857,7 @@ header {
 }
 
 .question__item-a-icon img {
-	width: 14px;
+	width: 16px;
 }
 
 .question__item-button img {
@@ -1985,20 +2016,22 @@ header {
 	font-size: 16px;
 }
 
-.entry__content {
-	border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
-}
-
-.entry__content:last-child {
-	border-bottom: none;
-}
-
 .entry__content-title {
 	font-size: 16px;
 }
 
+.entry__content-title::before {
+	height: 10px;
+	width: 10px; /* 幅指定 */
+}
+
 .entry__content-text {
 	font-size: 16px;
+}
+
+.text__dots::before {
+	height: 4px; /* 高さ指定 */
+	width: 4px; /* 幅指定 */
 }
 
 .follow__title {
@@ -2306,7 +2339,12 @@ header {
 }
 
 .entry__content {
+	border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
 	display: flex;
+}
+
+.entry__content:last-child {
+	border-bottom: none;
 }
 
 .entry__content-title {

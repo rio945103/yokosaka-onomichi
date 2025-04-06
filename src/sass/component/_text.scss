@@ -406,13 +406,7 @@
 }
 
 .entry__content {
-    @include mq(pc){
-        border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
-
-        &:last-child {
-            border-bottom: none;
-        }
-    }
+   
 
 }
 
@@ -432,13 +426,17 @@
 
     &::before {
         content:  "";     /* 空の要素作成 */
-        width:  10px;               /* 幅指定 */
-        height:  10px;              /* 高さ指定 */
+        width:  8px;               /* 幅指定 */
+        height:  8px;              /* 高さ指定 */
         display:  inline-block;     /* インラインブロックにする */
         background-color: #9ED0E0;  /* 背景色指定 */
         border-radius:  50%;        /* 要素を丸くする */
         margin-right: 8px;
-
+        margin-left: -6px;
+        @include mq(pc){
+            width:  10px;               /* 幅指定 */
+            height:  10px; 
+        }
     }
 }
 
@@ -468,8 +466,8 @@
     
     &::before {
         content:  "";     /* 空の要素作成 */
-        width:  4px;               /* 幅指定 */
-        height:  4px;              /* 高さ指定 */
+        width:  3px;               /* 幅指定 */
+        height:  3px;              /* 高さ指定 */
         display:  inline-block;     /* インラインブロックにする */
         background-color: #000;  /* 背景色指定 */
         border-radius:  50%;        /* 要素を丸くする */
@@ -477,6 +475,10 @@
         top: 11px;
         margin-right: 4px;
         flex-shrink: 0; /* 丸が縮まないようにする */
+        @include mq(pc){
+            width:  4px;               /* 幅指定 */
+        height:  4px;              /* 高さ指定 */
+        }
     }
 }
 

@@ -441,7 +441,6 @@ header {
 
 
 .prizes__card-text {
-    border-radius: 8px;
     background: var(--LP-Gray, #F5F5F5);
     width: 160px;
     height: 56px;
@@ -594,8 +593,8 @@ header {
 }
 
 .spots-card{
-    max-width: 240px;
-    height: 371px;
+    width: 240px;
+    // height: 371px;
     @include mq(pc){
         max-width: 296px;
     }
@@ -604,13 +603,17 @@ header {
         height: auto;
         display: block;
     }
-  }
+}
   
-  .spots__slide {
-    max-width: 296px;
-    max-height: 371px;
-    margin-bottom: 31px;
-  }
+.spots__slide {
+    // max-width: 318px;
+    // max-height: 371px;
+}
+
+.swiper-slide {
+    width: 240px !important;
+    max-width: 100%;
+}
 
 
 .spots__button-prev,.spots__button-next {
@@ -637,9 +640,11 @@ header {
 
 .question__item-a-icon {
     img {
-        width: 14px;
+        width: 16px;
     }
 }
+
+
 
 .question__item-button {
     img {
