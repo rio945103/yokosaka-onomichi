@@ -459,11 +459,29 @@
     list-style-type: disc !important;
 }
 
+.underline {
+    color: var(--LP-Blown, #4A3636);
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+  
+
 .text__dots {
     display: flex;  /* 疑似要素とテキストを横並びにする */
     align-items: flex-start; /* 上揃えにする */
     gap: 4px; /* 疑似要素とテキストの間隔を設定 */
-    
+    margin-left: 7px;
+    line-height: 1.6;
     &::before {
         content:  "";     /* 空の要素作成 */
         width:  3px;               /* 幅指定 */
@@ -472,14 +490,33 @@
         background-color: #000;  /* 背景色指定 */
         border-radius:  50%;        /* 要素を丸くする */
         position: relative;
-        top: 11px;
         margin-right: 4px;
         flex-shrink: 0; /* 丸が縮まないようにする */
+        margin-top: 10px;
         @include mq(pc){
             width:  4px;               /* 幅指定 */
-        height:  4px;              /* 高さ指定 */
+            height:  4px;              /* 高さ指定 */
         }
     }
+}
+
+.contact__text {
+    color: var(--LP-Blown, #4A3636);
+    text-align: center;
+
+    /* JP/Text 12px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+    @include mq(pc){
+        font-size: 16px;
+    }
+}
+
+input.form-text::placeholder {
+    font-size: 14px;
 }
 
 .form-field__label {
@@ -500,6 +537,53 @@
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 19.2px */
+}
+
+.form-radio__text {
+    color: var(--LP-Blown, #4A3636);
+
+    /* JP/Text 14px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+}
+
+.form-textarea::placeholder {
+    color: var(--LP-Dark-Gray, #CCC);
+
+    /* JP/Text 14px Regular */
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+}
+
+.form-checkbox__text {
+    color: var(--LP-Blown, #4A3636);
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.form-checkbox__text a {
+    text-decoration: underline;
+}
+
+.contact__button {
+    color: var(--LP-Blown, #4A3636);
+    font-feature-settings: 'pref' on;
+
+    /* JP/Text 16px Bold */
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 25.6px */
 }
 
 .follow__title {
@@ -533,8 +617,8 @@
 
     &::before {
         content:  "";     /* 空の要素作成 */
-        width:  10px;               /* 幅指定 */
-        height:  10px;              /* 高さ指定 */
+        width:  8px;               /* 幅指定 */
+        height:  8px;              /* 高さ指定 */
         display:  inline-block;     /* インラインブロックにする */
         background-color: #9ED0E0;  /* 背景色指定 */
         border-radius:  50%;        /* 要素を丸くする */

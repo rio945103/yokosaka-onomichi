@@ -21,6 +21,10 @@ header {
     img {
         width: 210px;
         height: 27px;
+        @include mq(pc){
+            width: 183px;
+            height: 24px;
+        }
     }
 }
 
@@ -668,18 +672,19 @@ header {
 }
 
 .form-text {
-    padding: 16px;
+    padding: 21px 16px;
     width: 100%;
 }
 
 .form-select {
-    padding: 16px;
+    padding: 21px 16px;
     width: 100%;
 }
 
 .form-textarea {
-    padding: 16px;
+    padding: 15px;
     width: 100%;
+    height: 160px;
 }
 
 .contact__button {

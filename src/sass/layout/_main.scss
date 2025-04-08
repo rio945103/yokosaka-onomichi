@@ -7,14 +7,26 @@
     
 }
 
+.header__logo {
+    @include mq(pc){
+        margin-top: 4px;
+        margin-left: 4px;
+    }
+}
+
 .header__nav {
     display: flex;
     gap: 12px;
     align-items: center;
+    margin-top: -3px;
+    margin-right: 5px;
 }
 
 .header__button {
+    margin-left: 3px;
     padding: 6px 24px;
+    width: 132px;
+    white-space: nowrap;
 }
 
 
@@ -105,6 +117,8 @@
 
 .mv__contents {
     position: relative;
+    margin-top: 4px;
+    margin-left: 39px;
 }
 
 .mv__title1 {
@@ -137,8 +151,8 @@
     margin-top: 7px;
     @include mq(pc){
         position: absolute;
-        top: 0;
-        left: 319px;
+        top: -16px;
+        left: 308px;
         z-index: 40;
     }
 }
@@ -146,8 +160,8 @@
 .mv__present {
     @include mq(pc){
         position: absolute;
-        top: 0;
-        right: 409px;
+        top: 7px;
+        right: 398px;
         z-index: 1;
     }
 }
@@ -156,7 +170,7 @@
     text-align: center;
     margin-top: -7px;
     @include mq(pc){
-        margin-top: 33px;
+        margin-top: 24px;
         position: relative; // ← 追加
         z-index: 30;
     }
@@ -168,7 +182,7 @@
     left: 2px;
     @include mq(pc){
         top: 469px;
-        left: 332px;
+        left: 279px;
     }
 }
 
@@ -1059,8 +1073,9 @@
 }
 
 .entry__content-text {
+    margin-left: -4px;
+    margin-right: -4px;
     margin-top: 8px;
-    margin-left: -5px;
     @include mq(pc){
         width: 672px;
     }
@@ -1081,7 +1096,7 @@
 .contact__inner {
     padding-inline: 20px;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 29px;
     @include mq(pc){
         padding-inline: 332px;
     }
@@ -1093,7 +1108,7 @@
 }
 
 .contact__field {
-    margin-top: 24px;
+    margin-top: 25px;
     @include mq(pc){
         display: flex;
     }
@@ -1108,6 +1123,10 @@
     }
 }
 
+.form-field__tag {
+    margin-top: -2px;
+}
+
 .form-field__item {
     margin-top: 8px;
     @include mq(pc){
@@ -1115,9 +1134,17 @@
     }
 }
 
+.form-field__radios {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+}
+
 .contact__privacy {
+    display: flex;
     margin-top: 24px;
     text-align: center;
+    justify-content: center;
 }
 
 .contact__button {
@@ -1125,7 +1152,7 @@
 }
 
 .contact__button {
-    margin-top: 24px;
+    margin-top: 26px;
     margin: auto;
 }
 
@@ -1140,6 +1167,7 @@
 
 .follow__title {
     text-align: center;
+    margin-top: -2px;
     @include mq(pc){
         margin-top: 40px;
     }
@@ -1153,13 +1181,14 @@
 }
 
 .follow__onomichi {
-    margin-top: 14px;
+    margin-top: 13px;
     @include mq(pc){
         margin-top: 41px;
     }
 }
 
 .follow__contents {
+    margin-top: -2px;
     @include mq(pc){
         display: flex;
         flex-direction: row-reverse;
@@ -1169,13 +1198,15 @@
 
 .follow__logo {
     text-align: center;
+    margin-top: -1px;
+    margin-bottom: 30px;
     @include mq(pc){
         text-align: left;
     }
 }
 
 .follow__accesses {
-    padding: 24px;
+    padding: 24px 24px 28px 24px;
     @include mq(pc){
         padding-top: 106px;
         padding-bottom: 106px;
@@ -1184,7 +1215,8 @@
 }
 
 .follow__access {
-    margin-top: 24px;
+    margin-top: 8px;
+    margin-left: 3px;
     display: flex;
     align-items: center;
 

@@ -378,10 +378,28 @@ html {
 	list-style-type: disc !important;
 }
 
+.underline {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	-webkit-text-decoration-skip-ink: none;
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: auto;
+	text-underline-offset: auto;
+	text-underline-position: from-font;
+}
+
 .text__dots {
 	align-items: flex-start; /* 上揃えにする */
 	display: flex; /* 疑似要素とテキストを横並びにする */
 	gap: 4px; /* 疑似要素とテキストの間隔を設定 */
+	line-height: 1.6;
+	margin-left: 7px;
 }
 
 .text__dots::before {
@@ -392,9 +410,27 @@ html {
 	flex-shrink: 0; /* 丸が縮まないようにする */
 	height: 3px; /* 高さ指定 */
 	margin-right: 4px;
+	margin-top: 10px;
 	position: relative;
-	top: 11px;
 	width: 3px; /* 幅指定 */
+}
+
+.contact__text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 12px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 19.2px */
+	text-align: center;
+}
+
+input.form-text::-moz-placeholder {
+	font-size: 14px;
+}
+
+input.form-text::placeholder {
+	font-size: 14px;
 }
 
 .form-field__label {
@@ -412,6 +448,56 @@ html {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 160%; /* 19.2px */
+}
+
+.form-radio__text {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 22.4px */
+}
+
+.form-textarea::-moz-placeholder {
+	color: var(--LP-Dark-Gray, #CCC); /* JP/Text 14px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 22.4px */
+}
+
+.form-textarea::placeholder {
+	color: var(--LP-Dark-Gray, #CCC); /* JP/Text 14px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 22.4px */
+}
+
+.form-checkbox__text {
+	color: var(--LP-Blown, #4A3636);
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%;
+}
+
+.form-checkbox__text a {
+	text-decoration: underline;
+}
+
+.contact__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Bold */
+	font-family: "Noto Sans JP";
+	font-feature-settings: "pref" on;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 25.6px */
 }
 
 .follow__title {
@@ -438,9 +524,9 @@ html {
 	border-radius: 50%; /* 要素を丸くする */
 	content: ""; /* 空の要素作成 */
 	display: inline-block; /* インラインブロックにする */
-	height: 10px; /* 高さ指定 */
+	height: 8px; /* 高さ指定 */
 	margin-right: 8px;
-	width: 10px; /* 幅指定 */
+	width: 8px; /* 幅指定 */
 }
 
 .follow__access-text {
@@ -560,10 +646,15 @@ header {
 	align-items: center;
 	display: flex;
 	gap: 12px;
+	margin-right: 5px;
+	margin-top: -3px;
 }
 
 .header__button {
+	margin-left: 3px;
 	padding: 6px 24px;
+	white-space: nowrap;
+	width: 132px;
 }
 
 .drawer-icon {
@@ -647,6 +738,8 @@ header {
 }
 
 .mv__contents {
+	margin-left: 39px;
+	margin-top: 4px;
 	position: relative;
 }
 
@@ -1304,7 +1397,8 @@ header {
 }
 
 .entry__content-text {
-	margin-left: -5px;
+	margin-left: -4px;
+	margin-right: -4px;
 	margin-top: 8px;
 }
 
@@ -1317,7 +1411,7 @@ header {
 }
 
 .contact__inner {
-	padding-bottom: 40px;
+	padding-bottom: 29px;
 	padding-inline: 20px;
 	padding-top: 40px;
 }
@@ -1328,7 +1422,7 @@ header {
 }
 
 .contact__field {
-	margin-top: 24px;
+	margin-top: 25px;
 }
 
 .form-field__head {
@@ -1336,11 +1430,23 @@ header {
 	gap: 12px;
 }
 
+.form-field__tag {
+	margin-top: -2px;
+}
+
 .form-field__item {
 	margin-top: 8px;
 }
 
+.form-field__radios {
+	display: flex;
+	gap: 24px;
+	margin-top: 8px;
+}
+
 .contact__privacy {
+	display: flex;
+	justify-content: center;
 	margin-top: 24px;
 	text-align: center;
 }
@@ -1351,7 +1457,7 @@ header {
 
 .contact__button {
 	margin: auto;
-	margin-top: 24px;
+	margin-top: 26px;
 }
 
 .follow__inner {
@@ -1360,6 +1466,7 @@ header {
 }
 
 .follow__title {
+	margin-top: -2px;
 	text-align: center;
 }
 
@@ -1371,21 +1478,28 @@ header {
 }
 
 .follow__onomichi {
-	margin-top: 14px;
+	margin-top: 13px;
+}
+
+.follow__contents {
+	margin-top: -2px;
 }
 
 .follow__logo {
+	margin-bottom: 30px;
+	margin-top: -1px;
 	text-align: center;
 }
 
 .follow__accesses {
-	padding: 24px;
+	padding: 24px 24px 28px 24px;
 }
 
 .follow__access {
 	align-items: center;
 	display: flex;
-	margin-top: 24px;
+	margin-left: 3px;
+	margin-top: 8px;
 }
 
 .page__top {
@@ -1478,6 +1592,135 @@ header {
 	border-radius: 4px;
 	color: var(--LP-White, #FFF);
 	padding: 4px 8px;
+}
+
+.cp_ipselect02 {
+	align-items: center;
+	background: #F5F5F5;
+	border-radius: 8px;
+	display: flex;
+	position: relative;
+}
+
+.cp_ipselect02 select { /* 標準のスタイルを無効にする */
+	border: none;
+	color: #4A3636;
+	cursor: pointer;
+	height: 55px;
+	padding: 16px 52px 16px 16px;
+	text-overflow: ellipsis; /*テキストがオーバーしたら'...'で省略*/
+	width: 100%;
+	z-index: 1;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent;
+	outline: none;
+}
+
+/*プルダウン枠を設定*/
+
+.cp_ipselect02::before {
+	background: #9ED0E0;
+	border-radius: 0 8px 8px 0;
+	content: "";
+	display: inline-block;
+	height: 55px;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	width: 52px;
+}
+
+.cp_ipselect02:after {
+	background-image: url("../img/pulldown-arrow.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 32px auto; /* サイズは調整してね */
+	content: "";
+	height: 32px;
+	pointer-events: none;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 32px;
+}
+
+.form-radio {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+}
+
+.form-radio .form-radio__input {
+	display: none;
+}
+
+.form-radio .form-radio__text {
+	padding-left: 32px;
+	position: relative;
+}
+
+.form-radio .form-radio__text::before {
+	background-color: #F5F5F5;
+	border-radius: 50%;
+	content: "";
+	height: 24px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.2s;
+	width: 24px;
+}
+
+.form-radio__input:checked ~ .form-radio__text {
+	font-weight: 700;
+}
+
+.form-radio__input:checked ~ .form-radio__text::before {
+	background: #F5F5F5 url("../img/radio-check.png") no-repeat center;
+	background-size: 12px 12px;
+}
+
+.form-checkbox {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+}
+
+.form-checkbox .form-checkbox__input {
+	display: none;
+}
+
+.form-checkbox .form-checkbox__text {
+	padding-left: 36px;
+	position: relative;
+}
+
+.form-checkbox .form-checkbox__text::before {
+	background: #F5F5F5;
+	border-radius: 4px;
+	content: "";
+	height: 24px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: background 0.2s;
+	width: 24px;
+}
+
+.form-checkbox .form-checkbox__input:checked + .form-checkbox__text::before {
+	background: #F5F5F5 url("../img/check.png") no-repeat center;
+	background-size: 24px 24px;
+}
+
+.form-checkbox__text a {
+	text-decoration: underline;
 }
 
 .follow__accesses {
@@ -1871,17 +2114,18 @@ header {
 }
 
 .form-text {
-	padding: 16px;
+	padding: 21px 16px;
 	width: 100%;
 }
 
 .form-select {
-	padding: 16px;
+	padding: 21px 16px;
 	width: 100%;
 }
 
 .form-textarea {
-	padding: 16px;
+	height: 160px;
+	padding: 15px;
 	width: 100%;
 }
 
@@ -2034,6 +2278,10 @@ header {
 	width: 4px; /* 幅指定 */
 }
 
+.contact__text {
+	font-size: 16px;
+}
+
 .follow__title {
 	font-size: 24px;
 }
@@ -2048,6 +2296,11 @@ header {
 
 .footer__copyright {
 	font-size: 14px;
+}
+
+.header__logo {
+	margin-left: 4px;
+	margin-top: 4px;
 }
 
 .mv__inner {
@@ -2067,27 +2320,27 @@ header {
 }
 
 .mv__share {
-	left: 319px;
+	left: 308px;
 	position: absolute;
-	top: 0;
+	top: -16px;
 	z-index: 40;
 }
 
 .mv__present {
 	position: absolute;
-	right: 409px;
-	top: 0;
+	right: 398px;
+	top: 7px;
 	z-index: 1;
 }
 
 .mv__smart {
-	margin-top: 33px;
+	margin-top: 24px;
 	position: relative;
 	z-index: 30;
 }
 
 .mv__food {
-	left: 332px;
+	left: 279px;
 	top: 469px;
 }
 
@@ -2424,6 +2677,11 @@ header {
 .icon img {
 	height: 48px;
 	width: 48px;
+}
+
+.header__logo img {
+	height: 24px;
+	width: 183px;
 }
 
 .mv__title1 img {

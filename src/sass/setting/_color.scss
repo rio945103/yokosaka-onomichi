@@ -79,6 +79,135 @@ header {
     color: var(--LP-White, #FFF);
 }
 
+.cp_ipselect02 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #F5F5F5;
+    border-radius: 8px;
+  }
+  .cp_ipselect02 select {
+    width: 100%;
+    height: 55px;
+    padding: 16px 52px 16px 16px;
+    color: #4A3636;
+    cursor: pointer;
+    text-overflow: ellipsis;/*テキストがオーバーしたら'...'で省略*/
+    z-index: 1;
+    /* 標準のスタイルを無効にする */
+    border: none;
+    appearance: none;
+    outline: none;
+    background: transparent;
+  }
+  /*プルダウン枠を設定*/
+  .cp_ipselect02::before {
+    display: inline-block;
+    right: 0;
+    width: 52px;
+    height: 55px;
+    border-radius: 0 8px 8px 0;
+    background: #9ED0E0;
+    position: absolute;
+    content: '';
+    pointer-events: none;
+  }
+  .cp_ipselect02:after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    background-image: url("../img/pulldown-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 32px auto; /* サイズは調整してね */
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .form-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+  
+    .form-radio__input {
+      display: none;
+    }
+  
+    .form-radio__text {
+      position: relative;
+      padding-left: 32px;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #F5F5F5;
+        transition: all 0.2s;
+      }
+    }
+  }
+  .form-radio__input:checked ~ .form-radio__text {
+    font-weight: 700;
+  }
+  
+  // ✅ 選択時のスタイルは "外に" 書き出す！
+  .form-radio__input:checked ~ .form-radio__text::before {
+    background: #F5F5F5 url("../img/radio-check.png") no-repeat center;
+    background-size: 12px 12px;
+  }
+  
+
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+.form-checkbox__input {
+    display: none;
+}
+
+.form-checkbox__text {
+    position: relative;
+    padding-left: 36px;
+
+    &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: #F5F5F5;
+    transition: background 0.2s;
+    }
+}
+
+// ✅ 正しくはここでセレクタを書き出す！
+.form-checkbox__input:checked + .form-checkbox__text::before {
+    background: #F5F5F5 url("../img/check.png") no-repeat center;
+    background-size: 24px 24px;
+}
+}
+  
+  
+.form-checkbox__text a {
+    text-decoration: underline;
+}
+  
+
 .follow__accesses  {
     border-radius: 0 0 16px 16px;
     background: var(--LP-White, #FFF);
