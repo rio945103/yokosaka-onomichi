@@ -65,10 +65,12 @@ html(lang="ja")
                             img(src="./assets/img/present.png", alt="")
                     .mv__smart 
                         img(src="./assets/img/smartphone.png", alt="")
+                    .mv__button.button 応募してみる
                     .mv__food 
                         img(src="./assets/img/food.png", alt="")
                     .mv__cats 
-                        img(src="./assets/img/cats.png", alt="")
+                        img(src="./assets/img/cats.png", alt="").hidden-pc
+                        img(src="./assets/img/mv_cats-pc.png", alt="").hidden-sp
                 .about__picture-naname.hidden-sp
                     img(src="./assets/img/naname.png", alt="")
 
@@ -123,7 +125,9 @@ html(lang="ja")
                         |ぜひおしえてください。
                         br
                         br
-                        |尾道観光部（@onomichi_retro）を
+                        |尾道観光部（
+                        a(href="https://www.instagram.com/onomichi_retro" target="_blank").underline @onomichi_retro
+                        |）を
                         br.hidden-pc
                         |フォロー&
                         br.hidden-sp

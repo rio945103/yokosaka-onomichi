@@ -132,6 +132,17 @@ header {
     }
 }
 
+.mv__button {
+    text-align: center;
+    padding: 4px 24px ;
+    max-width: 192px;
+    white-space: nowrap;
+    @include mq(pc){
+        padding: 10px 40px;
+        max-width: 260px;
+    }
+}
+
 .mv__food {
     img {
         width: 86px;
@@ -289,6 +300,14 @@ header {
             width: 200px;
             height: 200px;
         }
+    }
+}
+
+#js-about-swiper .swiper-slide {
+    width: 100px !important;
+  
+    @include mq(pc) {
+      width: 200px !important;
     }
 }
 
@@ -614,7 +633,7 @@ header {
     // max-height: 371px;
 }
 
-.swiper-slide {
+#js-gallery-swiper .swiper-slide {
     width: 240px !important;
     max-width: 100%;
 }

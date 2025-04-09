@@ -32,7 +32,8 @@
 	background-image: url(../img/spots_next-button.png);
 }
 
-html {
+html,
+body {
 	overflow-x: hidden;
 }
 
@@ -130,6 +131,15 @@ html {
 	line-height: 125%; /* 17.5px */
 	text-align: center;
 	text-shadow: 0px 0px 30px #FFF;
+}
+
+.mv__button {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 14px Bold */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%; /* 22.4px */
 }
 
 .about__text1 {
@@ -732,14 +742,17 @@ header {
 	margin-top: 4px;
 }
 
+.mv__bg-pc {
+	height: calc(100% - 80px);
+	width: 100%;
+}
+
 .mv__inner {
 	padding-inline: 20px;
 	padding-top: 22px;
 }
 
 .mv__contents {
-	margin-left: 39px;
-	margin-top: 4px;
 	position: relative;
 }
 
@@ -767,6 +780,13 @@ header {
 .mv__smart {
 	margin-top: -7px;
 	text-align: center;
+}
+
+.mv__button {
+	left: 100px;
+	position: absolute;
+	top: 498px;
+	z-index: 30;
 }
 
 .mv__food {
@@ -952,6 +972,10 @@ header {
 	position: absolute;
 	right: 0;
 	top: 880px;
+}
+
+.how__title2 {
+	margin-top: 7px;
 }
 
 .how__steps {
@@ -1816,6 +1840,13 @@ header {
 	width: 200px;
 }
 
+.mv__button {
+	max-width: 192px;
+	padding: 4px 24px;
+	text-align: center;
+	white-space: nowrap;
+}
+
 .mv__food img {
 	height: 141px;
 	width: 86px;
@@ -1904,6 +1935,10 @@ header {
 .about__slide img {
 	height: 100px;
 	width: 100px;
+}
+
+#js-about-swiper .swiper-slide {
+	width: 100px !important;
 }
 
 .how__picture-map img {
@@ -2075,7 +2110,7 @@ header {
 	width: 100%;
 }
 
-.swiper-slide {
+#js-gallery-swiper .swiper-slide {
 	max-width: 100%;
 	width: 240px !important;
 }
@@ -2189,6 +2224,10 @@ header {
 
 .mv__text {
 	font-size: 24px;
+}
+
+.mv__button {
+	font-size: 16px;
 }
 
 .about__text1 {
@@ -2307,6 +2346,11 @@ header {
 	padding-top: 35px;
 }
 
+.mv__contents {
+	margin-left: 72px;
+	margin-top: 4px;
+}
+
 .mv__title1 {
 	margin-top: 24px;
 }
@@ -2339,13 +2383,18 @@ header {
 	z-index: 30;
 }
 
+.mv__button {
+	left: 573px;
+	top: 553px;
+}
+
 .mv__food {
 	left: 279px;
 	top: 469px;
 }
 
 .mv__cats {
-	right: 300px;
+	right: 273px;
 	top: 551px;
 }
 
@@ -2709,6 +2758,11 @@ header {
 	width: 250px;
 }
 
+.mv__button {
+	max-width: 260px;
+	padding: 10px 40px;
+}
+
 .mv__food img {
 	height: 332px;
 	width: 202px;
@@ -2766,6 +2820,10 @@ header {
 .about__slide img {
 	height: 200px;
 	width: 200px;
+}
+
+#js-about-swiper .swiper-slide {
+	width: 200px !important;
 }
 
 .how__picture-map img {

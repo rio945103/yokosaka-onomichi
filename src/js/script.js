@@ -31,7 +31,15 @@ const aboutSwiper = new Swiper('#js-about-swiper', {
   slidesPerView: 'auto', // スライド幅をCSSで制御
   loop: true,
   allowTouchMove: false, // ユーザー操作を無効化（必要に応じて）
-  spaceBetween: 20, // 👈 これが「gap」
+  spaceBetween: 10, // 👈 これが「gap」
+
+  breakpoints: {
+    768: {
+      centeredSlides: false, // ← PC時は false にして左寄せや通常表示に
+      spaceBetween: 20,
+    }
+  },
+
   autoplay: {
     delay: 0, // ← 0にすると連続で滑る
     disableOnInteraction: false,
