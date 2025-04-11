@@ -34,7 +34,7 @@
 
 html,
 body {
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 
 .fade-in-up {
@@ -79,6 +79,10 @@ body {
 	margin-top: 6px;
 	padding-bottom: 6px;
 	text-align: center;
+}
+
+.font-weight {
+	font-weight: 700;
 }
 
 .tac {
@@ -162,10 +166,8 @@ body {
 	text-align: center;
 }
 
-.about__text2 br {
-	line-height: 19px; /* 19.2px */
-	margin: 0;
-	padding: 0;
+.about__text2 p.space {
+	margin-bottom: 1.5em; /* 空行に相当する余白を設定 */
 }
 
 .about__text3 {
@@ -656,7 +658,7 @@ header {
 	align-items: center;
 	display: flex;
 	gap: 12px;
-	margin-right: 5px;
+	margin-right: -10px;
 	margin-top: -3px;
 }
 
@@ -743,7 +745,8 @@ header {
 }
 
 .mv__bg-pc {
-	height: calc(100% - 80px);
+	height: 81%;
+	top: 63px;
 	width: 100%;
 }
 
@@ -802,7 +805,7 @@ header {
 }
 
 .about {
-	margin-top: 43px;
+	margin-top: 44px;
 	overflow: hidden;
 	position: relative;
 }
@@ -842,7 +845,7 @@ header {
 
 .about_foot {
 	position: absolute;
-	right: 165px;
+	right: 152px;
 }
 
 .about__inner {
@@ -861,7 +864,7 @@ header {
 .about__picture1 {
 	left: 36px;
 	position: absolute;
-	top: 38px;
+	top: 37px;
 }
 
 .about__picture2 {
@@ -923,13 +926,27 @@ header {
 	z-index: 100;
 }
 
+.about__wavy1 {
+	position: absolute;
+	right: -600px;
+	top: -223px;
+	z-index: 1;
+}
+
+.about__wavy2 {
+	position: absolute;
+	right: -532px;
+	top: -190px;
+	z-index: 1;
+}
+
 .about__scroll {
 	margin-top: -20px;
 }
 
 .how {
 	margin-top: 64px;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .how__inner {
@@ -958,7 +975,7 @@ header {
 
 .how__picture-cats-pc {
 	position: absolute;
-	right: 0;
+	right: -14px;
 	top: -26px;
 }
 
@@ -980,6 +997,10 @@ header {
 
 .how__steps {
 	padding-top: 32px;
+}
+
+.how__steps .how__step:nth-child(3) {
+	transform: translateX(25px);
 }
 
 .how__step-image {
@@ -1011,15 +1032,15 @@ header {
 }
 
 .how__step-line-pc1 {
-	left: 425px;
+	left: 455px;
 	position: absolute;
-	top: 245px;
+	top: 237px;
 }
 
 .how__step-line-pc2 {
 	position: absolute;
-	right: 470px;
-	top: 245px;
+	right: -63px;
+	top: 137px;
 }
 
 .how__button {
@@ -1027,6 +1048,12 @@ header {
 	margin-top: 14px;
 	position: relative;
 	z-index: 2;
+}
+
+.how__cats-step {
+	left: 36px;
+	position: absolute;
+	top: 2968px;
 }
 
 .prizes {
@@ -1928,6 +1955,12 @@ header {
 	width: 354.642px;
 }
 
+.about__wavy1 img,
+.about__wavy2 img {
+	height: 12.006px;
+	width: 806.851px;
+}
+
 .about__slide {
 	max-width: 100px;
 }
@@ -1990,6 +2023,11 @@ header {
 	padding: 6px 24px;
 	white-space: nowrap;
 	width: 100%;
+}
+
+.how__cats-step img {
+	height: 220px;
+	width: 100px;
 }
 
 .prizes__bg-left img,
@@ -2236,6 +2274,7 @@ header {
 
 .about__text2 {
 	font-size: 16px;
+	line-height: 165%; /* 25.6px */
 }
 
 .about__text3 {
@@ -2246,6 +2285,18 @@ header {
 
 .about__button {
 	font-size: 20px;
+}
+
+.how__step-title {
+	font-size: 20px;
+}
+
+.how__step-text {
+	font-size: 16px;
+}
+
+.how__follow-text {
+	font-size: 16px;
 }
 
 .how__button {
@@ -2312,6 +2363,10 @@ header {
 	font-size: 16px;
 }
 
+.underline {
+	font-size: 16px;
+}
+
 .text__dots::before {
 	height: 4px; /* 高さ指定 */
 	width: 4px; /* 幅指定 */
@@ -2347,7 +2402,7 @@ header {
 }
 
 .mv__contents {
-	margin-left: 72px;
+	margin-left: 15px;
 	margin-top: 4px;
 }
 
@@ -2364,15 +2419,15 @@ header {
 }
 
 .mv__share {
-	left: 308px;
+	left: 334px;
 	position: absolute;
-	top: -16px;
+	top: -15px;
 	z-index: 40;
 }
 
 .mv__present {
 	position: absolute;
-	right: 398px;
+	right: 424px;
 	top: 7px;
 	z-index: 1;
 }
@@ -2384,18 +2439,22 @@ header {
 }
 
 .mv__button {
-	left: 573px;
-	top: 553px;
+	left: 638px;
+	top: 556px;
 }
 
 .mv__food {
-	left: 279px;
+	left: 305px;
 	top: 469px;
 }
 
 .mv__cats {
-	right: 273px;
+	right: 296px;
 	top: 551px;
+}
+
+.about {
+	margin-top: 16px;
 }
 
 .about__picture-left {
@@ -2404,64 +2463,124 @@ header {
 }
 
 .about__picture-right {
-	right: -284px;
+	right: -298px;
 	top: 153px;
 }
 
 .about__contents {
+	left: 7px;
 	margin: auto;
 	margin-top: 80px;
 	max-width: 848px;
 	padding: 40px 114px;
 }
 
+.about__picture1 {
+	left: 87px;
+	top: 42px;
+}
+
+.about__picture2 {
+	right: 99px;
+	top: 55px;
+}
+
+.about__text1 {
+	margin-top: 35px;
+}
+
+.about__text2 {
+	margin-top: 32px;
+}
+
+.about__text3 {
+	margin-top: 46px;
+}
+
 .about__button {
 	margin-top: 32px;
 }
 
+.about__arrow {
+	margin-left: 10px;
+}
+
 .about__sakamichi {
-	left: -130px;
-	top: -450px;
+	left: -122px;
+	top: -507px;
 }
 
 .about__goods {
-	right: 0;
-	top: -71px;
+	right: 39px;
+	top: -72px;
 }
 
 .about__ball {
-	right: 130px;
-	top: -158px;
+	right: 115px;
+	top: -229px;
+	z-index: 10;
+}
+
+.about__onomichi {
+	left: 3px;
+	margin-top: 115px;
+}
+
+.about__scroll {
+	margin-top: -5px;
 }
 
 .how {
-	margin-top: 120px;
+	margin-bottom: 5px;
+	margin-left: 13px;
+	margin-top: 0;
+	padding-top: 120px;
 }
 
 .how__inner {
+	margin-bottom: 5px;
 	padding-inline: 36px;
 }
 
 .how__picture-map {
+	left: -14px;
+	top: -58px;
 	z-index: 5;
+}
+
+.how__picture-cats {
+	right: -14px;
 }
 
 .how__steps {
 	display: flex;
-	gap: 72px;
+	gap: 36px;
 	justify-content: center;
-	margin-top: 40px;
+	margin-left: -6px;
+	margin-top: 10px;
+	overflow: visible;
 	position: relative;
 	z-index: 10;
 }
 
 .step-2 {
 	margin-top: 68px;
+	transform: translateX(20px);
+}
+
+.how__step-title {
+	margin-top: 26px;
+}
+
+.how__follow {
+	margin-top: 18px;
+	white-space: nowrap;
+	width: 250px;
 }
 
 .how__button {
 	margin: auto;
-	margin-top: 40px;
+	margin-top: 49px;
 	text-align: center;
 }
 
@@ -2744,7 +2863,7 @@ header {
 }
 
 .mv__share img {
-	height: 130px;
+	height: 134px;
 	width: 244px;
 }
 
@@ -2760,7 +2879,7 @@ header {
 
 .mv__button {
 	max-width: 260px;
-	padding: 10px 40px;
+	padding: 7px 33px;
 }
 
 .mv__food img {
@@ -2774,13 +2893,13 @@ header {
 }
 
 .about__picture1 img {
-	height: 100px;
-	width: 134px;
+	height: 121px;
+	width: 148px;
 }
 
 .about__picture2 img {
-	height: 100px;
-	width: 134px;
+	height: 118px;
+	width: 150px;
 }
 
 .about__picture-left img {
@@ -2796,6 +2915,15 @@ header {
 .about__button {
 	max-width: 260px;
 	padding: 10px 40px;
+}
+
+.about__arrow img {
+	height: 50px;
+	width: 135px;
+}
+
+.about__sakamichi img {
+	height: 813px;
 }
 
 .about__goods img {
@@ -2833,6 +2961,11 @@ header {
 
 .how__step-image img {
 	height: 300px;
+}
+
+.how__follow-icon img {
+	height: 24px;
+	width: 24px;
 }
 
 .how__button {

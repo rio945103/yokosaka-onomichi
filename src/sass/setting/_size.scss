@@ -105,7 +105,7 @@ header {
         height: 80px;
         @include mq(pc){
             width: 244px;
-            height: 130px;
+            height: 134px;
         }
     }
 }
@@ -138,7 +138,7 @@ header {
     max-width: 192px;
     white-space: nowrap;
     @include mq(pc){
-        padding: 10px 40px;
+        padding: 7px 33px;
         max-width: 260px;
     }
 }
@@ -172,8 +172,8 @@ header {
         width: 87px;
         height: auto;
         @include mq(pc){
-            width: 134px;
-            height: 100px;
+            height: 121px;
+            width: 148px;
         }
     }
 }
@@ -185,8 +185,8 @@ header {
         width: 90px;
         height: auto;
         @include mq(pc){
-            width: 134px;
-            height: 100px;
+            width: 150px;
+            height: 118px;
         }
     }
 }
@@ -242,12 +242,19 @@ header {
     img {
         width: 100px;
         height: 36px;
+        @include mq(pc){
+            height: 50px;
+        width: 135px;
+        }
     }
 }
 
 .about__sakamichi {
     img {
         height: 212px;
+        @include mq(pc){
+            height: 813px;
+        }
     }
 }
 
@@ -283,6 +290,14 @@ header {
             height: 97px;
         }
     }
+}
+
+.about__wavy1,.about__wavy2 {
+    img {
+        height: 12.006px;
+        width: 806.851px;
+    }
+
 }
 
 
@@ -363,6 +378,10 @@ header {
     img {
         width: 20px;
         height: 20px;
+        @include mq(pc){
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 
@@ -388,6 +407,13 @@ header {
     @include mq(pc){
         padding: 10px 40px;
         max-width: 437px;
+    }
+}
+
+.how__cats-step {
+    img {
+        width: 100px;
+        height: 220px;
     }
 }
 

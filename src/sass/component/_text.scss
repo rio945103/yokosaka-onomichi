@@ -34,6 +34,10 @@
     }
 }
 
+.font-weight {
+    font-weight: 700;
+}
+
 .tac {
     text-align: center; //左右中央に配置したい場合に親要素として使用します。
 }
@@ -136,14 +140,13 @@
     line-height: 158%; /* 19.2px */
     @include mq(pc){
         font-size: 16px;
+        line-height: 165%; /* 25.6px */
         
     }
 }
 
-.about__text2 br {
-    line-height: 19px; /* 19.2px */
-    margin: 0;
-    padding: 0;
+.about__text2 p.space {
+    margin-bottom: 1.5em; /* 空行に相当する余白を設定 */
   }
 
 .about__text3 {
@@ -189,6 +192,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 25.6px */
+    @include mq(pc){
+        font-size: 20px;
+    }
 }
 .how__step-text {
     color: var(--LP-Blown, #4A3636);
@@ -200,6 +206,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 19.2px */
+    @include mq(pc){
+        font-size: 16px;
+    }
 }
 
 .how__follow-text {
@@ -212,6 +221,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 22.4px */
+    @include mq(pc){
+        font-size: 16px;
+    }
 }
 
 .how__button {
@@ -486,6 +498,9 @@
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+    @include mq(pc){
+        font-size: 16px;
+    }
 }
 
   

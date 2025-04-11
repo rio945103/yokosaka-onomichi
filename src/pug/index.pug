@@ -77,7 +77,7 @@ html(lang="ja")
         section(id="about").about
             .about__bd-picture
                 .about__picture-left 
-                    img(src="./assets/img/about_Left-sp.png", alt="")
+                    img(src="./assets/img/about_Left-sp.png", alt="").hidden-pc
                     img(src="./assets/img/about_Left.png", alt="").hidden-sp
 
                 .about__picture-right 
@@ -102,42 +102,22 @@ html(lang="ja")
                         br.
                         |＼ おしえてください！ ／
                     .about__text1.hidden-sp
-                        |＼ あなたの心が動いた尾道の瞬間をおしえてください！ ／
+                        |＼ あなたの心が動いた尾道の瞬間を、おしえてください！ ／
                     .about__text2
-                        |風情あふれる坂道に、静かに佇むお寺。
-                        br
-                        |路地裏の角をまがれば
-                        br.hidden-pc
-                        |気ままにお昼寝する猫に出会え、
-                        br
-                        |ふと振り返れば、美しい瀬戸内の海が。
-                        br
-                        br
-                        |数々の映画の舞台にもなってきたこの街には
-                        br
-                        |心がほどけるような、
-                        br.hidden-pc
-                        |レトロでやさしい風景が広がっています。
-                        br
-                        br
-                        |あなたの見つけた尾道のなつかしい景色を、
-                        br
-                        |ぜひおしえてください。
-                        br
-                        br
-                        |尾道観光部（
-                        a(href="https://www.instagram.com/onomichi_retro" target="_blank").underline @onomichi_retro
-                        |）を
-                        br.hidden-pc
-                        |フォロー&
-                        br.hidden-sp
-                        |尾道で撮影した写真を、
-                        br.hidden-pc
-                        |ハッシュタグ「#見つけて尾道レトロ」を
-                        br.hidden-pc
-                        |つけて
-                        br.hidden-sp
-                        |Instagramに投稿いただいた方の中から
+                        p 風情あふれる坂道に、静かに佇むお寺。
+                        p 路地裏の角をまがれば気ままにお昼寝する猫に出会え、
+                        p.space ふと振り返れば、美しい瀬戸内の海が。
+                        p 数々の映画の舞台にもなってきたこの街には
+                        p.space 心がほどけるような、レトロでやさしい風景が広がっています。
+                        p あなたの見つけた尾道のなつかしい景色を、
+                        p.space ぜひおしえてください。
+                        p 尾道観光部（
+                            a(href="https://www.instagram.com/onomichi_retro" target="_blank").underline @onomichi_retro
+                            | ）をフォロー &
+                        p 尾道で撮影した写真を、ハッシュタグ「
+                            span.font-weight #見つけて尾道レトロ
+                            | 」をつけて
+                            p Instagramに投稿いただいた方の中から
                     .about__text3 尾道のギフトを100名様にプレゼント！
                     a.about__button.button(href="#contact") 参加の仕方はこちら
 
@@ -145,7 +125,7 @@ html(lang="ja")
                     .about__arrow 
                         img(src="./assets/img/arrow.png", alt="")
                     .about__sakamichi 
-                        img(src="./assets/img/sakamichi-sp.png", alt="")
+                        img(src="./assets/img/sakamichi-sp.png", alt="").hidden-pc
                         img(src="./assets/img/sakamichi.png", alt="").hidden-sp
                     .about__goods 
                         img(src="./assets/img/about_goods.png", alt="")
@@ -153,6 +133,10 @@ html(lang="ja")
                         img(src="./assets/img/about_ball.png", alt="")
                     .about__onomichi 
                         img(src="./assets/img/about_onomichi.png", alt="")
+                    .about__wavy1.hidden-sp
+                        img(src="./assets/img/bg_wavyline.png", alt="")
+                    .about__wavy2.hidden-sp
+                        img(src="./assets/img/bg_wavyline.png", alt="")
         .about__scroll 
             .about__slider 
                 .swiper#js-about-swiper.about__swiper
@@ -185,15 +169,16 @@ html(lang="ja")
                             img(src="./assets/img/how_step1.png", alt="")
                         .how__step-title アカウントをフォロー
                         .how__step-text 
-                            |Instagramアプリをダウンロードして、
-                            br
-                            |公式アカウント尾道観光部(@onomichi_retro)の
-                            br
-                            |Instagramのアカウントをフォローしてにゃん。
+                            p Instagramアプリをダウンロードして、
+                            p 公式アカウント尾道観光部
+                            p (
+                                a(href="" target="_blank").underline @onomichi_retro
+                                |)のInstagramの
+                            p アカウントをフォローしてにゃん。
                         .how__follow 
                             .how__follow-icon 
                                 img(src="./assets/img/how_follow.png", alt="")
-                            .how__follow-text onomichi_tabi をフォロー
+                            a(href="https://www.instagram.com/onomichi_retro" target="_blank").how__follow-text onomichi_tabi をフォロー
                         .how__step-line.hidden-pc
                             img(src="./assets/img/how_step-line.png", alt="")
                         .how__step-line-pc1.hidden-sp
@@ -203,13 +188,10 @@ html(lang="ja")
                             img(src="./assets/img/how_step2.png", alt="")
                         .how__step-title 尾道で撮影
                         .how__step-text
-                            |尾道の旅で「レトロ」を感じられる
-                            br
-                            |写真を撮影してほしいんだにゃ。
-                            br
-                            |美しい景色、愛らしい猫、美味しい食べ物や
-                            br
-                            |可愛いお土産など、なんでもOK！
+                            p 尾道の旅で「レトロ」を感じられる
+                            p 写真を撮影してほしいんだにゃ。
+                            p 美しい景色、愛らしい猫、美味しい
+                            p 食べ物や可愛いお土産など、なんでもOK！
                         .how__step-line.hidden-pc
                             img(src="./assets/img/how_step-line.png", alt="")
                         .how__step-line-pc2.hidden-sp
@@ -219,14 +201,13 @@ html(lang="ja")
                             img(src="./assets/img/how_step3.png", alt="")
                         .how__step-title  ハッシュタグをつけて投稿！
                         .how__step-text
-                            |ハッシュタグ「＃見つけて尾道レトロ」を
-                            br
-                            |必ずつけて投稿してにゃん！
-                            br
-                            |投稿して頂いた方の中から
-                            br
-                            |100名様に尾道の豪華な商品をプレゼント！
+                            p ハッシュタグ「＃見つけて尾道レトロ」を
+                            p 必ずつけて投稿してにゃん！
+                            p 投稿して頂いた方の中から
+                            p 100名様に尾道の豪華な商品をプレゼント！
                 .how__button.button #見つけて尾道レトロ の最新投稿を見る
+                .how__cats-step.hidden-sp
+                    img(src="./assets/img/how_cats-step.png", alt="")
 
         section(id="prizes").prizes
             .prizes__bg.hidden-sp

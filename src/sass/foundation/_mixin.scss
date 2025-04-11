@@ -26,7 +26,7 @@ $breakpoints: (
 }
 
 html, body {
-  overflow-x: hidden; // ✅ 横スクロールを防ぐ
+  overflow-x: hidden !important;// ✅ 横スクロールを防ぐ
 }
 
 .fade-in-up {
