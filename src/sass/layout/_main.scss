@@ -341,7 +341,7 @@
 .about__button {
     display: block;
     margin: auto;
-    margin-top: 29px;
+    margin-top: 32px;
     @include mq(pc){
         
        
@@ -519,7 +519,9 @@
 }
 
 .how__steps .how__step:nth-child(3) {
-    transform: translateX(25px); // ←調整値はお好みで
+    @include mq(pc){
+        transform: translateX(25px); // ←調整値はお好みで
+    }
   }
   
 
@@ -593,6 +595,7 @@
 .prizes {
     margin-top: 26px;
     @include mq(pc){
+        margin-left: 15px;
         margin-top: 120px;
         text-align: center;
     }
@@ -605,13 +608,13 @@
 .prizes__bg-left {
     position: absolute;
     top: 28px;
-    left: 240px;
+    left: 230px;
 }
 
 .prizes__bg-right {
     position: absolute;
     top: 28px;
-    right: 240px;
+    right: 230px;
 }
 
 .prizes__inner {
@@ -644,6 +647,9 @@
 
 .prizes__title2 {
     margin-top: 7px;
+    @include mq(pc){
+       padding-bottom: 9px;
+    }
 }
 
 .prize__contents {
@@ -659,6 +665,12 @@
     }
 }
 
+.prizes__text {
+    @include mq(pc){
+        margin-top: 6px;
+    }
+}
+
 .prizes__icon {
     text-align: center;
 }
@@ -670,7 +682,8 @@
     margin-top: 24px;
 
     @include mq(pc){
-        margin-top: 72px;
+        gap: 27px;
+        margin-top: 55px;
         grid-template-columns: repeat(6, 1fr); /* 6分割にする（2:3の比率を作るため） */
         
         /* 1,2番目のカード（上段）は 3/6 = 50% にする */
@@ -684,12 +697,15 @@
         /* 3,4,5番目のカード（下段）は 2/6 = 1/3 にする */
         .prizes__card:nth-child(3) {
             grid-column: span 2;
+            margin-top: 48px;
         }
         .prizes__card:nth-child(4) {
             grid-column: span 2;
+            margin-top: 48px;
         }
         .prizes__card:nth-child(5) {
             grid-column: span 2;
+            margin-top: 48px;
         }
     }
 }
@@ -703,6 +719,7 @@
     @include mq(pc){
         border-radius: 26px;
     }
+
 
     &:hover {
         border-color:#9ED0E0; // ✅ 水色の枠を表示
@@ -722,6 +739,7 @@
         grid-column: span 2; /* ✅ 1行にして中央配置 */
         justify-self: center; /* ✅ 左右中央揃え */
     }
+
 }
 
 .prizes__card-image-wrapper {
@@ -739,8 +757,8 @@
     top: -26px;
     z-index: 51;
     @include mq(pc){
-        left: 40%;
-        top: -10%;
+        left: 38%;
+        top: -11%;
     }
 }
 
@@ -782,6 +800,17 @@
     
 }
 
+// 3〜5番目の .prizes__card-text にだけ高さ指定
+.prizes__card:nth-child(3) .prizes__card-text,
+.prizes__card:nth-child(4) .prizes__card-text,
+.prizes__card:nth-child(5) .prizes__card-text {
+    @include mq(pc){
+        height: 82px; // ← 任意の高さに変更
+        font-size: 16px; // ← フォントサイズも調整
+    }
+}
+
+
 .prizes__button {
     margin-top: 15px;
     margin: auto;
@@ -789,7 +818,8 @@
     padding: 6px 24px;
     white-space: nowrap;
     @include mq(pc){
-        margin-top: 40px;
+        margin-top: 37px;
+        transform: translateX(-1px);
     }
 }
 
@@ -822,24 +852,33 @@
 }
 
 .bg {
-    overflow-x: hidden;
-    overflow-y: visible; // 縦方向はそのまま表示（デフォルトでもOK）
-    position: relative;
+    background-image: url('../img/bg_pic.png'); // ← 背景画像として設定
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; // または contain / 100% auto など
     height: 260px;
-    margin-top: -48px; // ⬅ 上にずらす
-}
-
-.bg_pic {
-    position: absolute;
-    left: -103px;
-    top: 0px;
-    width: 100%; 
-    z-index: 0;
+    transform: translateY(-48px); // ← 位置調整
+    @include mq(pc){
+        height: 640px;
+        transform: translateX(6px);
+    }
 }
 
 .wave {
-    margin-top: 0;
-}
+    position: relative;
+    margin-top: -47px;
+    transform: translateX(3px); // ← 位置調整
+  @include mq(pc){
+    margin-top: -120px;
+    background-image: url('../img/wave_pc-top.png'); // ← 繰り返したい画像を指定
+    background-repeat: repeat-x; // ← 横方向にリピート
+    background-position: top center; // ← 必要なら位置指定
+    background-size: contain; // または contain／100% auto など適宜調整
+    height: 120px;
+    width: calc(100% + 276px); // 138px × 2（両側に余白を足す）
+    margin-left: -9px; // 左側にズラして真ん中を合わせる
+    }
+  }
 
 .spots {
     overflow: hidden;
@@ -857,6 +896,7 @@
         display: flex;
         gap: 32px;
         align-items: flex-start; // ← これ追加！
+        // margin-left: -29px;
     }
 }
 
@@ -867,7 +907,8 @@
     @include mq(pc){
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 252px;
+        margin-left: 223px;
+        margin-top: -3px;
     }
 }
 
@@ -881,12 +922,15 @@
         writing-mode: vertical-rl; // ✅ 右から左の縦書き
         text-orientation: upright; // ✅ 文字の向きを正しくする（ひらがな・カタカナが横倒しにならない）
         margin: 0 auto; // ✅ 中央揃え
+        margin-top: 7px;
     }
 }
 
 .spots__text {
     margin-top: 16px;
-    
+    @include mq(pc){
+        margin-top: 5px;
+    }
 }
 
 .swiper-wrapper {
@@ -922,27 +966,29 @@
     }
 }
 
-.spots-card__image {
-    img {
-        border-radius: 12px 12px 0 0;
-        width: 240px;
-    }
-}
+
 
 .spots-card__title {
     padding-top: 16px;
     text-align: center;
+    @include mq(pc){
+        padding-top: 24px;
+    }
 }
 
 .spots-card__text {
     margin-top: 16px;
     padding-inline: 24px;
+    @include mq(pc){
+        margin-top: 24px;
+        padding-inline: 30px;
+    }
 }
 
 .spots_foot {
     position: absolute;
     left: 36px;
-    bottom: 0;
+    bottom: 18px;
 
 }
 
@@ -958,23 +1004,27 @@
 
 .spots__sub-title {
     text-align: center;
+    @include mq(pc){
+        margin-left: 13px;
+        margin-top: 4px;
+    }
 }
 
 
 .spots__button {
-    margin-top: 23px;
+    margin-top: 21px;
     margin: auto;
     text-align: center;
     padding: 6px 24px;
     white-space: nowrap;
     @include mq(pc){
-        margin-top: 24px;
-
+        margin-top: 23px;
+        margin-left: 11px;
     }
 }
 
 .spots__slider {
-    margin-inline: -20px; // ← 親のpaddingと相殺
+    // margin-inline: -20px; // ← 親のpaddingと相殺
     @include mq(pc) {
       position: relative;
       
@@ -995,7 +1045,7 @@
 .spots__button-prev {
     
     position: absolute;
-    bottom: 0; // ⬅ 高さを一番下に
+    bottom: -4px; // ⬅ 高さを一番下に
     left: -48px;   // ⬅ 左端（必要なら margin-left で微調整）
     z-index: 10;
     
@@ -1003,8 +1053,8 @@
 
 .spots__button-next {
     position: absolute;
-    bottom: 0; // ⬅ 高さを同じく一番下に
-    left: 800px; // ⬅ 左から800pxの位置に配置（prev基準）
+    bottom: -4px; // ⬅ 高さを同じく一番下に
+    left: 815px; // ⬅ 左から800pxの位置に配置（prev基準）
     z-index: 10;
 }
 
@@ -1017,19 +1067,22 @@
     }
 }
 
-.under__wave-img {
-    position: relative;
-}
-
-.under_wave-pc {
-    position: absolute;
-    top: -1px;
+.under__wave-pc {
+    background-image: url('../img/wave_pc-bottom.png'); // ← 繰り返したい画像を指定
+    background-repeat: repeat-x; // ← 横方向にリピート
+    background-position: top center; // ← 必要なら位置指定
+    background-size: contain; // または contain／100% auto など適宜調整
+    height: 120px;
+    width: calc(100% + 276px); // 138px × 2（両側に余白を足す）
+    margin-top: -17px; // 上側にズラして真ん中を合わせる
+    margin-left: -10px; // 左側にズラして真ん中を合わせる
 }
 
 .question {
     margin-top: 40px;
     @include mq(pc){
-        margin-top: 240px;
+        margin-left: 16px;
+        margin-top: 120px;
     }
 }
 
@@ -1037,7 +1090,7 @@
     padding-inline: 20px;
     margin-bottom: 32px;
     @include mq(pc){
-        padding-inline: 244px;
+        padding-inline: 229px;
     }
 }
 
@@ -1048,7 +1101,7 @@
 .question__items {
     margin-top: 24px;
     @include mq(pc){
-        margin-top: 40px;
+        margin-top: 42px;
     }
 }
 
@@ -1069,7 +1122,10 @@
     padding: 11px 16px;
     gap: 12px;
     align-items: center;
-    
+    @include mq(pc){
+        gap: 15px;
+        padding: 21px 24px;
+    }
 }
 
 .question__item-q-text {
@@ -1094,6 +1150,10 @@
     align-items: center;
     gap: 18px;
     flex-direction: row; /* ✅ 横並びにする */
+    @include mq(pc){
+        gap: 19px;
+        padding: 27px 24px;
+    }
 
     &.is-open {
         display: flex; /* ✅ 開いたときは `display: flex;` を適用 */
@@ -1111,6 +1171,7 @@
 
 .question__item-button {
     margin-left: 0px;
+    
 }
 
 
@@ -1119,7 +1180,9 @@
     margin-top: -3px;
     padding-inline: 20px;
     @include mq(pc){
-        padding-inline: 244px;
+        margin-top: 116px;
+        padding-inline: 230px;
+        margin-left: 13px;
     }
 }
 
@@ -1130,7 +1193,7 @@
     background: rgba(255, 255, 255, 0.50);
 
     @include mq(pc){
-        padding-top: 40px;
+        padding-top: 33px;
         padding-bottom: 40px;
         padding-inline: 56px;
     }
@@ -1143,7 +1206,7 @@
 .entry__contents {
     margin-top: 24px;
     @include mq(pc){
-        margin-top: 40px;
+        margin-top: 43px;
     }
 }
 
@@ -1153,7 +1216,8 @@
     border-bottom: 1px solid #CCCCCC; 
     @include mq(pc){
         display: flex;
-        
+        padding-bottom: 10px;
+        margin-bottom: 13px;
         border-bottom: 1px solid var(--LP-Dark-Gray, #CCC);
 
         &:last-child {
@@ -1172,6 +1236,7 @@
 
     @include mq(pc){
         width: 240px;
+        margin-left: 13px;
     }
 }
 
@@ -1181,15 +1246,19 @@
     margin-top: 8px;
     @include mq(pc){
         width: 672px;
+        margin-top: 0;
+        margin-left: -18px;
     }
 }
 
 .big__entry {
     margin-top: 32px;
+    @include mq(pc){
+        transform: translateX(7px);
+    }
 }
 
 .contact {
-    
 }
 
 .contact__icon {
@@ -1201,6 +1270,8 @@
     padding-top: 40px;
     padding-bottom: 29px;
     @include mq(pc){
+        margin-left: 13px;
+        padding-top: 120px;
         padding-inline: 332px;
     }
 }
@@ -1208,12 +1279,16 @@
 .contact__text {
     margin-top: 24px;
     text-align: center;
+    @include mq(pc){
+        margin-top: 35px;
+    }
 }
 
 .contact__field {
     margin-top: 25px;
     @include mq(pc){
         display: flex;
+        margin-top: 33px;
     }
 }
 
@@ -1222,6 +1297,7 @@
     display: flex;
     gap: 12px;
     @include mq(pc){
+        margin-top: 23px;
         width: 220px;
     }
 }

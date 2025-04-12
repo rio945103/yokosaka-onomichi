@@ -52,6 +52,9 @@ header {
 .spots-card__texts {
     border-radius: 0 0 12px 12px;
     background: var(--LP-White, #FFF);
+    @include mq(pc){
+        border-radius: 0 0 24px 24px;
+    }
 }
 
 .question__item-q {

@@ -1,29 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper('#js-gallery-swiper', {
-    slidesPerView: 'auto',
-    slidesPerGroup: 1,
-    spaceBetween: 16,
-    loop: true,
-    loopedSlides: 7,
-    centeredSlides: true, // ← デフォルトはSP用に true
+const swiper = new Swiper('#js-gallery-swiper', {
+  slidesPerView: 'auto', // ← 必須！
+  slidesPerGroup: 1,
+  spaceBetween: 16,
+  loop: true,
+  centeredSlides: false, // true でもOKだが、トラブルが多い場合は false に
 
-    breakpoints: {
-      768: {
-        centeredSlides: false, // ← PC時は false にして左寄せや通常表示に
-        spaceBetween: 32,
-      }
-    },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto', // ← 必須！
+      slidesPerGroup: 1,
+      spaceBetween: 32,
+      centeredSlides: false,
+    }
+  },
 
-    pagination: {
-      el: '#js-gallery-pagenation',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.spots__button-next',
-      prevEl: '.spots__button-prev',
-    },
-  });
+  pagination: {
+    el: '#js-gallery-pagenation',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.spots__button-next',
+    prevEl: '.spots__button-prev',
+  }
 });
+
+
 
 
 
