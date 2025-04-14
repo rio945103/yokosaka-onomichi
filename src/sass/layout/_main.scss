@@ -1162,6 +1162,9 @@
 
 .question__item-a-icon {
     padding-bottom: 4px;
+    @include mq(pc){
+       margin-left: -3px;
+    }
 }
 
 .question__item-a-text {
@@ -1272,7 +1275,7 @@
     @include mq(pc){
         margin-left: 13px;
         padding-top: 120px;
-        padding-inline: 332px;
+        padding-inline: 320px;
     }
 }
 
@@ -1284,11 +1287,17 @@
     }
 }
 
+.contact__fields {
+    @include mq(pc){
+        margin-top: 33px;
+    }
+}
+
 .contact__field {
     margin-top: 25px;
     @include mq(pc){
         display: flex;
-        margin-top: 33px;
+        margin-top: 17px;
     }
 }
 

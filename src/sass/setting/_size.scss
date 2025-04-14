@@ -703,6 +703,9 @@ header {
 .question__item-a-icon {
     img {
         width: 16px;
+        @include mq(pc){
+            width: 20px;
+        }
     }
 }
 
@@ -736,6 +739,9 @@ header {
 .form-text {
     padding: 21px 16px;
     width: 100%;
+    @include mq(pc){
+        padding: 20px 16px;
+    }
 }
 
 .form-select {

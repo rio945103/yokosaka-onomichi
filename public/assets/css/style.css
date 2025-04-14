@@ -438,11 +438,21 @@ body {
 }
 
 input.form-text::-moz-placeholder {
+	color: var(--LP-Dark-Gray, #CCC); /* JP/Text 16px Regular */
+	font-family: "Noto Sans JP";
 	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
 }
 
 input.form-text::placeholder {
+	color: var(--LP-Dark-Gray, #CCC); /* JP/Text 16px Regular */
+	font-family: "Noto Sans JP";
 	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
 }
 
 .form-field__label {
@@ -469,6 +479,15 @@ input.form-text::placeholder {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 160%; /* 22.4px */
+}
+
+.form-select {
+	color: var(--LP-Blown, #4A3636); /* JP/Text 16px Regular */
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
 }
 
 .form-textarea::-moz-placeholder {
@@ -2366,6 +2385,34 @@ header {
 	font-size: 16px;
 }
 
+input.form-text::-moz-placeholder {
+	font-size: 16px;
+}
+
+input.form-text::placeholder {
+	font-size: 16px;
+}
+
+.form-field__label {
+	font-size: 16px;
+}
+
+.form-radio__text {
+	font-size: 16px;
+}
+
+.form-select {
+	font-size: 16px;
+}
+
+.form-textarea::-moz-placeholder {
+	font-size: 16px;
+}
+
+.form-textarea::placeholder {
+	font-size: 16px;
+}
+
 .follow__title {
 	font-size: 24px;
 }
@@ -2808,6 +2855,10 @@ header {
 	padding: 27px 24px;
 }
 
+.question__item-a-icon {
+	margin-left: -3px;
+}
+
 .entry {
 	margin-left: 13px;
 	margin-top: 116px;
@@ -2852,7 +2903,7 @@ header {
 
 .contact__inner {
 	margin-left: 13px;
-	padding-inline: 332px;
+	padding-inline: 320px;
 	padding-top: 120px;
 }
 
@@ -2860,9 +2911,13 @@ header {
 	margin-top: 35px;
 }
 
+.contact__fields {
+	margin-top: 33px;
+}
+
 .contact__field {
 	display: flex;
-	margin-top: 33px;
+	margin-top: 17px;
 }
 
 .form-field__head {
@@ -3173,6 +3228,10 @@ header {
 	width: 26px;
 }
 
+.question__item-a-icon img {
+	width: 20px;
+}
+
 .question__item-button img {
 	height: 48px;
 	width: 48px;
@@ -3185,6 +3244,10 @@ header {
 .big__entry img {
 	height: 400px;
 	width: 100%;
+}
+
+.form-text {
+	padding: 20px 16px;
 }
 
 .follow__sns a img {
