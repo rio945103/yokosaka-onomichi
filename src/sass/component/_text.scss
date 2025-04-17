@@ -634,6 +634,9 @@ input.form-text::placeholder {
     font-style: normal;
     font-weight: 400;
     line-height: 160%;
+    @include mq(pc){
+        font-size: 16px;
+    }
 }
 
 .form-checkbox__text a {

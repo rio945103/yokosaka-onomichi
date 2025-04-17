@@ -32,6 +32,10 @@
 	background-image: url(../img/spots_next-button.png);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	overflow-x: hidden !important;
@@ -1506,10 +1510,6 @@ header {
 }
 
 .contact__button {
-	margin-top: 24px;
-}
-
-.contact__button {
 	margin: auto;
 	margin-top: 26px;
 }
@@ -1533,6 +1533,11 @@ header {
 
 .follow__onomichi {
 	margin-top: 13px;
+}
+
+.follow__onomichi-pc {
+	margin-left: 14px;
+	margin-top: 40px;
 }
 
 .follow__contents {
@@ -1573,6 +1578,16 @@ header {
 
 .footer {
 	overflow: hidden;
+}
+
+.footer__image-pc {
+	background-image: url("../img/wave_pc-top.png");
+	background-position: top center;
+	background-repeat: repeat-x;
+	background-size: contain;
+	height: 120px;
+	margin-left: -9px;
+	width: calc(100% + 276px);
 }
 
 .footer__copyright {
@@ -2218,14 +2233,23 @@ header {
 	width: 32px;
 }
 
+.follow__onomichi {
+	width: 100%;
+}
+
 .follow__onomichi img {
 	max-width: 335px;
 }
 
-.follow__map img {
+.follow__onomichi-pc img {
+	max-width: 755px;
+}
+
+.follow__map iframe {
+	border: none;
 	border-radius: 16px 16px 0 0;
 	height: 271px;
-	width: 335px;
+	width: 100%;
 }
 
 .follow__logo img {
@@ -2410,6 +2434,10 @@ input.form-text::placeholder {
 }
 
 .form-textarea::placeholder {
+	font-size: 16px;
+}
+
+.form-checkbox__text {
 	font-size: 16px;
 }
 
@@ -2903,6 +2931,7 @@ input.form-text::placeholder {
 
 .contact__inner {
 	margin-left: 13px;
+	padding-bottom: 103px;
 	padding-inline: 320px;
 	padding-top: 120px;
 }
@@ -2929,33 +2958,58 @@ input.form-text::placeholder {
 	width: 628px;
 }
 
+.form-field__radios {
+	margin-top: 14px;
+}
+
+.form-textarea {
+	margin-top: 16px;
+}
+
+.contact__privacy {
+	margin-top: 38px;
+}
+
+.contact__button {
+	margin-top: 39px;
+}
+
 .follow__inner {
 	padding: 80px;
 	text-align: center;
 }
 
 .follow__title {
+	margin-left: 14px;
 	margin-top: 40px;
 }
 
-.follow__onomichi {
-	margin-top: 41px;
+.follow__sns {
+	margin-left: 12px;
 }
 
 .follow__contents {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
+	margin-left: 16px;
 }
 
 .follow__logo {
+	margin-bottom: 25px;
+	margin-left: 2px;
+	margin-top: -1px;
 	text-align: left;
 }
 
 .follow__accesses {
 	padding-bottom: 106px;
-	padding-inline: 61px;
+	padding-inline: 58px;
 	padding-top: 106px;
+}
+
+.follow__access {
+	margin-top: 12px;
 }
 
 .follow__access-title {
@@ -2967,6 +3021,14 @@ input.form-text::placeholder {
 	position: fixed;
 	right: 16px;
 	width: 76px;
+}
+
+.footer {
+	margin-top: 40px;
+}
+
+.footer__copyright {
+	margin-left: 14px;
 }
 
 .about__contents {
@@ -3250,17 +3312,18 @@ input.form-text::placeholder {
 	padding: 20px 16px;
 }
 
+.contact__button {
+	max-width: 240px;
+	padding: 6px 40px;
+}
+
 .follow__sns a img {
 	height: 40px;
 	width: 40px;
 }
 
-.follow__onomichi img {
-	max-width: 755px;
-}
-
-.follow__map img {
-	border-radius: 0 16px 16px 0;
+.follow__map iframe {
+	border-radius: 0 24px 24px 0;
 	height: 400px;
 	width: 512px;
 }

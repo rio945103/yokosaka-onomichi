@@ -14,7 +14,7 @@ html(lang="ja")
 
     
 
-    body
+    body(id="top")
         header 
             .header__inner
                 .header__contents 
@@ -689,15 +689,14 @@ html(lang="ja")
                         img(src="./assets/img/instagram_icon.png", alt="")
                     a(href="https://twitter.com/onomichi_retro" target="_blank")
                         img(src="./assets/img/twitter_icon.png", alt="")
-                .follow__onomichi 
+                .follow__onomichi.hidden-pc
                         img(src="./assets/img/about_onomichi.png", alt="")
+                .follow__onomichi-pc.hidden-sp
+                    img(src="./assets/img/follow_onomichi-pc.png", alt="")
                 .follow__contents
                     .follow__map
                         iframe(
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.671181564551!2d133.20206597618872!3d34.40970274877029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355101ae25445039%3A0xa7f60624966b8290!2z44CSNzIyLTAwNDUg5bqD5bO255yM5bC-6YGT5biC5LmF5L-d77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1744103884452!5m2!1sja!2sjp"
-                            width="335"
-                            height="271"
-                            style="border:0; border-radius:16px 16px 0 0;"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
@@ -720,16 +719,17 @@ html(lang="ja")
                             .follow__access-text 000-0000-0000
         
         section.page__top#js-pagetop
-            a(href="#")
+            a.pagetop(href="#top")
                 img(src="./assets/img/pagetop.png", alt="")
 
 
 
         section.footer
             .footer__inner
-                .footer__image
-                    img(src="./assets/img/wave_pic.png", alt="").hidden-pc
-                    img(src="./assets/img/wave_pc.png", alt="").hidden-sp
+                .footer__image.hidden-pc
+                    img(src="./assets/img/wave_pic.png", alt="")
+                .footer__image-pc.hidden-sp
+                
 
                 .footer__copyright Copyright © Tourism campaign management office.
         // ✅ 1. jQuery を最初に読み込む

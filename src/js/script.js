@@ -112,32 +112,27 @@ jQuery("#js-drawer-content a[href^='#']").on("click", function (e) {
   jQuery("#js-drawer-content").removeClass("is-checked");
 });
 
-jQuery('a[href^="#"]').on("click", function (e) {
-  e.preventDefault();
+jQuery(function () {
+  jQuery('a[href^="#"]').on("click", function (e) {
+    e.preventDefault();
 
-  const speed = 500;
-  const id = jQuery(this).attr("href");
-  const target = jQuery(id === "#" ? "html" : id);
+    const speed = 500;
+    const id = jQuery(this).attr("href");
+    const target = jQuery(id === "#" ? "html" : id);
 
-  console.log("スクロール先:", id); // ← これを追加して動作チェック
-  console.log("スクロール位置:", target.offset().top);
+    if (!target.length) {
+      console.warn("🚨 スクロール先のターゲットが見つかりません:", id);
+      return;
+    }
 
-  if (!target.length) {
-    console.warn("🚨 スクロール先のターゲットが見つかりません:", id);
-    return;
-  }
+    const offset = 80; // 固定ヘッダーの高さ
+    const position = target.offset().top - offset;
 
-  const offset = 80; // 固定ヘッダーの高さ調整
-  const position = target.offset().top - offset;
-
-  jQuery("html, body").animate(
-    {
-      scrollTop: position,
-    },
-    speed,
-    "swing"
-  );
+    jQuery("html, body").animate({ scrollTop: position }, speed, "swing");
+  });
 });
+
+
 
 
 

@@ -1276,6 +1276,7 @@
         margin-left: 13px;
         padding-top: 120px;
         padding-inline: 320px;
+        padding-bottom: 103px;
     }
 }
 
@@ -1326,6 +1327,15 @@
     display: flex;
     gap: 24px;
     margin-top: 8px;
+    @include mq(pc){
+        margin-top: 14px;
+    }
+}
+
+.form-textarea {
+    @include mq(pc){
+        margin-top: 16px;
+    }
 }
 
 .contact__privacy {
@@ -1333,15 +1343,17 @@
     margin-top: 24px;
     text-align: center;
     justify-content: center;
-}
-
-.contact__button {
-    margin-top: 24px;
+    @include mq(pc){
+        margin-top: 38px;
+    }
 }
 
 .contact__button {
     margin-top: 26px;
     margin: auto;
+    @include mq(pc){
+        margin-top: 39px;
+    }
 }
 
 .follow__inner {
@@ -1358,6 +1370,7 @@
     margin-top: -2px;
     @include mq(pc){
         margin-top: 40px;
+        margin-left: 14px;
     }
 }
 
@@ -1366,13 +1379,18 @@
     justify-content: center;
     gap: 40px;
     margin-top: 24px;
+    @include mq(pc){
+        margin-left: 12px;
+    }
 }
 
 .follow__onomichi {
     margin-top: 13px;
-    @include mq(pc){
-        margin-top: 41px;
-    }
+}
+
+.follow__onomichi-pc {
+    margin-top: 40px;
+    margin-left: 14px;
 }
 
 .follow__contents {
@@ -1381,6 +1399,7 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
+        margin-left: 16px;
     }
 }
 
@@ -1390,6 +1409,9 @@
     margin-bottom: 30px;
     @include mq(pc){
         text-align: left;
+        margin-top: -1px;
+        margin-left: 2px;
+        margin-bottom: 25px;
     }
 }
 
@@ -1398,7 +1420,7 @@
     @include mq(pc){
         padding-top: 106px;
         padding-bottom: 106px;
-        padding-inline: 61px;
+        padding-inline: 58px;
     }
 }
 
@@ -1409,7 +1431,7 @@
     align-items: center;
 
     @include mq(pc){
-        
+        margin-top: 12px;
     }
 }
 
@@ -1441,8 +1463,26 @@
 
 .footer {
     overflow: hidden;
+    @include mq(pc){
+        margin-top: 40px;
+    }
+}
+
+.footer__image-pc {
+    
+
+    background-image: url('../img/wave_pc-top.png'); // ← 繰り返したい画像を指定
+    background-repeat: repeat-x; // ← 横方向にリピート
+    background-position: top center; // ← 必要なら位置指定
+    background-size: contain; // または contain／100% auto など適宜調整
+    height: 120px;
+    width: calc(100% + 276px); // 138px × 2（両側に余白を足す）
+    margin-left: -9px; // 左側にズラして真ん中を合わせる
 }
 
 .footer__copyright {
     padding-bottom: 24px;
+    @include mq(pc){
+        margin-left: 14px;
+    }
 }

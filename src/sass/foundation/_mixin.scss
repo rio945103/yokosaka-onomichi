@@ -1,6 +1,9 @@
 // src/sass/foundation/_mixin.scss
 @use "sass:map";
 
+html {
+  scroll-behavior: smooth;
+}
 
 $breakpoints: (
   sp: "screen and (max-width: 767px)",
