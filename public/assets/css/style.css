@@ -32,10 +32,6 @@
 	background-image: url(../img/spots_next-button.png);
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 html,
 body {
 	overflow-x: hidden !important;
@@ -1276,8 +1272,14 @@ header {
 	margin-top: 24px;
 }
 
-.spots__slide:last-child {
-	margin-right: 0;
+/* スライダーの中央寄せ */
+
+.spots__swiper .swiper-wrapper {
+	justify-content: center;
+}
+
+.spots__slide {
+	margin: 0 8px;
 }
 
 .spots-card img {
@@ -2811,6 +2813,10 @@ input.form-text::placeholder {
 
 .swiper-wrapper {
 	margin-top: 0;
+}
+
+.spots__slide {
+	margin: 0 16px;
 }
 
 .spots-card {

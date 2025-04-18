@@ -946,10 +946,19 @@
     }
 }
 
+/* スライダーの中央寄せ */
+.spots__swiper .swiper-wrapper {
+    justify-content: center;
+  }
+  
 
 
-.spots__slide:last-child {
-    margin-right: 0; // ✅ 最後のスライドの余白をなくす
+
+  .spots__slide  {
+    margin: 0 8px;
+    @include mq(pc){
+        margin: 0 16px;
+    }
 }
 
 
@@ -1261,8 +1270,6 @@
     }
 }
 
-.contact {
-}
 
 .contact__icon {
     text-align: center;
