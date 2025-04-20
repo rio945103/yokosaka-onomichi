@@ -4,6 +4,8 @@ window.addEventListener('load', () => {
     loop: true,
     centeredSlides: false,
     slidesPerGroup: 1,
+    autoHeight: true,
+    centeredSlides: true, // ← これで中央寄せされます！
     pagination: {
       el: '#js-gallery-pagenation',
       clickable: true,

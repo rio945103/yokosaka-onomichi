@@ -637,6 +637,14 @@ header {
     }
 }
 
+.spots__slider{
+    width: 100%;
+}
+
+// .spots__slide {
+//     height: auto !important;
+// }
+
 .spots-card{
     width: 240px;
     // height: 371px;
@@ -664,9 +672,16 @@ header {
     }
 }
 
-#js-gallery-swiper .swiper-slide {
-    width: 240px !important;
-    flex-shrink: 0;
+.spots__swiper {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0; // ← もし左右に余白があれば外す
+  }
+
+.spots__slide {
+    width: auto !important; // ← これで親に合わせて幅いっぱいに
+    height: auto !important; // ← 自然な高さ調整も確保
     @include mq(pc){
         width: 344px !important;
     }

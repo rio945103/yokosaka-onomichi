@@ -1242,7 +1242,6 @@ header {
 
 .spots__inner {
 	padding-bottom: 20px;
-	padding-inline: 20px;
 	position: relative;
 }
 
@@ -1264,19 +1263,7 @@ header {
 	margin-top: 16px;
 }
 
-.swiper-wrapper {
-	align-items: unset;
-	display: flex;
-	height: auto !important;
-	justify-content: unset;
-	margin-top: 24px;
-}
-
 /* スライダーの中央寄せ */
-
-.spots__swiper .swiper-wrapper {
-	justify-content: center;
-}
 
 .spots__slide {
 	margin: 0 8px;
@@ -1303,6 +1290,10 @@ header {
 	bottom: 18px;
 	left: 36px;
 	position: absolute;
+}
+
+.spots__sub {
+	padding-inline: 20px;
 }
 
 .spots__sub-title {
@@ -2154,6 +2145,10 @@ header {
 	height: 222px;
 }
 
+.spots__slider {
+	width: 100%;
+}
+
 .spots-card {
 	width: 240px;
 }
@@ -2169,9 +2164,16 @@ header {
 	width: 240px;
 }
 
-#js-gallery-swiper .swiper-slide {
-	flex-shrink: 0;
-	width: 240px !important;
+.spots__swiper {
+	box-sizing: border-box;
+	max-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+.spots__slide {
+	height: auto !important;
+	width: auto !important;
 }
 
 .spots__button-prev,
@@ -2811,10 +2813,6 @@ input.form-text::placeholder {
 	margin-top: 5px;
 }
 
-.swiper-wrapper {
-	margin-top: 0;
-}
-
 .spots__slide {
 	margin: 0 16px;
 }
@@ -2833,12 +2831,17 @@ input.form-text::placeholder {
 	padding-inline: 30px;
 }
 
+.spots__pagination {
+	display: none;
+}
+
 .spots__sub {
 	align-items: center;
 	display: flex;
 	gap: 81px;
 	justify-content: center;
 	margin-top: 40px;
+	padding-inline: 0;
 }
 
 .spots__sub-title {
@@ -3288,7 +3291,7 @@ input.form-text::placeholder {
 	width: 100%;
 }
 
-#js-gallery-swiper .swiper-slide {
+.spots__slide {
 	width: 344px !important;
 }
 

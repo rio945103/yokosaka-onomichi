@@ -885,7 +885,7 @@
 }
 
 .spots__inner {
-    padding-inline: 20px;
+    // padding-inline: 20px;
     padding-bottom: 20px;
     position: relative;
     
@@ -933,23 +933,23 @@
     }
 }
 
-.swiper-wrapper {
-    margin-top: 24px;
-    height: auto !important;
+// .swiper-wrapper {
+//     margin-top: 24px;
+//     height: auto !important;
   
-    display: flex; // 念のため明示
-    justify-content: unset; // ✅ Swiperに任せる
-    align-items: unset; // ✅ 不要な揃えを外す
+//     display: flex; // 念のため明示
+//     justify-content: unset; // ✅ Swiperに任せる
+//     align-items: unset; // ✅ 不要な揃えを外す
   
-    @include mq(pc) {
-      margin-top: 0;
-    }
-}
+//     @include mq(pc) {
+//       margin-top: 0;
+//     }
+// }
 
 /* スライダーの中央寄せ */
-.spots__swiper .swiper-wrapper {
-    justify-content: center;
-  }
+// .spots__swiper .swiper-wrapper {
+//     justify-content: center;
+//   }
   
 
 
@@ -994,6 +994,12 @@
     }
 }
 
+.spots__pagination {
+    @include mq(pc){
+        display: none;
+    }
+}
+
 .spots_foot {
     position: absolute;
     left: 36px;
@@ -1002,7 +1008,9 @@
 }
 
 .spots__sub {
+    padding-inline: 20px;
     @include mq(pc){
+        padding-inline: 0;
         display: flex;
         align-items: center;
         justify-content: center;
