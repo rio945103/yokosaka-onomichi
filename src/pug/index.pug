@@ -14,8 +14,9 @@ html(lang="ja")
 
     
 
-    body(id="top")
-        header 
+    body
+        div(id="top")
+        header
             .header__inner
                 .header__contents 
                     .header__logo 
@@ -65,7 +66,7 @@ html(lang="ja")
                             img(src="./assets/img/present.png", alt="")
                     .mv__smart 
                         img(src="./assets/img/smartphone.png", alt="")
-                    .mv__button.button 応募してみる
+                    a(href="#contact").mv__button.button 応募してみる
                     .mv__food 
                         img(src="./assets/img/food.png", alt="")
                     .mv__cats 
@@ -139,7 +140,7 @@ html(lang="ja")
                                 | 」をつけて
                             p Instagramに投稿いただいた方の中から
                     .about__text3 尾道のギフトを100名様にプレゼント！
-                    a.about__button.button(href="#contact") 参加の仕方はこちら
+                    a.about__button.button(href="#how") 参加の仕方はこちら
 
                 .about__pictures 
                     .about__arrow 
@@ -264,7 +265,7 @@ html(lang="ja")
                         br.hidden-pc
                         |で人気のお土産セットやオリジナルグッズをプレゼント！
                     .prizes__cards 
-                        .prizes__card 
+                        .prizes__card.js-modal-open(data-target="prizes__modal-sweets")
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number1.png", alt="")
                             .prizes__card-image-wrapper 
@@ -274,11 +275,10 @@ html(lang="ja")
                                 |海街洋菓子店
                                 br
                                 |スイーツセット
-                                button.js-modal-open(data-target="prizes__modal-sweets")
-                                    svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
-                                        path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
-                                        image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
-                        .prizes__card 
+                                svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
+                                    path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
+                                    image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
+                        .prizes__card.js-modal-open(data-target="prizes__modal-cats")
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number2.png", alt="")
                             .prizes__card-image-wrapper 
@@ -288,11 +288,10 @@ html(lang="ja")
                                 |ねこねこ
                                 br.hidden-pc
                                 |グッズセット 
-                                button.js-modal-open(data-target="prizes__modal-cats")
-                                    svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
-                                        path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
-                                        image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
-                        .prizes__card 
+                                svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
+                                    path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
+                                    image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
+                        .prizes__card.js-modal-open(data-target="prizes__modal-ramen")
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number3.png", alt="")
                             .prizes__card-image-wrapper 
@@ -300,12 +299,11 @@ html(lang="ja")
                                     img(src="./assets/img/prizes_onomichiramen.png", alt="")
                             .prizes__card-text
                                 |尾道ラーメンセット 
-                                button.js-modal-open(data-target="prizes__modal-ramen")
-                                    svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
-                                        path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
-                                        image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
+                                svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
+                                    path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
+                                    image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
 
-                        .prizes__card 
+                        .prizes__card.js-modal-open(data-target="prizes__modal-cafe")
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number4.png", alt="")
                             .prizes__card-image-wrapper 
@@ -315,11 +313,10 @@ html(lang="ja")
                                 |おうちで
                                 br
                                 |喫茶店セット 
-                                button.js-modal-open(data-target="prizes__modal-cafe")
-                                    svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
-                                        path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
-                                        image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
-                        .prizes__card 
+                                svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
+                                    path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
+                                    image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
+                        .prizes__card.js-modal-open(data-target="prizes__modal-to-to")
                             .prize__card-number 
                                 img(src="./assets/img/prizes_number5.png", alt="")
                             .prizes__card-image-wrapper 
@@ -329,10 +326,9 @@ html(lang="ja")
                                 |工房尾道帆布
                                 br
                                 |オリジナルトート 
-                                button.js-modal-open(data-target="prizes__modal-to-to")
-                                    svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
-                                        path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
-                                        image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
+                                svg(xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none")
+                                    path(d="M100 0V100H0L100 0Z" fill="#67B0C7")
+                                    image(x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png")
                     .prizes__button.button #見つけて尾道レトロ の最新投稿を見る
         dialog(id="prizes__modal-sweets").prizes__modal
             .prizes__modal-image 
@@ -498,7 +494,7 @@ html(lang="ja")
 
         .under__wave.hidden-pc
             img(src="./assets/img/under_wave.png", alt="")
-        .under__wave-pc
+        .under__wave-pc.hidden-sp
 
         section(id="question").question 
                     .question__inner
@@ -618,7 +614,7 @@ html(lang="ja")
                         br.hidden-pc
                         |以下のフォームからお願いします。
                     .contact__items 
-                        form.contact__form
+                        form.contact__form#contact-form(novalidate)
                             .contact__fields
                                 .contact__field
                                     .form-field
@@ -626,14 +622,14 @@ html(lang="ja")
                                             label.form-field__label(for="your-name") お名前
                                             span.form-field__tag 必須
                                     .form-field__item
-                                        input.form-text(type="text" name="your-name" id="your-name" placeholder="山田太郎")
+                                        input.form-text(type="text" name="your-name" id="your-name" placeholder="山田太郎" required)
                                 .contact__field
                                     .form-field
                                         .form-field__head
                                             label.form-field__label(for="your-email") メールアドレス
                                             span.form-field__tag 必須
                                     .form-field__item
-                                        input.form-text(type="email" name="your-email" id="your-email" placeholder="info@example.com")
+                                        input.form-text(type="email" name="your-email" id="your-email" placeholder="info@example.com" required)
                                 .contact__field
                                     .form-field
                                         .form-field__head
@@ -641,7 +637,7 @@ html(lang="ja")
                                             span.form-field__tag.is-option 必須
                                     .form-field__item
                                         .cp_ipselect02
-                                            select.form-select(name="your-age" id="your-age")
+                                            select.form-select(name="your-age" id="your-age" required)
                                                 option(value="") 選択してください
                                                 option(value="") 選択１
                                                 option(value="") 選択２
@@ -671,6 +667,7 @@ html(lang="ja")
                                             cols="30" 
                                             rows="10" 
                                             placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"
+                                            required
                                         )
                                 .contact__privacy
                                     label.form-checkbox
@@ -678,7 +675,8 @@ html(lang="ja")
                                         span.form-checkbox__text
                                             a(href="" target="_blank") プライバシーポリシー
                                             | に合意する
-                                .contact__button.button 上記の内容を送信する
+                                .contact__button-wrapper 
+                                    button(type="submit").contact__button.button 上記の内容を送信する
         section.follow 
             .follow__inner 
                 .follow__title \ Please Follow Us! /

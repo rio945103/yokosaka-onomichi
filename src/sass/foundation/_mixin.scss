@@ -12,6 +12,11 @@ $breakpoints: (
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 .hidden-pc {
     @include mq(pc) {
       display: none;
@@ -24,9 +29,9 @@ $breakpoints: (
   }
 }
 
-html, body {
-  overflow-x: hidden !important;// ✅ 横スクロールを防ぐ
-}
+// html, body {
+//   overflow-x: hidden !important;// ✅ 横スクロールを防ぐ
+// }
 
 .fade-in-up {
   opacity: 0;

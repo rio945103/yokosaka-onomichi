@@ -32,9 +32,8 @@
 	background-image: url(../img/spots_next-button.png);
 }
 
-html,
-body {
-	overflow-x: hidden !important;
+html {
+	scroll-behavior: smooth;
 }
 
 .fade-in-up {
@@ -960,7 +959,7 @@ header {
 }
 
 .about__scroll {
-	margin-top: -20px;
+	margin-top: 3px;
 }
 
 .how {
@@ -1263,7 +1262,9 @@ header {
 	margin-top: 16px;
 }
 
-/* スライダーの中央寄せ */
+.spots__slider {
+	margin-top: 23px;
+}
 
 .spots__slide {
 	margin: 0 8px;
@@ -1302,7 +1303,7 @@ header {
 
 .spots__button {
 	margin: auto;
-	margin-top: 21px;
+	margin-top: 23px;
 	padding: 6px 24px;
 	text-align: center;
 	white-space: nowrap;
@@ -1315,14 +1316,14 @@ header {
 
 .spots__button-prev {
 	bottom: -4px;
-	left: -48px;
+	left: -32px;
 	position: absolute;
 	z-index: 10;
 }
 
 .spots__button-next {
 	bottom: -4px;
-	left: 815px;
+	left: 832px;
 	position: absolute;
 	z-index: 10;
 }
@@ -1457,6 +1458,19 @@ header {
 	margin-top: 32px;
 }
 
+.contact {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
 .contact__icon {
 	text-align: center;
 }
@@ -1502,9 +1516,13 @@ header {
 	text-align: center;
 }
 
+.contact__button-wrapper {
+	text-align: center;
+}
+
 .contact__button {
 	margin: auto;
-	margin-top: 26px;
+	margin-top: 25px;
 }
 
 .follow__inner {
@@ -2118,7 +2136,7 @@ header {
 }
 
 .wave_pic img {
-	width: 384px;
+	width: 375px;
 }
 
 .wave_pic-pc {
@@ -2792,13 +2810,13 @@ input.form-text::placeholder {
 .spots__contents {
 	align-items: flex-start;
 	display: flex;
-	gap: 32px;
+	gap: 18px;
 }
 
 .spots__head {
 	align-items: flex-start;
 	flex-direction: column;
-	margin-left: 223px;
+	margin-left: 241px;
 	margin-top: -3px;
 }
 
@@ -2811,6 +2829,10 @@ input.form-text::placeholder {
 
 .spots__text {
 	margin-top: 5px;
+}
+
+.spots__slider {
+	margin-top: 0;
 }
 
 .spots__slide {

@@ -30,6 +30,7 @@ const aboutSwiper = new Swiper('#js-about-swiper', {
   loop: true,
   allowTouchMove: false, // ユーザー操作を無効化（必要に応じて）
   spaceBetween: 10, // 👈 これが「gap」
+  autoHeight: true,
 
   breakpoints: {
     768: {
@@ -97,45 +98,22 @@ jQuery(".js-modal-close").on("click", function (e) {
 
 
 jQuery("#js-drawer-content a[href^='#']").on("click", function (e) {
-  e.preventDefault(); // ←これを追加！！！
+  const id = jQuery(this).attr("href");
+  if (!id || id === "#" || id.startsWith("http")) return;
+
+  e.preventDefault();
   jQuery("#js-drawer-content").removeClass("is-checked");
 
-  // ドロワー内リンクのスムーススクロールもここに書いてOK！
-  const id = jQuery(this).attr("href");
-  const target = jQuery(id);
-
-  if (!target.length) return;
-
-  const offset = 80;
-  const position = target.offset().top - offset;
-
-  jQuery("html, body").animate({ scrollTop: position }, 500, "swing");
+  smoothScrollTo(id); // ← 後で定義する関数を使います
 });
 
 
 jQuery(document).on("click", 'a[href^="#"]', function (e) {
-  console.log("✅ クリックされました！");
-
   const id = jQuery(this).attr("href");
-  console.log("📍 href値:", id);
-
   if (!id || id === "#" || id.startsWith("http")) return;
 
   e.preventDefault();
-
-  const target = jQuery(id);
-  console.log("🎯 target要素:", target);
-
-  if (!target.length) {
-    console.warn("🚨 ターゲットが見つかりません:", id);
-    return;
-  }
-
-  const offset = 80;
-  const position = Math.max(target.offset().top - offset, 0);
-  console.log("➡️ スクロール位置:", position);
-
-  jQuery("div.body").stop().animate({ scrollTop: position }, 500, "swing");
+  smoothScrollTo(id); // ← 同じ関数で統一！
 });
 
 
@@ -160,4 +138,26 @@ const intersectionObserver = new IntersectionObserver(function (entries) {
 const inViewItems = document.querySelectorAll(".js-in-view");
 inViewItems.forEach(function (inViewItem) {
   intersectionObserver.observe(inViewItem);
+});
+
+function smoothScrollTo(id, offset = 80) {
+  const target = document.querySelector(id);
+  if (!target) return;
+
+  const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+  window.scrollTo({
+    top: position,
+    behavior: "smooth"
+  });
+}
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (this.checkValidity()) {
+    alert('送信が完了しました。ありがとうございました！');
+    this.reset();
+  } else {
+    this.reportValidity();
+  }
 });

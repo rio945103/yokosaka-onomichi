@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="./assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
   </head>
-  <body id="top">
-    <header> 
+  <body>
+    <div id="top"></div>
+    <header>
       <div class="header__inner">
         <div class="header__contents"> 
           <div class="header__logo"> <img src="./assets/img/logo.png" alt=""/></div>
@@ -39,8 +40,7 @@
             <div class="mv__share"> <img src="./assets/img/mv_fukidashi.png" alt=""/></div>
             <div class="mv__present"> <img src="./assets/img/present.png" alt=""/></div>
           </div>
-          <div class="mv__smart"> <img src="./assets/img/smartphone.png" alt=""/></div>
-          <div class="mv__button button">応募してみる</div>
+          <div class="mv__smart"> <img src="./assets/img/smartphone.png" alt=""/></div><a class="mv__button button" href="#contact">応募してみる</a>
           <div class="mv__food"> <img src="./assets/img/food.png" alt=""/></div>
           <div class="mv__cats"> <img class="hidden-pc" src="./assets/img/cats.png" alt=""/><img class="hidden-sp" src="./assets/img/mv_cats-pc.png" alt=""/></div>
         </div>
@@ -93,7 +93,7 @@
               <p>Instagramに投稿いただいた方の中から</p>
             </div>
           </div>
-          <div class="about__text3">尾道のギフトを100名様にプレゼント！</div><a class="about__button button" href="#contact">参加の仕方はこちら</a>
+          <div class="about__text3">尾道のギフトを100名様にプレゼント！</div><a class="about__button button" href="#how">参加の仕方はこちら</a>
         </div>
         <div class="about__pictures"> 
           <div class="about__arrow"> <img src="./assets/img/arrow.png" alt=""/></div>
@@ -213,74 +213,64 @@
         <div class="prize__contents"> 
           <div class="prizes__text">キャンペーンにご参加いただたい方の中から100名様に、尾道<br class="hidden-pc"/>で人気のお土産セットやオリジナルグッズをプレゼント！</div>
           <div class="prizes__cards"> 
-            <div class="prizes__card"> 
+            <div class="prizes__card js-modal-open" data-target="prizes__modal-sweets">
               <div class="prize__card-number"> <img src="./assets/img/prizes_number1.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_sweets.png" alt=""/></div>
               </div>
               <div class="prizes__card-text">海街洋菓子店<br/>スイーツセット
-                <button class="js-modal-open" data-target="prizes__modal-sweets">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-                    <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
-                    <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg>
-                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
+                  <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
+                </svg>
               </div>
             </div>
-            <div class="prizes__card"> 
+            <div class="prizes__card js-modal-open" data-target="prizes__modal-cats">
               <div class="prize__card-number"> <img src="./assets/img/prizes_number2.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_manekineko.png" alt=""/></div>
               </div>
               <div class="prizes__card-text">ねこねこ<br class="hidden-pc"/>グッズセット 
-                <button class="js-modal-open" data-target="prizes__modal-cats">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-                    <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
-                    <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg>
-                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
+                  <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
+                </svg>
               </div>
             </div>
-            <div class="prizes__card"> 
+            <div class="prizes__card js-modal-open" data-target="prizes__modal-ramen">
               <div class="prize__card-number"> <img src="./assets/img/prizes_number3.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_onomichiramen.png" alt=""/></div>
               </div>
               <div class="prizes__card-text">尾道ラーメンセット 
-                <button class="js-modal-open" data-target="prizes__modal-ramen">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-                    <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
-                    <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg>
-                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
+                  <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
+                </svg>
               </div>
             </div>
-            <div class="prizes__card"> 
+            <div class="prizes__card js-modal-open" data-target="prizes__modal-cafe">
               <div class="prize__card-number"> <img src="./assets/img/prizes_number4.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_cafe.png" alt=""/></div>
               </div>
               <div class="prizes__card-text">おうちで<br/>喫茶店セット 
-                <button class="js-modal-open" data-target="prizes__modal-cafe">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-                    <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
-                    <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg>
-                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
+                  <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
+                </svg>
               </div>
             </div>
-            <div class="prizes__card"> 
+            <div class="prizes__card js-modal-open" data-target="prizes__modal-to-to">
               <div class="prize__card-number"> <img src="./assets/img/prizes_number5.png" alt=""/></div>
               <div class="prizes__card-image-wrapper"> 
                 <div class="prizes__card-image"><img src="./assets/img/prizes_to-to.png" alt=""/></div>
               </div>
               <div class="prizes__card-text">工房尾道帆布<br/>オリジナルトート 
-                <button class="js-modal-open" data-target="prizes__modal-to-to">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-                    <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
-                    <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
-                  </svg>
-                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <path d="M100 0V100H0L100 0Z" fill="#67B0C7"></path>
+                  <image x="50" y="50" width="32" height="32" xlink:href="./assets/img/prizes_zoom.png"></image>
+                </svg>
               </div>
             </div>
           </div>
@@ -430,7 +420,7 @@
       </div>
     </section>
     <div class="under__wave hidden-pc"><img src="./assets/img/under_wave.png" alt=""/></div>
-    <div class="under__wave-pc"></div>
+    <div class="under__wave-pc hidden-sp"></div>
     <section class="question" id="question"> 
       <div class="question__inner">
         <div class="question__contents">
@@ -541,7 +531,7 @@
           </div>
           <div class="contact__text">本キャンペーンに関するお問い合わせは<br class="hidden-pc"/>以下のフォームからお願いします。</div>
           <div class="contact__items"> 
-            <form class="contact__form">
+            <form class="contact__form" id="contact-form" novalidate="novalidate">
               <div class="contact__fields">
                 <div class="contact__field">
                   <div class="form-field">
@@ -550,7 +540,7 @@
                     </div>
                   </div>
                   <div class="form-field__item">
-                    <input class="form-text" type="text" name="your-name" id="your-name" placeholder="山田太郎"/>
+                    <input class="form-text" type="text" name="your-name" id="your-name" placeholder="山田太郎" required="required"/>
                   </div>
                 </div>
                 <div class="contact__field">
@@ -560,7 +550,7 @@
                     </div>
                   </div>
                   <div class="form-field__item">
-                    <input class="form-text" type="email" name="your-email" id="your-email" placeholder="info@example.com"/>
+                    <input class="form-text" type="email" name="your-email" id="your-email" placeholder="info@example.com" required="required"/>
                   </div>
                 </div>
                 <div class="contact__field">
@@ -571,7 +561,7 @@
                   </div>
                   <div class="form-field__item">
                     <div class="cp_ipselect02">
-                      <select class="form-select" name="your-age" id="your-age">
+                      <select class="form-select" name="your-age" id="your-age" required="required">
                         <option value="">選択してください</option>
                         <option value="">選択１</option>
                         <option value="">選択２</option>
@@ -604,7 +594,7 @@
                     </div>
                   </div>
                   <div class="form-field__item">
-                    <textarea class="form-textarea" name="your-message" id="your-message" cols="30" rows="10" placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"></textarea>
+                    <textarea class="form-textarea" name="your-message" id="your-message" cols="30" rows="10" placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。" required="required"></textarea>
                   </div>
                 </div>
                 <div class="contact__privacy">
@@ -612,7 +602,9 @@
                     <input class="form-checkbox__input" type="checkbox" name="your-privacy"/><span class="form-checkbox__text"><a href="" target="_blank">プライバシーポリシー</a>に合意する</span>
                   </label>
                 </div>
-                <div class="contact__button button">上記の内容を送信する</div>
+                <div class="contact__button-wrapper"> 
+                  <button class="contact__button button" type="submit">上記の内容を送信する</button>
+                </div>
               </div>
             </form>
           </div>
