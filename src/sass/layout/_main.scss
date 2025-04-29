@@ -1,34 +1,7 @@
 @use "../foundation/mixin" as *;
 
 
-.header__contents {
-    display: flex;
-    justify-content: space-between;
-    
-}
 
-.header__logo {
-    @include mq(pc){
-        margin-top: 4px;
-        margin-left: 4px;
-    }
-}
-
-.header__nav {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-top: -3px;
-    margin-right: -10px;
-}
-
-.header__button {
-    margin-left: 3px;
-
-    padding: 6px 24px;
-    width: 132px;
-    white-space: nowrap;
-}
 
 
 
@@ -96,7 +69,7 @@
     flex-direction: column;
     text-align: center;
     gap: 40px;
-    padding: 84px 110px;
+    padding: 84px 50px;
 }
 
 .mv {

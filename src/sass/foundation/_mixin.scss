@@ -3,7 +3,10 @@
 
 $breakpoints: (
   sp: "screen and (max-width: 767px)",
-  pc: "screen and (min-width: 768px)",
+  tab: "screen and (min-width: 768px) and (max-width: 1024px)",
+  pc: "screen and (min-width: 1025px)",
+  large: "screen and (min-width: 1280px)",
+  fullhd: "screen and (min-width: 1920px)"
 );
 
 @mixin mq($breakpoint: pc) {
@@ -15,6 +18,8 @@ $breakpoints: (
 html {
   scroll-behavior: smooth;
 }
+
+
 
 
 .hidden-pc {

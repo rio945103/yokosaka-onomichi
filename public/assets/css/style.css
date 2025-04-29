@@ -660,16 +660,17 @@ header {
 	position: fixed;
 	right: 0;
 	top: 0;
+	width: 100%;
 	z-index: 1000;
 }
 
 .header__inner {
-	padding: 16px 20px;
+	padding-inline: 20px;
 }
 
 .header__contents {
+	align-items: center;
 	display: flex;
-	justify-content: space-between;
 }
 
 .header__nav {
@@ -750,7 +751,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-	padding: 84px 110px;
+	padding: 84px 50px;
 	text-align: center;
 }
 
@@ -1850,6 +1851,7 @@ header {
 }
 
 .drawer-content__button {
+	max-width: 192px;
 	padding: 6px 24px;
 }
 
@@ -1858,8 +1860,8 @@ header {
 }
 
 .mv__bg img {
-	height: 554px;
-	width: 375px;
+	height: 100%;
+	width: 100%;
 }
 
 .mv__bg-pc {
@@ -2293,7 +2295,7 @@ header {
 	width: 375px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
 
 .hidden-pc {
 	display: none;

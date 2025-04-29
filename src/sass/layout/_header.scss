@@ -6,8 +6,39 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .header__inner {
-    padding: 16px 20px;
+    padding-inline: 20px;
+}
+
+.header__contents {
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.header__logo {
+    @include mq(pc){
+        margin-top: 4px;
+        margin-left: 4px;
+    }
+}
+
+.header__nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: -3px;
+    margin-right: -10px;
+}
+
+.header__button {
+    margin-left: 3px;
+
+    padding: 6px 24px;
+    width: 132px;
+    white-space: nowrap;
 }
