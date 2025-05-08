@@ -11,13 +11,12 @@ header {
 
 .header__inner {
     padding-inline: 20px;
-}
-
-.header__contents {
     display: flex;
     align-items: center;
-    
-    
+    height: 64px;
+    @include mq(pc){
+        justify-content: space-between;
+    }
 }
 
 .header__logo {
@@ -31,8 +30,6 @@ header {
     display: flex;
     gap: 12px;
     align-items: center;
-    margin-top: -3px;
-    margin-right: -10px;
 }
 
 .header__button {

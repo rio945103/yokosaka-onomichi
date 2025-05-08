@@ -1,18 +1,12 @@
 @use "../foundation/mixin" as *;
 
 
-
-
-
-
 .drawer-icon {
-    right: 5px;
-    top: 1px;
-    width: 32px;
+    margin-left: auto;
+    width: 33px;
     height: 24px;
     position: relative;
     z-index: 51;
-    
     &.is-checked {
         .drawer-icon__bars {
             display: none;
@@ -33,7 +27,6 @@
     flex-direction: row;
     position: absolute;
     top: 0px;
-    right: 0px;
     // transition: transform 0.3s linear, top 0.3s linear;
 }
 
@@ -41,7 +34,6 @@
     position: absolute;
     left: 0px;
     transition: transform 0.3s linear, top 0.3s linear;
-  
     &:nth-of-type(1) {
       top: 12px;
     }
@@ -76,22 +68,27 @@
     margin-top: 59px;
 }
 
-.mv__bg {
-    margin-top: 4px;
-}
-
-.mv__bg-pc {
-    width: 100%;
-    top: 63px;
-    height: 81%;
+.picture-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 
 .mv__inner {
-    padding-inline: 20px;
+    position: relative;
     padding-top: 22px;
+    width: 100%;
+    max-width: 335px;
+    margin-left: auto;
+    margin-right: auto;
     @include mq(pc){
         padding-top: 35px;
+    }
+    // 画面幅が 335px 未満のときだけ padding を追加
+    @media (max-width: 334px) {
+      padding-inline: 20px;
     }
 }
 
@@ -105,6 +102,8 @@
 
 .mv__title1 {
     text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
     margin-top: 20px;
     @include mq(pc){
         margin-top: 24px;
@@ -124,6 +123,7 @@
     justify-content: flex-start;
     gap: 58px;
     margin-top: 10px;
+    
     @include mq(pc){
         position: relative;
     }
@@ -162,7 +162,11 @@
     position: absolute;
     z-index: 30;
     top: 498px;
-    left: 100px;
+    left: 50%;             // 親の中心に配置
+    transform: translateX(-50%); // 水平中央に補正
+    @media (max-width: 334px) {
+        top: 468px;
+    }
     @include mq(pc){
         top: 556px;
         left: 638px;
@@ -171,8 +175,8 @@
 
 .mv__food {
     position: absolute;
-    top: 552px;
-    left: 2px;
+    top: 556px;
+    left: 1px;
     @include mq(pc){
         top: 469px;
         left: 305px;
@@ -192,7 +196,6 @@
 .about {
     margin-top: 44px;
     overflow: hidden;
-
     position: relative;
     @include mq(pc){
         margin-top: 16px;
@@ -241,7 +244,7 @@
     }
 }
 
-.about_foot {
+.about__foot {
     position: absolute;
     right: 152px;
 }
@@ -415,6 +418,10 @@
 
 .how__inner {
     padding-inline: 20px;
+    position: relative;
+    max-width: 375px;
+    margin-right: auto;
+    margin-left: auto;
     @include mq(pc){
         padding-inline: 36px;
         margin-bottom: 5px;
@@ -567,6 +574,9 @@
 
 .prizes {
     margin-top: 26px;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
     @include mq(pc){
         margin-left: 15px;
         margin-top: 120px;
@@ -837,10 +847,15 @@
     }
 }
 
-.wave {
+.wave__top {
     position: relative;
-    margin-top: -47px;
-    transform: translateX(3px); // ← 位置調整
+    margin-top: -88px;
+    background-image: url('../img/wave_sp-top.png'); // ← 繰り返したい画像を指定
+    background-repeat: repeat-x; // ← 横方向にリピート
+    background-position: top center; // ← 必要なら位置指定
+    background-size: contain; // または contain／100% auto など適宜調整
+    height: 45px;
+    
   @include mq(pc){
     margin-top: -120px;
     background-image: url('../img/wave_pc-top.png'); // ← 繰り返したい画像を指定
@@ -1036,24 +1051,22 @@
     z-index: 10;
 }
 
-.under__wave {
-    position: relative;
-    top: -1px;
-    img {
-        width: 375px;
-        height: 45px;
-    }
-}
-
-.under__wave-pc {
+.wave__bottom {
     background-image: url('../img/wave_pc-bottom.png'); // ← 繰り返したい画像を指定
     background-repeat: repeat-x; // ← 横方向にリピート
     background-position: top center; // ← 必要なら位置指定
     background-size: contain; // または contain／100% auto など適宜調整
-    height: 120px;
-    width: calc(100% + 276px); // 138px × 2（両側に余白を足す）
-    margin-top: -17px; // 上側にズラして真ん中を合わせる
-    margin-left: -10px; // 左側にズラして真ん中を合わせる
+    height: 45px;
+    @include mq(pc){
+        background-image: url('../img/wave_pc-bottom.png'); // ← 繰り返したい画像を指定
+        background-repeat: repeat-x; // ← 横方向にリピート
+        background-position: top center; // ← 必要なら位置指定
+        background-size: contain; // または contain／100% auto など適宜調整
+        height: 120px;
+        width: calc(100% + 276px); // 138px × 2（両側に余白を足す）
+        margin-top: -17px; // 上側にズラして真ん中を合わせる
+        margin-left: -10px; // 左側にズラして真ん中を合わせる
+    }
 }
 
 .question {

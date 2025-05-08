@@ -55,43 +55,42 @@ header {
 }
 
 .mv {
-    // background: url("../img/Onomichi.png") no-repeat center center / cover;
+    width: 100%;
+    overflow-x: visible; // ← 念のため
+}
+
+.picture-wrapper {
+    width: 100%;
+    height: calc(100% - 206px); // など必要に応じて
+    border-radius: 0 0 24px 24px;
 }
 
 .mv__bg {
-    position: absolute;
     img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
 }
-
-.mv__bg-pc{
-    position: absolute;
-    img {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-
-
 
 .mv__title1 {
+    width: 100%;
+    max-width: 335px;
+    
+  
     img {
-        width: 335px;
-        height: 53px;
-        @include mq(pc){
-            width: 520px;
-            height: 82px;
-        }
+      width: 100%;
+      height: auto;
+      display: block;
     }
-}
+  
+  }
 
 .mv__title2 {
     img {
-        width: 240px;
-        height: 40px;
+        max-width: 72%;
+        height: auto;
         @include mq(pc){
             width: 356px;
             height: 60px;
@@ -101,19 +100,24 @@ header {
 
 .mv__share {
     img {
-        width: 142px;
-        height: 80px;
+        width: 100%;
+        max-width: 142px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
-            width: 244px;
-            height: 134px;
+            max-width: 244px;
         }
     }
 }
 
 .mv__present {
     img {
-        width: 110px;
-        height: 110px;
+        width: 100%;
+        max-width: 110px; // 現在のサイズを基準に
+        height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
             width: 180px;
             height: 180px;
@@ -123,8 +127,11 @@ header {
 
 .mv__smart {
     img {
-        width: 200px;
-        height: 408px;
+        width: 100%;
+        max-width: 200px; // 現在のサイズを基準に
+        height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
             width: 250px;
             height: 510px;
@@ -145,8 +152,11 @@ header {
 
 .mv__food {
     img {
-        width: 86px;
-        height: 141px;
+        width: 100%;
+        max-width: 86px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
             width: 202px;
             height: 332px;
@@ -156,8 +166,11 @@ header {
 
 .mv__cats {
     img {
-        width: 107px;
-        height: 127px;
+        width: 100%;
+        max-width: 107px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
             width: 233px;
             height: 294px;
@@ -169,8 +182,11 @@ header {
     margin-top: -4px;
     margin-left: -2px;
     img {
-        width: 87px;
+        width: 100%;
+        max-width: 87px;
         height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
             height: 121px;
             width: 148px;
@@ -182,8 +198,11 @@ header {
     margin-top: -7px;
     margin-right: -16px;
     img {
-        width: 90px;
+        width: 100%;
+        max-width: 90px;
         height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
             width: 150px;
             height: 118px;
@@ -220,10 +239,18 @@ header {
     }
 }
 
-.about_foot {
+.about__foot {
     img {
         width: 100px;
         height: 220px;
+    }
+}
+
+.about__cat-foot-sp {
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
     }
 }
 
@@ -328,8 +355,11 @@ header {
 
 .how__picture-map {
     img {
-        width: 149px;
-        height: 223px;
+        width: 100%;
+        max-width: 149px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
         @include mq(pc){
             width: 460px;
             height: 689px;
@@ -339,8 +369,11 @@ header {
 
 .how__picture-cats {
     img {
-        width: 160px;
-        height: 194px;
+        width: 100%;
+        max-width: 160px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
 }
 

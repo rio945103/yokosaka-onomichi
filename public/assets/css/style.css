@@ -36,6 +36,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+.wrapper {
+	overflow: hidden;
+}
+
 .fade-in-up {
 	opacity: 0;
 	transform: translateY(24px);
@@ -665,20 +669,16 @@ header {
 }
 
 .header__inner {
-	padding-inline: 20px;
-}
-
-.header__contents {
 	align-items: center;
 	display: flex;
+	height: 64px;
+	padding-inline: 20px;
 }
 
 .header__nav {
 	align-items: center;
 	display: flex;
 	gap: 12px;
-	margin-right: -10px;
-	margin-top: -3px;
 }
 
 .header__button {
@@ -690,10 +690,9 @@ header {
 
 .drawer-icon {
 	height: 24px;
+	margin-left: auto;
 	position: relative;
-	right: 5px;
-	top: 1px;
-	width: 32px;
+	width: 33px;
 	z-index: 51;
 }
 
@@ -716,7 +715,6 @@ header {
 	flex-direction: row;
 	gap: 1.6px;
 	position: absolute;
-	right: 0px;
 	top: 0px;
 }
 
@@ -759,19 +757,20 @@ header {
 	margin-top: 59px;
 }
 
-.mv__bg {
-	margin-top: 4px;
-}
-
-.mv__bg-pc {
-	height: 81%;
-	top: 63px;
-	width: 100%;
+.picture-wrapper {
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
 }
 
 .mv__inner {
-	padding-inline: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 335px;
 	padding-top: 22px;
+	position: relative;
+	width: 100%;
 }
 
 .mv__contents {
@@ -779,6 +778,8 @@ header {
 }
 
 .mv__title1 {
+	box-sizing: border-box;
+	margin: 0 auto;
 	margin-top: 20px;
 	text-align: center;
 }
@@ -805,16 +806,17 @@ header {
 }
 
 .mv__button {
-	left: 100px;
+	left: 50%;
 	position: absolute;
 	top: 498px;
+	transform: translateX(-50%);
 	z-index: 30;
 }
 
 .mv__food {
-	left: 2px;
+	left: 1px;
 	position: absolute;
-	top: 552px;
+	top: 556px;
 }
 
 .mv__cats {
@@ -862,7 +864,7 @@ header {
 	top: 273px;
 }
 
-.about_foot {
+.about__foot {
 	position: absolute;
 	right: 152px;
 }
@@ -969,7 +971,11 @@ header {
 }
 
 .how__inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 375px;
 	padding-inline: 20px;
+	position: relative;
 }
 
 .how__contents {
@@ -1072,7 +1078,10 @@ header {
 }
 
 .prizes {
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 26px;
+	max-width: 600px;
 }
 
 .prizes__bg {
@@ -1230,10 +1239,14 @@ header {
 	transform: translateY(-48px);
 }
 
-.wave {
-	margin-top: -47px;
+.wave__top {
+	background-image: url("../img/wave_sp-top.png");
+	background-position: top center;
+	background-repeat: repeat-x;
+	background-size: contain;
+	height: 45px;
+	margin-top: -88px;
 	position: relative;
-	transform: translateX(3px);
 }
 
 .spots {
@@ -1329,25 +1342,12 @@ header {
 	z-index: 10;
 }
 
-.under__wave {
-	position: relative;
-	top: -1px;
-}
-
-.under__wave img {
-	height: 45px;
-	width: 375px;
-}
-
-.under__wave-pc {
+.wave__bottom {
 	background-image: url("../img/wave_pc-bottom.png");
 	background-position: top center;
 	background-repeat: repeat-x;
 	background-size: contain;
-	height: 120px;
-	margin-left: -10px;
-	margin-top: -17px;
-	width: calc(100% + 276px);
+	height: 45px;
 }
 
 .question {
@@ -1855,47 +1855,64 @@ header {
 	padding: 6px 24px;
 }
 
-.mv__bg {
-	position: absolute;
+.mv {
+	overflow-x: visible;
+	width: 100%;
+}
+
+.picture-wrapper {
+	border-radius: 0 0 24px 24px;
+	height: calc(100% - 206px);
+	width: 100%;
 }
 
 .mv__bg img {
 	height: 100%;
 	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center center;
+	object-position: center center;
 }
 
-.mv__bg-pc {
-	position: absolute;
-}
-
-.mv__bg-pc img {
-	height: 100%;
+.mv__title1 {
+	max-width: 335px;
 	width: 100%;
 }
 
 .mv__title1 img {
-	height: 53px;
-	width: 335px;
+	display: block;
+	height: auto;
+	width: 100%;
 }
 
 .mv__title2 img {
-	height: 40px;
-	width: 240px;
+	height: auto;
+	max-width: 72%;
 }
 
 .mv__share img {
-	height: 80px;
-	width: 142px;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	max-width: 142px;
+	width: 100%;
 }
 
 .mv__present img {
-	height: 110px;
-	width: 110px;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	max-width: 110px;
+	width: 100%;
 }
 
 .mv__smart img {
-	height: 408px;
-	width: 200px;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	max-width: 200px;
+	width: 100%;
 }
 
 .mv__button {
@@ -1906,13 +1923,19 @@ header {
 }
 
 .mv__food img {
-	height: 141px;
-	width: 86px;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	max-width: 86px;
+	width: 100%;
 }
 
 .mv__cats img {
-	height: 127px;
-	width: 107px;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	max-width: 107px;
+	width: 100%;
 }
 
 .about__picture1 {
@@ -1921,8 +1944,11 @@ header {
 }
 
 .about__picture1 img {
+	display: block;
 	height: auto;
-	width: 87px;
+	margin: 0 auto;
+	max-width: 87px;
+	width: 100%;
 }
 
 .about__picture2 {
@@ -1931,8 +1957,11 @@ header {
 }
 
 .about__picture2 img {
+	display: block;
 	height: auto;
-	width: 90px;
+	margin: 0 auto;
+	max-width: 90px;
+	width: 100%;
 }
 
 .about__picture-naname img {
@@ -1950,9 +1979,15 @@ header {
 	width: 200px;
 }
 
-.about_foot img {
+.about__foot img {
 	height: 220px;
 	width: 100px;
+}
+
+.about__cat-foot-sp img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
 }
 
 .about__button {
@@ -2006,13 +2041,19 @@ header {
 }
 
 .how__picture-map img {
-	height: 223px;
-	width: 149px;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	max-width: 149px;
+	width: 100%;
 }
 
 .how__picture-cats img {
-	height: 194px;
-	width: 160px;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	max-width: 160px;
+	width: 100%;
 }
 
 .how__picture-cats-pc img {
@@ -2481,6 +2522,10 @@ input.form-text::placeholder {
 	font-size: 14px;
 }
 
+.header__inner {
+	justify-content: space-between;
+}
+
 .header__logo {
 	margin-left: 4px;
 	margin-top: 4px;
@@ -2798,7 +2843,7 @@ input.form-text::placeholder {
 	transform: translateX(6px);
 }
 
-.wave {
+.wave__top {
 	background-image: url("../img/wave_pc-top.png");
 	background-position: top center;
 	background-repeat: repeat-x;
@@ -2886,6 +2931,17 @@ input.form-text::placeholder {
 .spots__button-next {
 	display: block;
 	top: auto !important;
+}
+
+.wave__bottom {
+	background-image: url("../img/wave_pc-bottom.png");
+	background-position: top center;
+	background-repeat: repeat-x;
+	background-size: contain;
+	height: 120px;
+	margin-left: -10px;
+	margin-top: -17px;
+	width: calc(100% + 276px);
 }
 
 .question {
@@ -3088,19 +3144,13 @@ input.form-text::placeholder {
 	width: 183px;
 }
 
-.mv__title1 img {
-	height: 82px;
-	width: 520px;
-}
-
 .mv__title2 img {
 	height: 60px;
 	width: 356px;
 }
 
 .mv__share img {
-	height: 134px;
-	width: 244px;
+	max-width: 244px;
 }
 
 .mv__present img {
@@ -3381,6 +3431,18 @@ input.form-text::placeholder {
 
 .hidden-sp {
 	display: none;
+}
+
+}
+
+@media (max-width: 334px) {
+
+.mv__inner {
+	padding-inline: 20px;
+}
+
+.mv__button {
+	top: 468px;
 }
 
 }
