@@ -119,8 +119,8 @@ header {
         display: block;
         margin: 0 auto;
         @include mq(pc){
-            width: 180px;
-            height: 180px;
+            max-width: 180px;
+
         }
     }
 }
@@ -133,8 +133,7 @@ header {
         display: block;
         margin: 0 auto;
         @include mq(pc){
-            width: 250px;
-            height: 510px;
+            max-width: 250px;
         }
     }
 }
@@ -278,7 +277,9 @@ header {
 
 .about__sakamichi {
     img {
-        height: 212px;
+        width: 100%;
+        max-width: 138px;
+        height: auto;
         @include mq(pc){
             height: 813px;
         }

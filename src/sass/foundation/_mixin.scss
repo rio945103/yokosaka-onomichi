@@ -23,6 +23,11 @@ html {
   overflow: hidden;
 }
 
+.hidden-tab {
+  @include mq(tab) {
+    display: none;
+  }
+}
 
 .hidden-pc {
     @include mq(pc) {

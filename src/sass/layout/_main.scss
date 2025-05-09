@@ -64,6 +64,10 @@
     padding: 84px 50px;
 }
 
+.drawer-content__button {
+    margin: 0 auto;
+}
+
 .mv {
     margin-top: 59px;
 }
@@ -89,6 +93,9 @@
     // 画面幅が 335px 未満のときだけ padding を追加
     @media (max-width: 334px) {
       padding-inline: 20px;
+    }
+    @media screen and (min-width: 900px) {
+        max-width: 848px;
     }
 }
 
@@ -255,6 +262,7 @@
 .about__contents {
     padding: 40px 12px;
     position: relative;
+    text-align: center;
     @include mq(pc){
         left: 7px;
         margin-top: 80px;
@@ -317,7 +325,7 @@
 .about__button {
     display: block;
     margin: auto;
-    margin-top: 32px;
+    margin-top: 25px;
     @include mq(pc){
         
        

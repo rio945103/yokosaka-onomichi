@@ -150,8 +150,11 @@
   }
 
 .about__text3 {
+    display: inline-block;
     color: var(--LP-Blown, #4A3636);
     text-align: center;
+    padding-bottom: 6px;
+    border-bottom: 2px dashed #9ed0e0;
 
     /* JP/Text 14px Bold */
     font-family: "Noto Sans JP";
