@@ -84,7 +84,11 @@ header {
       height: auto;
       display: block;
     }
-  
+    @include mq(pc){
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+    }
   }
 
 .mv__title2 {
@@ -158,7 +162,7 @@ header {
         margin: 0 auto;
         @include mq(pc){
             width: 202px;
-            height: 332px;
+            max-width: 202px;
         }
     }
 }
@@ -171,8 +175,7 @@ header {
         display: block;
         margin: 0 auto;
         @include mq(pc){
-            width: 233px;
-            height: 294px;
+            max-width: 233px;
         }
     }
 }

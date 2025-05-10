@@ -682,6 +682,7 @@ header {
 	align-items: center;
 	display: flex;
 	gap: 12px;
+	margin-right: 5px;
 }
 
 .header__button {
@@ -2562,7 +2563,6 @@ input.form-text::placeholder {
 }
 
 .mv__contents {
-	margin-left: 15px;
 	margin-top: 4px;
 }
 
@@ -2579,16 +2579,19 @@ input.form-text::placeholder {
 }
 
 .mv__share {
-	left: 334px;
+	left: auto;
+	margin-top: 0;
 	position: absolute;
-	top: -15px;
+	right: calc(50% + 143px);
+	top: -10px;
 	z-index: 40;
 }
 
 .mv__present {
+	left: calc(50% + 117px);
 	position: absolute;
-	right: 424px;
-	top: 7px;
+	right: auto;
+	top: 6px;
 	z-index: 1;
 }
 
@@ -2599,17 +2602,17 @@ input.form-text::placeholder {
 }
 
 .mv__button {
-	left: 638px;
+	left: 50%;
 	top: 556px;
+	transform: translateX(-50%);
 }
 
 .mv__food {
-	left: 305px;
-	top: 469px;
+	left: 6;
+	top: 478px;
 }
 
 .mv__cats {
-	right: 296px;
 	top: 551px;
 }
 
@@ -3170,6 +3173,12 @@ input.form-text::placeholder {
 	width: 183px;
 }
 
+.mv__title1 {
+	height: auto;
+	max-width: 520px;
+	width: 100%;
+}
+
 .mv__title2 img {
 	height: 60px;
 	width: 356px;
@@ -3193,13 +3202,12 @@ input.form-text::placeholder {
 }
 
 .mv__food img {
-	height: 332px;
+	max-width: 202px;
 	width: 202px;
 }
 
 .mv__cats img {
-	height: 294px;
-	width: 233px;
+	max-width: 233px;
 }
 
 .about__picture1 img {

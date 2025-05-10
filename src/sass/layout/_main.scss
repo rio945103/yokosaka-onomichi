@@ -103,7 +103,7 @@
     position: relative;
    @include mq(pc){
     margin-top: 4px;
-    margin-left: 15px;
+    
    }
 }
 
@@ -140,8 +140,10 @@
     margin-top: 7px;
     @include mq(pc){
         position: absolute;
-        top: -15px;
-        left: 334px;
+        margin-top: 0;
+        top: -10px;
+        right: calc(50% + 143px);
+        left: auto;
         z-index: 40;
     }
 }
@@ -149,8 +151,9 @@
 .mv__present {
     @include mq(pc){
         position: absolute;
-        top: 7px;
-        right: 424px;
+        top: 6px;
+        right: auto;
+        left: calc(50% + 117px);
         z-index: 1;
     }
 }
@@ -176,7 +179,8 @@
     }
     @include mq(pc){
         top: 556px;
-        left: 638px;
+        left: 50%;             // 親の中心に配置
+        transform: translateX(-50%); // 水平中央に補正
     }
 }
 
@@ -185,8 +189,8 @@
     top: 556px;
     left: 1px;
     @include mq(pc){
-        top: 469px;
-        left: 305px;
+       left: 6;
+       top: 478px;
     }
 }
 
@@ -195,8 +199,7 @@
     top: 565px;
     right: 0;
     @include mq(pc){
-        top: 551px;
-        right: 296px;
+       top: 551px;
     }
 }
 
