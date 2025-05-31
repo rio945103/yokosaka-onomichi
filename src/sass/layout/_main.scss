@@ -230,7 +230,7 @@
 
 .about__picture-naname {
     position: absolute;
-    top: 960px;
+    top: 60px;
     left: -21px;
 }
 
@@ -250,13 +250,13 @@
     top: 273px;
     @include mq(pc){
         top: 153px;
-        right: -298px;
+        right: -285px;
     }
 }
 
 .about__foot {
     position: absolute;
-    right: 152px;
+    right: 166px;
 }
 .about__inner {
     padding-inline: 20px;
@@ -267,7 +267,6 @@
     position: relative;
     text-align: center;
     @include mq(pc){
-        left: 7px;
         margin-top: 80px;
         padding: 40px 114px;
         max-width: 848px;

@@ -857,7 +857,7 @@ header {
 .about__picture-naname {
 	left: -21px;
 	position: absolute;
-	top: 960px;
+	top: 60px;
 }
 
 .about__picture-left {
@@ -874,7 +874,7 @@ header {
 
 .about__foot {
 	position: absolute;
-	right: 152px;
+	right: 166px;
 }
 
 .about__inner {
@@ -2626,12 +2626,11 @@ input.form-text::placeholder {
 }
 
 .about__picture-right {
-	right: -298px;
+	right: -285px;
 	top: 153px;
 }
 
 .about__contents {
-	left: 7px;
 	margin: auto;
 	margin-top: 80px;
 	max-width: 848px;
