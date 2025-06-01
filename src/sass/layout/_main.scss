@@ -215,6 +215,11 @@
 .about__inner {
     position: relative;
     z-index: 1;
+    margin: 0 auto;
+    max-width: 500px;
+    @include mq(pc){
+        max-width: 888px;
+    }
 }
   
 
@@ -239,8 +244,8 @@
     left: -140px;
     top: 395px;
     @include mq(pc){
-        top: 154px;
-        left: -338px;
+        top: 74px;
+        left: -650px;
     }
 }
 
@@ -249,8 +254,8 @@
     right: -140px;
     top: 273px;
     @include mq(pc){
-        top: 153px;
-        right: -285px;
+        top: 73px;
+        right: -596px;
     }
 }
 
@@ -266,6 +271,7 @@
     padding: 40px 12px;
     position: relative;
     text-align: center;
+    z-index: 10; // ✅ 背景より上に来るように
     @include mq(pc){
         margin-top: 80px;
         padding: 40px 114px;
@@ -352,7 +358,7 @@
     left: -20px;
     z-index: 1;
     @include mq(pc){
-        left: -122px;
+        left: -434px;
         top: -507px;
     }
 }
@@ -362,8 +368,9 @@
     top: 54px;
     right: 37px;
     @include mq(pc){
-        right: 39px;
+        right: -258px;
         top: -72px;
+        z-index: 1;
     }
 }
 
@@ -372,7 +379,7 @@
     top: 12px;
     right: 1px;
     @include mq(pc){
-        right: 115px;
+        right: -182px;
         top: -229px;
         z-index: 10;
     }
@@ -386,21 +393,21 @@
     z-index: 100;
 
     @include mq(pc){
-        left: 3px;
+        left: -25px;
         margin-top: 115px;
     }
 }
 
 .about__wavy1 {
     position: absolute;
-    right: -600px;
+    right: -898px;
     top: -223px;
     z-index: 1;
 }
 
 .about__wavy2 {
     position: absolute;
-    right: -532px;
+    right: -829px;
     top: -190px;
     z-index: 1;
 }

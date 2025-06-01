@@ -86,12 +86,7 @@ html(lang="ja")
                     
             section(id="about").about
                 .about__bd-picture
-                    .about__picture-left 
-                        img(src="./assets/img/about_Left-sp.png", alt="").hidden-pc
-                        img(src="./assets/img/about_Left.png", alt="").hidden-sp
-
-                    .about__picture-right 
-                        img(src="./assets/img/about_Right.png", alt="")
+                    
                     .about__foot.hidden-sp
                         img(src="./assets/img/about_cats-foot.png", alt="")
                     .about__cat-foot-sp.hidden-pc
@@ -100,6 +95,19 @@ html(lang="ja")
                         img(src="./assets/img/naname.png", alt="")
 
                 .about__inner
+                    .about__picture-left 
+                        picture
+                            source(media="(min-width: 768px)", srcset="./assets/img/about_Left.png")
+                            img(
+                            src="./assets/img/about_Left-sp.png",
+                            alt="尾道の装飾画像", // altテキストを必要に応じて入れてください
+                            width="auto",
+                            height="auto",
+                            decoding="async"
+                            )
+
+                    .about__picture-right 
+                        img(src="./assets/img/about_Right.png", alt="")
                     .about__contents
                         .about__icon.icon
                             img(src="./assets/img/about_icon.png", alt="")
@@ -159,9 +167,17 @@ html(lang="ja")
                     .about__pictures 
                         .about__arrow 
                             img(src="./assets/img/arrow.png", alt="")
-                        .about__sakamichi 
-                            img(src="./assets/img/sakamichi-sp.png", alt="").hidden-pc
-                            img(src="./assets/img/sakamichi.png", alt="").hidden-sp
+                        .about__sakamichi
+                            picture
+                                source(media="(min-width: 768px)", srcset="./assets/img/sakamichi.png")
+                                img(
+                                src="./assets/img/sakamichi-sp.png",
+                                alt="坂道の装飾画像",
+                                width="138",
+                                height="auto",
+                                decoding="async"
+                                )
+
                         .about__goods 
                             img(src="./assets/img/about_goods.png", alt="")
                         .about__ball 

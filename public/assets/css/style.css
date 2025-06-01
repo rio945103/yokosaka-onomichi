@@ -840,6 +840,8 @@ header {
 }
 
 .about__inner {
+	margin: 0 auto;
+	max-width: 500px;
 	position: relative;
 	z-index: 1;
 }
@@ -885,6 +887,7 @@ header {
 	padding: 40px 12px;
 	position: relative;
 	text-align: center;
+	z-index: 10;
 }
 
 .about__icon {
@@ -958,14 +961,14 @@ header {
 
 .about__wavy1 {
 	position: absolute;
-	right: -600px;
+	right: -898px;
 	top: -223px;
 	z-index: 1;
 }
 
 .about__wavy2 {
 	position: absolute;
-	right: -532px;
+	right: -829px;
 	top: -190px;
 	z-index: 1;
 }
@@ -2347,7 +2350,7 @@ header {
 	width: 375px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 899px) {
 
 .hidden-tab {
 	display: none;
@@ -2356,14 +2359,6 @@ header {
 }
 
 @media screen and (min-width: 900px) {
-
-.mv__inner {
-	max-width: 848px;
-}
-
-}
-
-@media screen and (min-width: 1025px) {
 
 .hidden-pc {
 	display: none;
@@ -2562,6 +2557,10 @@ input.form-text::placeholder {
 	padding-top: 35px;
 }
 
+.mv__inner {
+	max-width: 848px;
+}
+
 .mv__contents {
 	margin-top: 4px;
 }
@@ -2620,14 +2619,18 @@ input.form-text::placeholder {
 	margin-top: 16px;
 }
 
+.about__inner {
+	max-width: 888px;
+}
+
 .about__picture-left {
-	left: -338px;
-	top: 154px;
+	left: -650px;
+	top: 74px;
 }
 
 .about__picture-right {
-	right: -285px;
-	top: 153px;
+	right: -596px;
+	top: 73px;
 }
 
 .about__contents {
@@ -2668,23 +2671,24 @@ input.form-text::placeholder {
 }
 
 .about__sakamichi {
-	left: -122px;
+	left: -434px;
 	top: -507px;
 }
 
 .about__goods {
-	right: 39px;
+	right: -258px;
 	top: -72px;
+	z-index: 1;
 }
 
 .about__ball {
-	right: 115px;
+	right: -182px;
 	top: -229px;
 	z-index: 10;
 }
 
 .about__onomichi {
-	left: 3px;
+	left: -25px;
 	margin-top: 115px;
 }
 
@@ -3241,6 +3245,7 @@ input.form-text::placeholder {
 
 .about__sakamichi img {
 	height: 813px;
+	max-width: 427px;
 }
 
 .about__goods img {

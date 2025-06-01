@@ -284,6 +284,7 @@ header {
         max-width: 138px;
         height: auto;
         @include mq(pc){
+            max-width: 427px;
             height: 813px;
         }
     }
