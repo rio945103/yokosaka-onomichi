@@ -856,6 +856,12 @@ header {
 	z-index: 0;
 }
 
+.about__sakamichi {
+	bottom: -41px;
+	position: absolute;
+	z-index: 1;
+}
+
 .about__picture-naname {
 	left: -21px;
 	position: absolute;
@@ -932,13 +938,6 @@ header {
 	text-align: center;
 }
 
-.about__sakamichi {
-	left: -20px;
-	position: absolute;
-	top: 0;
-	z-index: 1;
-}
-
 .about__goods {
 	position: absolute;
 	right: 37px;
@@ -1012,7 +1011,7 @@ header {
 
 .how__picture-cats-pc {
 	position: absolute;
-	right: -14px;
+	right: 0;
 	top: -26px;
 }
 
@@ -1065,8 +1064,8 @@ header {
 }
 
 .how__step-line-pc1 {
-	left: 455px;
 	position: absolute;
+	right: 864px;
 	top: 237px;
 }
 
@@ -1084,9 +1083,9 @@ header {
 }
 
 .how__cats-step {
+	bottom: 35px;
 	left: 36px;
 	position: absolute;
-	top: 2968px;
 }
 
 .prizes {
@@ -2021,12 +2020,12 @@ header {
 }
 
 .about__goods img {
-	height: 65.003px;
+	height: auto;
 	width: 133px;
 }
 
 .about__ball img {
-	height: 48px;
+	height: auto;
 	width: 48px;
 }
 
@@ -2350,10 +2349,42 @@ header {
 	width: 375px;
 }
 
+@media screen and (min-width: 600px) and (max-width: 899px) {
+
+.about__sakamichi {
+	left: 0px;
+}
+
+.about__goods {
+	right: -100px;
+}
+
+.about__ball {
+	right: -150px;
+	top: 0;
+}
+
+.about__goods img {
+	max-width: 200px;
+	width: 200px;
+}
+
+.about__ball img {
+	max-width: 80px;
+	width: 80px;
+}
+
+}
+
 @media screen and (min-width: 768px) and (max-width: 899px) {
 
 .hidden-tab {
 	display: none;
+}
+
+.about__sakamichi img {
+	max-width: 250px;
+	width: 250px;
 }
 
 }
@@ -2623,6 +2654,10 @@ input.form-text::placeholder {
 	max-width: 888px;
 }
 
+.about__sakamichi {
+	left: -102px;
+}
+
 .about__picture-left {
 	left: -650px;
 	top: 74px;
@@ -2670,11 +2705,6 @@ input.form-text::placeholder {
 	margin-left: 10px;
 }
 
-.about__sakamichi {
-	left: -434px;
-	top: -507px;
-}
-
 .about__goods {
 	right: -258px;
 	top: -72px;
@@ -2698,18 +2728,18 @@ input.form-text::placeholder {
 
 .how {
 	margin-bottom: 5px;
-	margin-left: 13px;
 	margin-top: 0;
 	padding-top: 120px;
 }
 
 .how__inner {
 	margin-bottom: 5px;
+	max-width: 1512px;
 	padding-inline: 36px;
 }
 
 .how__picture-map {
-	left: -14px;
+	left: 0px;
 	top: -58px;
 	z-index: 5;
 }
@@ -3249,12 +3279,10 @@ input.form-text::placeholder {
 }
 
 .about__goods img {
-	height: 150.604px;
 	width: 308px;
 }
 
 .about__ball img {
-	height: 100.047px;
 	width: 101px;
 }
 
@@ -3277,8 +3305,7 @@ input.form-text::placeholder {
 }
 
 .how__picture-map img {
-	height: 689px;
-	width: 460px;
+	max-width: 460px;
 }
 
 .how__step-image img {
@@ -3459,6 +3486,15 @@ input.form-text::placeholder {
 .footer__image img {
 	height: 120px;
 	width: 1520px;
+}
+
+}
+
+@media screen and (max-width: 899px) {
+
+.about__wavy1,
+.about__wavy2 {
+	display: none;
 }
 
 }

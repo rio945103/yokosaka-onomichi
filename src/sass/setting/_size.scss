@@ -283,6 +283,11 @@ header {
         width: 100%;
         max-width: 138px;
         height: auto;
+
+        @media screen and (min-width: 768px) and (max-width: 899px) {
+            width: 250px;
+            max-width: 250px; // ← これも上書きしないと100%にならない可能性あり
+        }
         @include mq(pc){
             max-width: 427px;
             height: 813px;
@@ -293,10 +298,13 @@ header {
 .about__goods {
     img {
         width: 133px;
-        height: 65.003px;
+        height: auto;
+         @media screen and (min-width: 600px) and (max-width: 899px) {
+            width: 200px;
+            max-width: 200px; // ← これも上書きしないと100%にならない可能性あり
+        }
         @include mq(pc){
             width: 308px;
-            height: 150.604px;
         }
     }
 }
@@ -304,10 +312,13 @@ header {
 .about__ball {
     img {
         width: 48px;
-        height: 48px;
+        height: auto;
+        @media screen and (min-width: 600px) and (max-width: 899px) {
+            width: 80px;
+            max-width: 80px; // ← これも上書きしないと100%にならない可能性あり
+        }
         @include mq(pc){
             width: 101px;
-            height: 100.047px;
         }
     }
 }
@@ -366,8 +377,7 @@ header {
         display: block;
         margin: 0 auto;
         @include mq(pc){
-            width: 460px;
-            height: 689px;
+            max-width: 460px;
         }
     }
 }

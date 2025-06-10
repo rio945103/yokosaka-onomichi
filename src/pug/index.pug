@@ -85,8 +85,17 @@ html(lang="ja")
                             img(src="./assets/img/cats.png", alt="")
                     
             section(id="about").about
+                .about__sakamichi
+                        picture
+                            source(media="(min-width: 768px)", srcset="./assets/img/sakamichi.png")
+                            img(
+                            src="./assets/img/sakamichi-sp.png",
+                            alt="坂道の装飾画像",
+                            width="138",
+                            height="auto",
+                            decoding="async"
+                            )
                 .about__bd-picture
-                    
                     .about__foot.hidden-sp
                         img(src="./assets/img/about_cats-foot.png", alt="")
                     .about__cat-foot-sp.hidden-pc
@@ -167,16 +176,7 @@ html(lang="ja")
                     .about__pictures 
                         .about__arrow 
                             img(src="./assets/img/arrow.png", alt="")
-                        .about__sakamichi
-                            picture
-                                source(media="(min-width: 768px)", srcset="./assets/img/sakamichi.png")
-                                img(
-                                src="./assets/img/sakamichi-sp.png",
-                                alt="坂道の装飾画像",
-                                width="138",
-                                height="auto",
-                                decoding="async"
-                                )
+                        
 
                         .about__goods 
                             img(src="./assets/img/about_goods.png", alt="")
