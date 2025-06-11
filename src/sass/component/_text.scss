@@ -195,8 +195,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 25.6px */
-    @include mq(pc){
-        font-size: 20px;
+    @media screen and (min-width: 1200px) {
+        font-size: 20px; 
     }
 }
 .how__step-text {
@@ -209,8 +209,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 19.2px */
-    @include mq(pc){
-        font-size: 16px;
+   @media screen and (min-width: 1200px) {
+        font-size: 16px; 
     }
 }
 

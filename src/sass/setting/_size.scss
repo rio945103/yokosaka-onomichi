@@ -416,10 +416,14 @@ header {
 .how__step-image {
     img {
         height: 210px;
+        @media screen and (min-width: 900px) and (max-width: 1199px) {
+            height: 270px; // タブレット用のサイズ
+        }
         @include mq(pc){
             height: 300px;
         }
     }
+    
 }
 
 .how__follow-icon {
@@ -443,9 +447,12 @@ header {
 .how__step-line-pc1,.how__step-line-pc2 {
     img {
         width: 113px;
-        height: 24px;
-
+        height: auto;
+        @media screen and (max-width: 1199px) {
+            width: 90px; // スマホ用のサイズ
+        }
     }
+
 }
 
 .how__button {

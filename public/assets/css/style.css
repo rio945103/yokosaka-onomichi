@@ -1013,6 +1013,7 @@ header {
 	position: absolute;
 	right: 0;
 	top: -26px;
+	z-index: 1;
 }
 
 .how__cats-foot1 {
@@ -1032,7 +1033,12 @@ header {
 }
 
 .how__steps {
+	justify-content: center;
 	padding-top: 32px;
+}
+
+.how__step {
+	position: relative;
 }
 
 .how__step-image {
@@ -1065,8 +1071,8 @@ header {
 
 .how__step-line-pc1 {
 	position: absolute;
-	right: 864px;
-	top: 237px;
+	right: -66px;
+	top: 205px;
 }
 
 .how__step-line-pc2 {
@@ -2100,7 +2106,7 @@ header {
 
 .how__step-line-pc1 img,
 .how__step-line-pc2 img {
-	height: 24px;
+	height: auto;
 	width: 113px;
 }
 
@@ -2431,14 +2437,6 @@ header {
 
 .about__button {
 	font-size: 20px;
-}
-
-.how__step-title {
-	font-size: 20px;
-}
-
-.how__step-text {
-	font-size: 16px;
 }
 
 .how__follow-text {
@@ -3490,10 +3488,67 @@ input.form-text::placeholder {
 
 }
 
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+
+.how__inner {
+	max-width: 1120px;
+	padding-inline: 20px;
+}
+
+.how__steps {
+	gap: 7px;
+	margin: 0 auto;
+	max-width: 1199px;
+	width: 100%;
+}
+
+.how__step-image img {
+	height: 270px;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+.how__step-title {
+	font-size: 20px;
+}
+
+.how__step-text {
+	font-size: 16px;
+}
+
+}
+
+@media screen and (max-width: 1199px) {
+
+.how__step-line-pc1 img,
+.how__step-line-pc2 img {
+	width: 90px;
+}
+
+}
+
 @media screen and (max-width: 899px) {
 
 .about__wavy1,
 .about__wavy2 {
+	display: none;
+}
+
+.how__picture-cats-pc {
+	display: none;
+}
+
+.how__step-line-pc1 {
+	display: none;
+}
+
+.how__step-line-pc2 {
+	display: none;
+}
+
+.how__cats-step {
 	display: none;
 }
 
