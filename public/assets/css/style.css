@@ -997,6 +997,11 @@ header {
 	text-align: center;
 }
 
+.how__title1 {
+	position: relative;
+	z-index: 10;
+}
+
 .how__picture-map {
 	left: -20px;
 	position: absolute;
@@ -1007,6 +1012,7 @@ header {
 	position: absolute;
 	right: -51px;
 	top: 0;
+	z-index: 1;
 }
 
 .how__picture-cats-pc {
@@ -1102,18 +1108,19 @@ header {
 }
 
 .prizes__bg {
+	max-width: 1024px;
 	position: relative;
 }
 
 .prizes__bg-left {
-	left: 230px;
+	left: 0px;
 	position: absolute;
 	top: 28px;
 }
 
 .prizes__bg-right {
 	position: absolute;
-	right: 230px;
+	right: 0px;
 	top: 28px;
 }
 
@@ -2783,8 +2790,8 @@ input.form-text::placeholder {
 }
 
 .prizes {
-	margin-left: 15px;
 	margin-top: 120px;
+	max-width: 1024px;
 	text-align: center;
 }
 
@@ -3522,6 +3529,14 @@ input.form-text::placeholder {
 
 @media screen and (max-width: 1199px) {
 
+.how__picture-map {
+	left: -146px;
+}
+
+.how__picture-cats-pc {
+	right: -90px;
+}
+
 .how__step-line-pc1 img,
 .how__step-line-pc2 img {
 	width: 90px;
@@ -3552,6 +3567,10 @@ input.form-text::placeholder {
 	display: none;
 }
 
+.prizes__bg {
+	display: none;
+}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -3570,6 +3589,14 @@ input.form-text::placeholder {
 
 .mv__button {
 	top: 468px;
+}
+
+}
+
+@media screen and (max-width: 320px) {
+
+.how__picture-cats {
+	right: -70px;
 }
 
 }

@@ -476,10 +476,18 @@
     text-align: center;
 }
 
+.how__title1 {
+    position: relative;
+    z-index: 10;
+}
+
 .how__picture-map {
     position: absolute;
     top: 0;
     left: -20px;
+    @media screen and (max-width: 1199px) {
+        left: -146px;
+    }
     @include mq(pc){
         z-index: 5;
         left: 0px;
@@ -491,6 +499,10 @@
     position: absolute;
     top: 0;
     right: -51px;
+    z-index: 1;
+    @media screen and (max-width: 320px) {
+        right: -70px; // ← 調整値はお好みで
+    }
     @include mq(pc){
         right: -14px;
     }
@@ -502,7 +514,7 @@
     top: -26px;
     z-index: 1;
     @media screen and (max-width: 1199px) {
-        
+        right: -90px;
     }
     @media screen and (max-width: 899px) {
         display: none;
@@ -643,26 +655,30 @@
     margin-right: auto;
     margin-left: auto;
     @include mq(pc){
-        margin-left: 15px;
         margin-top: 120px;
+        max-width: 1024px;
         text-align: center;
     }
 }
 
 .prizes__bg {
     position: relative;
+    max-width: 1024px;
+    @media screen and (max-width: 899px) {
+        display: none;
+    }
 }
 
 .prizes__bg-left {
     position: absolute;
     top: 28px;
-    left: 230px;
+    left: 0px;
 }
 
 .prizes__bg-right {
     position: absolute;
     top: 28px;
-    right: 230px;
+    right: 0px;
 }
 
 .prizes__inner {
