@@ -614,6 +614,9 @@
     position: absolute;
     right: -66px;
     top: 205px;
+    @media screen and (max-width: 1199px) {
+        right: -39px;
+    }
     @media screen and (max-width: 899px) {
         display: none;
     }
@@ -623,6 +626,9 @@
     position: absolute;
     right: -63px;
     top: 137px;
+    @media screen and (max-width: 1199px) {
+        right: -39px;
+    }
     @media screen and (max-width: 899px) {
         display: none;
     }
@@ -827,6 +833,7 @@
 }
 
 .prizes__card-text {
+    position: relative;
     margin-top: 0;
     svg {
         position: absolute; /* 絶対配置 */

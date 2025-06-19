@@ -1201,6 +1201,7 @@ header {
 
 .prizes__card-text {
 	margin-top: 0;
+	position: relative;
 }
 
 .prizes__card-text svg {
@@ -2146,8 +2147,11 @@ header {
 
 .prizes__card-image img {
 	border-radius: 8px 8px 0 0;
-	height: 140px;
-	width: 160px;
+	width: 100%;
+}
+
+.prizes__card:nth-child(5) {
+	width: 50%;
 }
 
 .prize__card-number img {
@@ -2161,9 +2165,9 @@ header {
 	border-radius: 0 0 8px 8px;
 	display: flex;
 	flex-direction: column;
-	height: 56px;
+	height: auto;
 	justify-content: center;
-	width: 160px;
+	width: 100%;
 }
 
 .prizes__modal {
@@ -3331,17 +3335,17 @@ input.form-text::placeholder {
 	max-width: 1024px;
 }
 
+.prizes__card-image img {
+	border-radius: 24px 24px 0 0;
+	height: 340px;
+	width: 100%;
+}
+
 .prizes__card:nth-child(3) .prizes__card-image img,
 .prizes__card:nth-child(4) .prizes__card-image img,
 .prizes__card:nth-child(5) .prizes__card-image img {
 	border-radius: 16px 16px 0 0;
 	height: 240px;
-	width: 100%;
-}
-
-.prizes__card-image img {
-	border-radius: 24px 24px 0 0;
-	height: 340px;
 	width: 100%;
 }
 
@@ -3537,9 +3541,17 @@ input.form-text::placeholder {
 	right: -90px;
 }
 
+.how__step-line-pc1 {
+	right: -39px;
+}
+
+.how__step-line-pc2 {
+	right: -39px;
+}
+
 .how__step-line-pc1 img,
 .how__step-line-pc2 img {
-	width: 90px;
+	width: 80px;
 }
 
 }
