@@ -728,6 +728,7 @@
     padding-top: 60px;
     padding-inline: 20px;
     padding-bottom: 36px;
+    text-align: center;
     @include mq(pc){
         padding-inline: 56px;
         padding-bottom: 53px;
@@ -823,7 +824,7 @@
 
 .prize__card-number  {
     position: absolute;
-    left: 54px;
+    left: 50%;
     top: -26px;
     z-index: 51;
     @include mq(pc){
@@ -883,11 +884,13 @@
 
 
 .prizes__button {
+    display: inline-block;
     margin-top: 15px;
     margin: auto;
     text-align: center;
-    padding: 6px 24px;
-    white-space: nowrap;
+    padding: 6px 22px;
+    max-width: 100%;
+    // white-space: nowrap;
     @include mq(pc){
         margin-top: 37px;
         transform: translateX(-1px);

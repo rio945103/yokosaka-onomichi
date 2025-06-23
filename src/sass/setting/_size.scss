@@ -511,7 +511,9 @@ header {
     }
 }
 .prizes__card:nth-child(5) {
-    width: 50%;
+    @media screen and (max-width: 899px) {
+        width: 50%;
+    }
 }
 
 // 下のコードはPCのカードのサイズ
@@ -550,13 +552,13 @@ header {
 .prizes__card-text {
     background: var(--LP-Gray, #F5F5F5);
     width: 100%;
-    height: auto;
+    height: 56px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0 0 8px 8px;
-    @include mq(pc){
+    @media screen and (min-width: 900px){
         width: 100%;
         height: 120px;
         color: var(--LP-Blown, #4A3636);
@@ -571,6 +573,7 @@ header {
 }
 
 .prizes__button {
+    
     @include mq(pc){
         padding: 10px 40px;
         max-width: 437px;

@@ -1146,6 +1146,7 @@ header {
 	padding-inline: 20px;
 	padding-top: 60px;
 	position: relative;
+	text-align: center;
 	z-index: 1;
 }
 
@@ -1193,7 +1194,7 @@ header {
 }
 
 .prize__card-number {
-	left: 54px;
+	left: 50%;
 	position: absolute;
 	top: -26px;
 	z-index: 51;
@@ -1225,11 +1226,12 @@ header {
 }
 
 .prizes__button {
+	display: inline-block;
 	margin: auto;
 	margin-top: 15px;
-	padding: 6px 24px;
+	max-width: 100%;
+	padding: 6px 22px;
 	text-align: center;
-	white-space: nowrap;
 }
 
 .prizes__modal {
@@ -2150,10 +2152,6 @@ header {
 	width: 100%;
 }
 
-.prizes__card:nth-child(5) {
-	width: 50%;
-}
-
 .prize__card-number img {
 	height: 48px;
 	width: 48px;
@@ -2165,7 +2163,7 @@ header {
 	border-radius: 0 0 8px 8px;
 	display: flex;
 	flex-direction: column;
-	height: auto;
+	height: 56px;
 	justify-content: center;
 	width: 100%;
 }
@@ -3581,6 +3579,10 @@ input.form-text::placeholder {
 
 .prizes__bg {
 	display: none;
+}
+
+.prizes__card:nth-child(5) {
+	width: 50%;
 }
 
 }
