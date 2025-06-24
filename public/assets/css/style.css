@@ -1197,7 +1197,14 @@ header {
 	left: 50%;
 	position: absolute;
 	top: -26px;
+	transform: translateX(-50%);
 	z-index: 51;
+}
+
+.prizes__card:nth-of-type(3) .prize__card-number,
+.prizes__card:nth-of-type(4) .prize__card-number,
+.prizes__card:nth-of-type(5) .prize__card-number {
+	top: -39px;
 }
 
 .prizes__card-text {
@@ -2866,8 +2873,7 @@ input.form-text::placeholder {
 }
 
 .prize__card-number {
-	left: 38%;
-	top: -11%;
+	top: -50px;
 }
 
 .prizes__card-text svg {
@@ -3373,7 +3379,6 @@ input.form-text::placeholder {
 }
 
 .prizes__button {
-	max-width: 437px;
 	padding: 10px 40px;
 }
 
